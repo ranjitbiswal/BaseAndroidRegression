@@ -1,0 +1,44 @@
+[Appium] Welcome to Appium v1.6.5
+[Appium] Non-default server args:
+[Appium]   port: 50890
+[Appium]   loglevel: info
+[Appium]   chromeDriverPort: 50891
+[Appium]   tmpDir: C:\Users\SAHIL~1.DHE\AppData\Local\Temp\\Katalon\Appium\Temp1515049388710
+[Appium] Appium REST http interface listener started on 0.0.0.0:50890
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 73 ms - 83 
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\QA_4th_DEC_2018.apk","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-G930F 7.0","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"ce11160b818d583805"},"capabilities":{"desiredCapabilities":{"app":"E:\\QA_4th_DEC_2018.apk","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-G930F 7.0","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"ce11160b818d583805"},"firstMatch":[{"platformName":"android"}]}}
+[Appium] Creating new AndroidUiautomator2Driver (v0.3.3) session
+[Appium] Capabilities:
+[Appium]   app: 'E:\\QA_4th_DEC_2018.apk'
+[Appium]   autoGrantPermissions: true
+[Appium]   automationName: 'uiautomator2'
+[Appium]   deviceId: ''
+[Appium]   deviceName: 'samsung SM-G930F 7.0'
+[Appium]   fullReset: false
+[Appium]   newCommandTimeout: 1800
+[Appium]   noReset: true
+[Appium]   platform: 'ANDROID'
+[Appium]   platformName: 'Android'
+[Appium]   udid: 'ce11160b818d583805'
+[BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
+[BaseDriver] Session created with session id: 840d6aa3-a9b7-456d-934a-d738a739e4af
+[BaseDriver] Using local app 'E:\QA_4th_DEC_2018.apk'
+[UiAutomator2] UIAutomator2 Driver version:0.3.3
+[AndroidDriver] Java version is: 1.8.0_102
+[ADB] Checking whether adb is present
+[ADB] Using adb.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\platform-tools\adb.exe
+[AndroidDriver] Retrieving device list
+[AndroidDriver] Using device: ce11160b818d583805
+[ADB] Checking whether adb is present
+[ADB] Using adb.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\platform-tools\adb.exe
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[ADB] Extracting package and launch activity from manifest
+[ADB] Getting device platform version
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[ADB] Cannot read version codes of C:\Users\sahil.dheer\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk and/or io.appium.settings. Assuming correct app version is already installed
+[UiAutomator2] Did not get confirmation UiAutomator2 deleteSession worked; Error was: Error: Trying to proxy a session command without session id
+[UiAutomator2] Unable to remove port forward 'Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 forward --remove tcp\:8201' exited with code 1'; Stderr: 'error: listener 'tcp:8201' not found'; Code: '1''
+[HTTP] <-- POST /wd/hub/session 500 124642 ms - 550 

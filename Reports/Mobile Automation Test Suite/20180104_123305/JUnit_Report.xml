@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mobile Automation Test Suite" time="133" tests="0" failures="1" errors="0">
+   <testsuite name="Mobile Automation Test Suite" tests="0" failures="1" errors="0" time="133" timestamp="2018-01-04 12:33:07" hostname="Sahil.Dheer - suslap-2015-112.sus.local" id="Test Suites/Mobile Automation Test Suite">
+      <properties>
+         <property name="deviceName" value="samsung SM-G930F 7.0"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="E:\\Mobile Automation\\Base Android App Regression Pack\\Reports\\Mobile Automation Test Suite\\20180104_123305"/>
+         <property name="logFiles" value="E:\\Mobile Automation\\Base Android App Regression Pack\\Reports\\Mobile Automation Test Suite\\20180104_123305\\appium.log, E:\\Mobile Automation\\Base Android App Regression Pack\\Reports\\Mobile Automation Test Suite\\20180104_123305\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Sahil.Dheer - suslap-2015-112.sus.local"/>
+         <property name="os" value="Windows 7 64bit"/>
+         <property name="katalonVersion" value="5.1.0.1"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="deviceModel" value="SM-G930F"/>
+         <property name="hostAddress" value="192.168.56.1"/>
+         <property name="deviceManufacturer" value="samsung"/>
+         <property name="deviceId" value="ce11160b818d583805"/>
+         <property name="deviceName" value="samsung SM-G930F 7.0"/>
+         <property name="deviceOSVersion" value="7.0"/>
+      </properties>
+      <testcase name="Test Cases/PreLogIn" classname="Test Cases/PreLogIn" status="FAILED">
+         <failure type="FAILED" message="Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)"/>
+         <system-out><![CDATA[2018-01-04 12:33:07 - [TEST_CASE][FAILED] - Test Cases/PreLogIn: Test Cases/PreLogIn FAILED because (of) Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)
+
+2018-01-04 12:33:08 - [TEST_STEP][PASSED] - Statement - messageText = null: null
+
+2018-01-04 12:33:08 - [TEST_STEP][FAILED] - startApplication: Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)
+
+2018-01-04 12:35:20 - [MESSAGE][FAILED] - Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)]]></system-out>
+         <system-err><![CDATA[2018-01-04 12:33:07 - [TEST_CASE][FAILED] - Test Cases/PreLogIn: Test Cases/PreLogIn FAILED because (of) Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-01-04 12:33:07 - [TEST_SUITE][FAILED] - Mobile Automation Test Suite: Test Cases/PreLogIn FAILED because (of) Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)]]></system-out>
+      <system-err><![CDATA[2018-01-04 12:33:07 - [TEST_SUITE][FAILED] - Mobile Automation Test Suite: Test Cases/PreLogIn FAILED because (of) Unable to start app at: 'E:/QA_4th_DEC_2018.apk' (Root cause: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'E\:\\Katalon_Studio_Windows_64-5.1.0.1\\configuration\\resources\\tools\\android_sdk\\platform-tools\\adb.exe -P 5037 -s ce11160b818d583805 install C\:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk' timed out after 60000ms'; Stderr: ''; Code: 'null' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 124.74 seconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:07:36.161Z'
+System info: host: 'SUSLAP-2015-112', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: SwipeableAndroidDriver)]]></system-err>
+   </testsuite>
+</testsuites>

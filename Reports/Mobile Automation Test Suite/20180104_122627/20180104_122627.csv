@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Mobile Automation Test Suite,,,2018-01-04 12:26:33,2018-01-04 12:28:23,1m - 49.404s,FAILED
+,,,,,,
+Test Cases/PreLogIn,,PreLogIn,2018-01-04 12:26:34,2018-01-04 12:28:22,1m - 47.594s,FAILED
+Statement - messageText = null,,,2018-01-04 12:26:35,2018-01-04 12:26:35,0.003s,PASSED
+startApplication,,Installing the Application on the Device,2018-01-04 12:26:35,2018-01-04 12:27:15,39.349s,PASSED
+delay,,Delay of 30 Sec,2018-01-04 12:27:15,2018-01-04 12:27:45,30.040s,PASSED
+getCurrentOrientation,,Getting Device Current Orientation,2018-01-04 12:27:45,2018-01-04 12:27:45,0.795s,PASSED
+getDeviceHeight,,Getting Device Height,2018-01-04 12:27:45,2018-01-04 12:27:46,0.422s,PASSED
+getDeviceOS,,Getting Device OS,2018-01-04 12:27:46,2018-01-04 12:27:46,0.014s,PASSED
+getDeviceOSVersion,,Getting Device OS Version,2018-01-04 12:27:46,2018-01-04 12:27:46,0.013s,PASSED
+delay,,Delay of 30 Sec,2018-01-04 12:27:46,2018-01-04 12:28:16,30.007s,PASSED
+Statement - sDeviceVersion = com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.getDeviceOSVersion(),,,2018-01-04 12:28:16,2018-01-04 12:28:16,0.005s,PASSED
+"Statement - s2 = sDeviceVersion.split(""\."")",,,2018-01-04 12:28:16,2018-01-04 12:28:16,0.006s,PASSED
+Statement - s3 = s2[0],,,2018-01-04 12:28:16,2018-01-04 12:28:16,0.001s,PASSED
+Statement - iAndroidVersion = java.lang.Integer.parseInt(s3),,,2018-01-04 12:28:16,2018-01-04 12:28:16,0.015s,PASSED
+getDeviceWidth,,Getting Device Width,2018-01-04 12:28:16,2018-01-04 12:28:16,0.394s,PASSED
+delay,,Delay of 5 Sec,2018-01-04 12:28:16,2018-01-04 12:28:21,5.003s,PASSED
+"Statement - If (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementVisible(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(SCM Mobile/PreLogin/PreLogin Client Logo), 3, CONTINUE_ON_FAILURE) == true)",,Verifying Client Logo is Displayed or Not,2018-01-04 12:28:21,2018-01-04 12:28:22,0.388s,FAILED
+Statement - Else,,,2018-01-04 12:28:22,2018-01-04 12:28:22,0.008s,PASSED

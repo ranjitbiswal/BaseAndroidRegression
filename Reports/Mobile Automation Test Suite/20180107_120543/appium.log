@@ -1,0 +1,6 @@
+[Appium] Welcome to Appium v1.6.5
+[Appium] Non-default server args:
+[Appium]   port: 52049
+[Appium]   chromeDriverPort: 52052
+[Appium]   tmpDir: C:\Users\SAHIL~1.DHE\AppData\Local\Temp\\Katalon\Appium\Temp1515306951897
+[Appium] Appium REST http interface listener started on 0.0.0.0:52049

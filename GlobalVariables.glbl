@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <tag></tag>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Copyright © 2018 Smart Energy Systems | All rights reserved.'</initValue>
+      <name>sCopyRight</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Version: 7.0'</initValue>
+      <name>sApplicationVersion</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'demo'</initValue>
+      <name>sUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Sdge@123'</initValue>
+      <name>sPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'E:\\SCM.apk'</initValue>
+      <name>sApplicationPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'FAQs'</initValue>
+      <name>sFAQsModuleExpectedTitle</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Terms and Conditions'</initValue>
+      <name>sTandCExpectedTitle</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'‎smartenergywater.com'</initValue>
+      <name>sCompanyUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'I want to..'</initValue>
+      <name>sMoreOptionsMenuHeadingText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'The Email Address you entered has been verified. The Username has been e-mailed to you.'</initValue>
+      <name>sForgotUserNameText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'The Email Address you entered has been verified. A link to reset password has been e-mailed to you.'</initValue>
+      <name>sForgotPasswordText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Thank you for writing in. We will get back to you in 2 working days.'</initValue>
+      <name>sProblemSignInText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'999-999-9999'</initValue>
+      <name>sAlternateNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'John Doe'</initValue>
+      <name>sCardHolderName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'4111111111111111'</initValue>
+      <name>sCardNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your Marketing Preferences have been updated successfully.'</initValue>
+      <name>sMarketingPreferencesMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'100'</initValue>
+      <name>sMonthlyBudget</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your budget limit has been set. A notification will be sent on registered Email Address when your monthly budget exceeds the budget limit.'</initValue>
+      <name>sBudgetMyBillMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'You have successfully enrolled for Level Pay.'</initValue>
+      <name>sLevelEnrollmentMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'You have successfully disenrolled for Level Pay Plan.'</initValue>
+      <name>sLevelDisEnrollmentMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C003009010'</initValue>
+      <name>sUtilityAccountNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'I want to..'</initValue>
+      <name>sHamburgerSubMenu1HeadingText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Shortcuts'</initValue>
+      <name>sHamburgerSubMenu2HeadingText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'sahil.dheer@smartusys.com'</initValue>
+      <name>sEmailAddress</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Configured setting have been changed successfully.'</initValue>
+      <name>sNotificationPreferencesUpdationMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Demo@1234'</initValue>
+      <name>sNewPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Demo@12345'</initValue>
+      <name>sNewPassword1</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your password has been changed successfully.'</initValue>
+      <name>sPasswordUpdationMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'(111) 111-1111'</initValue>
+      <name>sCustomerMobileNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'SCM Website'</initValue>
+      <name>sCompanyWebsiteName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'8003451570'</initValue>
+      <name>sCustomerSupportNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'SEW'</initValue>
+      <name>sCompanyLogoURLName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'5454545454545454'</initValue>
+      <name>sBankAccountNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'124000054'</initValue>
+      <name>sRoutingNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your credit card details have been added successfully and will be validated once you choose to make a payment.'</initValue>
+      <name>sCreditCardAddMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your Credit Card has been updated successfully and will be validated once you choose to make a payment.'</initValue>
+      <name>sCreditCardUpdateMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your account has been successfully transferred from Monthly Billing to Pay as you go.'</initValue>
+      <name>sPaymentTypeUpdateMessageFromMonthlyToPayAsYouGo</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your account has been successfully transferred from Pay as you go to Monthly Billing.'</initValue>
+      <name>sPaymentTypeUpdateMessageFromPayAsYouGoToMonthly</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Configured settings have been changed successfully.'</initValue>
+      <name>sSettingsSaveMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C003009010'</initValue>
+      <name>sCustomerAccountNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Please enter all the mandatory information.'</initValue>
+      <name>sMandatoryFieldPopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'New Password and Confirm Password do not match. Please enter the same password is displayed when new password and confirm password do not match.'</initValue>
+      <name>sNewandConfirmPasswordNotMatchPopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your Existing Password does not match our records, please verify and re-enter.'</initValue>
+      <name>sExistingPasswordNotMatchPopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'DemoNew'</initValue>
+      <name>sNewUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your Existing Username does not match our records, please verify and re-enter.'</initValue>
+      <name>sExistingUsernameNotMatchPopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Shikha@12345'</initValue>
+      <name>sUserNameAlreadyExists</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Username is already in use. Please register with a new Username or contact Customer Service by email at support@smartusys.com or by phone at (800) 345-1570.'</initValue>
+      <name>sDuplicateUsernameNotMatchPopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your Username has been changed successfully.'</initValue>
+      <name>sUsernameUpdationMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'anubhuti.saxena@smartusys.com'</initValue>
+      <name>sEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'A link with instructions on how to complete registration has been sent to the customer’s registered Email Address.'</initValue>
+      <name>sRegistrationSuccessfulMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'92602'</initValue>
+      <name>sUtilityZipCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Our records indicate that you have previously registered using this Account Number. If you have forgotten your Username/Password, please click on “Login Help”. If you need assistance, please contact Customer Service by email at support@smartusys.com or by phone at 8003451570.'</initValue>
+      <name>sDuplicateUsernameRegistraionMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'5454545454545454'</initValue>
+      <name>sDuplicateCreditCardNumber</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Credit Card Number “xxxxxxxxxxxx5454” is already added.'</initValue>
+      <name>sCreditCardDuplicateCardMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your bank account details have been added successfully and will be validated once you choose to make a payment.'</initValue>
+      <name>sBankAccountAddMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Bank Account number Already Exist'</initValue>
+      <name>sBankAccountDuplicateCardMessageText</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

@@ -1,0 +1,13 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Mobile Automation Test Suite,,,2018-01-07 12:07:00,2018-01-07 12:15:22,8m - 21.592s,PASSED
+,,,,,,
+Test Cases/PreLogIn,,PreLogIn,2018-01-07 12:07:01,2018-01-07 12:15:17,8m - 16.761s,PASSED
+Statement - messageText = null,,,2018-01-07 12:07:01,2018-01-07 12:07:01,0.004s,PASSED
+Statement - applicationMethods.ReusableMethods.startApplication(),,Starting the Application,2018-01-07 12:07:01,2018-01-07 12:08:21,1m - 19.152s,PASSED
+getCurrentOrientation,,Getting Device Current Orientation,2018-01-07 12:08:21,2018-01-07 12:08:21,0.634s,PASSED
+getDeviceHeight,,Getting Device Height,2018-01-07 12:08:21,2018-01-07 12:08:22,0.343s,PASSED
+getDeviceOS,,Getting Device OS,2018-01-07 12:08:22,2018-01-07 12:08:22,0.014s,PASSED
+getDeviceOSVersion,,Getting Device OS Version,2018-01-07 12:08:22,2018-01-07 12:08:22,0.020s,PASSED
+delay,,Delay of 30 Sec,2018-01-07 12:08:22,2018-01-07 12:08:52,30.005s,PASSED
+verifyLoginPageObjects,,,2018-01-07 12:08:52,2018-01-07 12:10:30,1m - 38.059s,PASSED
+verifyLoginPageNegativeTestCases,,,2018-01-07 12:10:30,2018-01-07 12:15:17,4m - 47.793s,PASSED

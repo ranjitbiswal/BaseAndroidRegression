@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PreLogIn</description>
+   <name>PreLogIn</name>
+   <tag>PreLogIn</tag>
+   <comment>TC  --> To verify that SCM-Mobile app Landing screen contain Objects
+TC : TC_LO_8, TC_LO_9, TC_LO_10, TC_LO_11 --> To Verify the Negative Test Cases</comment>
+   <testCaseGuid>8d734f63-1c3c-4f58-98ce-23b82c8bf59e</testCaseGuid>
+</TestCaseEntity>

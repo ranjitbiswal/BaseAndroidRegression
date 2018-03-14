@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Mobile Automation Test Suite,,,2018-01-04 11:36:29,2018-01-04 11:39:09,2m - 40.057s,FAILED
+,,,,,,
+Test Cases/PreLogIn,,PreLogIn,2018-01-04 11:36:29,2018-01-04 11:39:08,2m - 38.404s,FAILED
+Statement - messageText = null,,,2018-01-04 11:36:30,2018-01-04 11:36:30,0.003s,PASSED
+startApplication,,Installing the Application on the Device,2018-01-04 11:36:30,2018-01-04 11:37:22,52.290s,PASSED
+delay,,Delay of 30 Sec,2018-01-04 11:37:22,2018-01-04 11:37:52,30.042s,PASSED
+getCurrentOrientation,,Getting Device Current Orientation,2018-01-04 11:37:52,2018-01-04 11:37:53,0.548s,PASSED
+getDeviceHeight,,Getting Device Height,2018-01-04 11:37:53,2018-01-04 11:37:53,0.459s,PASSED
+getDeviceOS,,Getting Device OS,2018-01-04 11:37:53,2018-01-04 11:37:53,0.033s,PASSED
+getDeviceOSVersion,,Getting Device OS Version,2018-01-04 11:37:53,2018-01-04 11:37:54,0.013s,PASSED
+delay,,Delay of 30 Sec,2018-01-04 11:37:54,2018-01-04 11:38:24,30.006s,PASSED
+Statement - sDeviceVersion = com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.getDeviceOSVersion(),,,2018-01-04 11:38:24,2018-01-04 11:38:24,0.004s,PASSED
+"Statement - s2 = sDeviceVersion.split(""\."")",,,2018-01-04 11:38:24,2018-01-04 11:38:24,0.009s,PASSED
+Statement - s3 = s2[0],,,2018-01-04 11:38:24,2018-01-04 11:38:24,0.002s,PASSED
+Statement - iAndroidVersion = java.lang.Integer.parseInt(s3),,,2018-01-04 11:38:24,2018-01-04 11:38:24,0.004s,PASSED
+getDeviceWidth,,Getting Device Width,2018-01-04 11:38:24,2018-01-04 11:38:24,0.401s,PASSED
+Statement - If (iAndroidVersion > 5),,Checking Permissions are displayed or Not?,2018-01-04 11:38:24,2018-01-04 11:39:04,40.540s,FAILED
+"Statement - If (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementVisible(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(SCM Mobile/PreLogin/PreLogin Client Logo), 3, CONTINUE_ON_FAILURE) == true)",,Verifying Client Logo is Displayed or Not,2018-01-04 11:39:04,2018-01-04 11:39:08,3.044s,FAILED
+Statement - Else,,,2018-01-04 11:39:08,2018-01-04 11:39:08,0.003s,PASSED

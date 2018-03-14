@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mobile Automation Test Suite" time="116" tests="0" failures="1" errors="0">
+   <testsuite name="Mobile Automation Test Suite" tests="0" failures="1" errors="0" time="116" timestamp="2018-01-04 12:29:12" hostname="Sahil.Dheer - suslap-2015-112.sus.local" id="Test Suites/Mobile Automation Test Suite">
+      <properties>
+         <property name="deviceName" value="samsung SM-G930F 7.0"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="E:\\Mobile Automation\\Base Android App Regression Pack\\Reports\\Mobile Automation Test Suite\\20180104_122910"/>
+         <property name="logFiles" value="E:\\Mobile Automation\\Base Android App Regression Pack\\Reports\\Mobile Automation Test Suite\\20180104_122910\\appium.log, E:\\Mobile Automation\\Base Android App Regression Pack\\Reports\\Mobile Automation Test Suite\\20180104_122910\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Sahil.Dheer - suslap-2015-112.sus.local"/>
+         <property name="os" value="Windows 7 64bit"/>
+         <property name="katalonVersion" value="5.1.0.1"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.6.5"/>
+         <property name="deviceModel" value="SM-G930F"/>
+         <property name="hostAddress" value="192.168.56.1"/>
+         <property name="deviceManufacturer" value="samsung"/>
+         <property name="deviceId" value="ce11160b818d583805"/>
+         <property name="deviceName" value="samsung SM-G930F 7.0"/>
+         <property name="deviceOSVersion" value="7.0"/>
+      </properties>
+      <testcase name="Test Cases/PreLogIn" classname="Test Cases/PreLogIn" status="FAILED">
+         <failure type="FAILED" message="Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)"/>
+         <system-out><![CDATA[2018-01-04 12:29:13 - [TEST_CASE][FAILED] - Test Cases/PreLogIn: Test Cases/PreLogIn FAILED because (of) Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)
+
+2018-01-04 12:29:13 - [TEST_STEP][PASSED] - Statement - messageText = null: null
+
+2018-01-04 12:29:14 - [TEST_STEP][PASSED] - startApplication: Started app at: 'E:\QA_4th_DEC_2018.apk'
+
+2018-01-04 12:30:01 - [MESSAGE][PASSED] - Started app at: 'E:\QA_4th_DEC_2018.apk'
+
+2018-01-04 12:30:01 - [TEST_STEP][PASSED] - delay: Delayed 30 second(s)
+
+2018-01-04 12:30:31 - [MESSAGE][PASSED] - Delayed 30 second(s)
+
+2018-01-04 12:30:31 - [TEST_STEP][PASSED] - getCurrentOrientation: Current screen orientation of the device is 'portrait'
+
+2018-01-04 12:30:31 - [MESSAGE][PASSED] - Current screen orientation of the device is 'portrait'
+
+2018-01-04 12:30:31 - [TEST_STEP][PASSED] - getDeviceHeight: Current device physical height is 1920
+
+2018-01-04 12:30:32 - [MESSAGE][PASSED] - Current device physical height is 1920
+
+2018-01-04 12:30:32 - [TEST_STEP][PASSED] - getDeviceOS: Device OS name is: 'Android'
+
+2018-01-04 12:30:32 - [MESSAGE][PASSED] - Device OS name is: 'Android'
+
+2018-01-04 12:30:32 - [TEST_STEP][PASSED] - getDeviceOSVersion: Device OS version is: '7.0'
+
+2018-01-04 12:30:32 - [MESSAGE][PASSED] - Device OS version is: '7.0'
+
+2018-01-04 12:30:32 - [TEST_STEP][PASSED] - delay: Delayed 30 second(s)
+
+2018-01-04 12:31:02 - [MESSAGE][PASSED] - Delayed 30 second(s)
+
+2018-01-04 12:31:02 - [TEST_STEP][PASSED] - Statement - sDeviceVersion = com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.getDeviceOSVersion(): Device OS version is: '7.0'
+
+2018-01-04 12:31:02 - [MESSAGE][PASSED] - Device OS version is: '7.0'
+
+2018-01-04 12:31:02 - [TEST_STEP][PASSED] - Statement - s2 = sDeviceVersion.split("\."): null
+
+2018-01-04 12:31:02 - [TEST_STEP][PASSED] - Statement - s3 = s2[0]: null
+
+2018-01-04 12:31:02 - [TEST_STEP][PASSED] - Statement - iAndroidVersion = java.lang.Integer.parseInt(s3): null
+
+2018-01-04 12:31:02 - [TEST_STEP][PASSED] - getDeviceWidth: Current device physical width is 1080
+
+2018-01-04 12:31:02 - [MESSAGE][PASSED] - Current device physical width is 1080
+
+2018-01-04 12:31:02 - [TEST_STEP][PASSED] - delay: Delayed 5 second(s)
+
+2018-01-04 12:31:07 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+2018-01-04 12:31:07 - [TEST_STEP][FAILED] - Statement - If (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementVisible(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(SCM Mobile/PreLogin/PreLogin Client Logo), 3, CONTINUE_ON_FAILURE) == true): Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)
+
+2018-01-04 12:31:08 - [MESSAGE][FAILED] - Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)
+
+2018-01-04 12:31:08 - [TEST_STEP][PASSED] - Statement - Else: null
+
+2018-01-04 12:31:08 - [TEST_STEP][PASSED] - Statement - out.println("Client Logo is not Displayed"): null]]></system-out>
+         <system-err><![CDATA[2018-01-04 12:29:13 - [TEST_CASE][FAILED] - Test Cases/PreLogIn: Test Cases/PreLogIn FAILED because (of) Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-01-04 12:29:12 - [TEST_SUITE][FAILED] - Mobile Automation Test Suite: Test Cases/PreLogIn FAILED because (of) Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)]]></system-out>
+      <system-err><![CDATA[2018-01-04 12:29:12 - [TEST_SUITE][FAILED] - Mobile Automation Test Suite: Test Cases/PreLogIn FAILED because (of) Failed to check for element 'Object Repository/SCM Mobile/PreLogin/PreLogin Client Logo' visible (Root cause: java.lang.NullPointerException)]]></system-err>
+   </testsuite>
+</testsuites>

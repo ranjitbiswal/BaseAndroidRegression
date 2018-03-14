@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PreLogin MoreMenu Option Menu</description>
+   <name>PreLogin MoreOptions Menu</name>
+   <tag>PreLogin MoreMenu Option Menu</tag>
+   <comment>***********************************************
+TC : To verify that MoreOptionsMenu screen contain Objects
+TC : To verify that MoreOptionsMenu Footer</comment>
+   <testCaseGuid>781fd546-eaa7-4cd8-970e-29bf5073805f</testCaseGuid>
+</TestCaseEntity>

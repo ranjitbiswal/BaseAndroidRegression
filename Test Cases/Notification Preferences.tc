@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Notification Preferences</description>
+   <name>Notification Preferences</name>
+   <tag>Notification Preferences</tag>
+   <comment></comment>
+   <testCaseGuid>c563e91b-b3c8-44ad-b6c8-071e6aae9ef9</testCaseGuid>
+</TestCaseEntity>

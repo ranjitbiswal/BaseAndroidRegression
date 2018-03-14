@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>PreLogin Payment Locations</description>
+   <name>PreLogin Payment Locations</name>
+   <tag>PreLogin Payment Locations</tag>
+   <comment></comment>
+   <testCaseGuid>19f45815-c4c5-4495-8859-151601f26ff8</testCaseGuid>
+</TestCaseEntity>

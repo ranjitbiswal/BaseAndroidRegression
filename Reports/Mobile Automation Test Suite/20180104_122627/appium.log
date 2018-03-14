@@ -1,0 +1,106 @@
+[Appium] Welcome to Appium v1.6.5
+[Appium] Non-default server args:
+[Appium]   port: 49934
+[Appium]   loglevel: info
+[Appium]   chromeDriverPort: 49936
+[Appium]   tmpDir: C:\Users\SAHIL~1.DHE\AppData\Local\Temp\\Katalon\Appium\Temp1515048996053
+[Appium] Appium REST http interface listener started on 0.0.0.0:49934
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 77 ms - 83 
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\QA_4th_DEC_2018.apk","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-G930F 7.0","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"ce11160b818d583805"},"capabilities":{"desiredCapabilities":{"app":"E:\\QA_4th_DEC_2018.apk","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-G930F 7.0","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"ce11160b818d583805"},"firstMatch":[{"platformName":"android"}]}}
+[Appium] Creating new AndroidUiautomator2Driver (v0.3.3) session
+[Appium] Capabilities:
+[Appium]   app: 'E:\\QA_4th_DEC_2018.apk'
+[Appium]   autoGrantPermissions: true
+[Appium]   automationName: 'uiautomator2'
+[Appium]   deviceId: ''
+[Appium]   deviceName: 'samsung SM-G930F 7.0'
+[Appium]   fullReset: false
+[Appium]   newCommandTimeout: 1800
+[Appium]   noReset: true
+[Appium]   platform: 'ANDROID'
+[Appium]   platformName: 'Android'
+[Appium]   udid: 'ce11160b818d583805'
+[BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
+[BaseDriver] Session created with session id: 550cec12-d192-43c2-8dc6-cc2cdf71ce13
+[BaseDriver] Using local app 'E:\QA_4th_DEC_2018.apk'
+[UiAutomator2] UIAutomator2 Driver version:0.3.3
+[AndroidDriver] Java version is: 1.8.0_102
+[ADB] Checking whether adb is present
+[ADB] Using adb.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\platform-tools\adb.exe
+[AndroidDriver] Retrieving device list
+[AndroidDriver] Using device: ce11160b818d583805
+[ADB] Checking whether adb is present
+[ADB] Using adb.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\platform-tools\adb.exe
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[ADB] Extracting package and launch activity from manifest
+[ADB] Getting device platform version
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[ADB] Cannot read version codes of C:\Users\sahil.dheer\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk and/or io.appium.settings. Assuming correct app version is already installed
+[AndroidDriver] Screen already unlocked, doing nothing
+[ADB] Checking whether zipalign is present
+[ADB] Using zipalign.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\zipalign.exe
+[AndroidDriver] Remote apk path is /data/local/tmp/dfdb55e9ed14649e08702e199680f761.apk
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[ADB] Extracting package and launch activity from manifest
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from E:\Katalon_Studio_Windows_64-5.1.0.1\configuration\resources\tools\android_sdk\build-tools\23.0.3\aapt.exe
+[UiAutomator2] Starting uiautomator2 server v0.1.5 with cmd: am,instrument,-w,io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner
+[UiAutomator2] running command...
+ adb -s ce11160b818d583805 shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner... 
+[UiAutomator2] Waiting up to 20000ms for UiAutomator2 to be online...
+[UiAutomator2] UiAutomator2 did not start the activity we were waiting for, 'com.sus.scm_mobile/com.sus.scm_mobile.Login.controller.Splash_Screen'. Starting it ourselves
+[Appium] New AndroidUiautomator2Driver session created successfully, session 550cec12-d192-43c2-8dc6-cc2cdf71ce13 added to master session list
+[HTTP] <-- POST /wd/hub/session 200 29547 ms - 347 
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 49 ms - 83 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {}
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 11 ms - 84 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/contexts {}
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/contexts 200 89 ms - 86 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {"name":"NATIVE_APP"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 128 ms - 76 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/orientation {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId e914a8e9-1cf4-4533-8bb6-b24311e759b1 with 550cec12-d192-43c2-8dc6-cc2cdf71ce13
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/orientation 200 251 ms - 82 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {"name":"NATIVE_APP"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 116 ms - 76 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {}
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 3 ms - 84 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/contexts {}
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/contexts 200 114 ms - 86 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {"name":"NATIVE_APP"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 109 ms - 76 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/window/current/size {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId e914a8e9-1cf4-4533-8bb6-b24311e759b1 with 550cec12-d192-43c2-8dc6-cc2cdf71ce13
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/window/current/size 200 41 ms - 100 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {"name":"NATIVE_APP"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 89 ms - 76 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {}
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 3 ms - 84 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/contexts {}
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/contexts 200 101 ms - 86 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {"name":"NATIVE_APP"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 95 ms - 76 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/window/current/size {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId e914a8e9-1cf4-4533-8bb6-b24311e759b1 with 550cec12-d192-43c2-8dc6-cc2cdf71ce13
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/window/current/size 200 43 ms - 100 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context {"name":"NATIVE_APP"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/context 200 89 ms - 76 
+[HTTP] --> GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/window/current/size {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId e914a8e9-1cf4-4533-8bb6-b24311e759b1 with 550cec12-d192-43c2-8dc6-cc2cdf71ce13
+[HTTP] <-- GET /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/window/current/size 200 38 ms - 100 
+[HTTP] --> POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/elements {"using":"-android uiautomator","value":"new UiSelector().className(\"android.widget.ImageView\").resourceId(\"com.sus.scm_mobile:id/suslogo\").instance(0)"}
+[HTTP] <-- POST /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13/elements 200 233 ms - 124 
+[HTTP] --> DELETE /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13 {}
+[Appium] Removing session 550cec12-d192-43c2-8dc6-cc2cdf71ce13 from our master session list
+[HTTP] <-- DELETE /wd/hub/session/550cec12-d192-43c2-8dc6-cc2cdf71ce13 200 909 ms - 76 

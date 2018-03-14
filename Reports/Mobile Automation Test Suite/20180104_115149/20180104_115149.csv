@@ -1,0 +1,19 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Mobile Automation Test Suite,,,2018-01-04 11:51:51,2018-01-04 11:54:47,2m - 55.285s,FAILED
+,,,,,,
+Test Cases/PreLogIn,,PreLogIn,2018-01-04 11:51:52,2018-01-04 11:54:45,2m - 53.715s,FAILED
+Statement - messageText = null,,,2018-01-04 11:51:53,2018-01-04 11:51:53,0.002s,PASSED
+startApplication,,Installing the Application on the Device,2018-01-04 11:51:53,2018-01-04 11:53:40,1m - 47.925s,PASSED
+delay,,Delay of 30 Sec,2018-01-04 11:53:40,2018-01-04 11:54:11,30.059s,PASSED
+getCurrentOrientation,,Getting Device Current Orientation,2018-01-04 11:54:11,2018-01-04 11:54:11,0.747s,PASSED
+getDeviceHeight,,Getting Device Height,2018-01-04 11:54:11,2018-01-04 11:54:12,0.442s,PASSED
+getDeviceOS,,Getting Device OS,2018-01-04 11:54:12,2018-01-04 11:54:12,0.031s,PASSED
+getDeviceOSVersion,,Getting Device OS Version,2018-01-04 11:54:12,2018-01-04 11:54:12,0.015s,PASSED
+delay,,Delay of 30 Sec,2018-01-04 11:54:12,2018-01-04 11:54:42,30.003s,PASSED
+Statement - sDeviceVersion = com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.getDeviceOSVersion(),,,2018-01-04 11:54:42,2018-01-04 11:54:42,0.006s,PASSED
+"Statement - s2 = sDeviceVersion.split(""\."")",,,2018-01-04 11:54:42,2018-01-04 11:54:42,0.015s,PASSED
+Statement - s3 = s2[0],,,2018-01-04 11:54:42,2018-01-04 11:54:42,0.001s,PASSED
+Statement - iAndroidVersion = java.lang.Integer.parseInt(s3),,,2018-01-04 11:54:42,2018-01-04 11:54:42,0.002s,PASSED
+getDeviceWidth,,Getting Device Width,2018-01-04 11:54:42,2018-01-04 11:54:42,0.512s,PASSED
+"Statement - If (com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords.verifyElementVisible(com.kms.katalon.core.testobject.ObjectRepository.findTestObject(SCM Mobile/PreLogin/PreLogin Client Logo), 3, CONTINUE_ON_FAILURE) == true)",,Verifying Client Logo is Displayed or Not,2018-01-04 11:54:42,2018-01-04 11:54:45,3.149s,FAILED
+Statement - Else,,,2018-01-04 11:54:45,2018-01-04 11:54:45,0.022s,PASSED

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Change UserName</description>
+   <name>Change UserName</name>
+   <tag>Change UserName</tag>
+   <comment></comment>
+   <testCaseGuid>eae60041-5d37-4e81-a7c1-c3c62f537314</testCaseGuid>
+</TestCaseEntity>
