@@ -58,7 +58,7 @@ public class ReusableMethods {
 
 		'Clicking on SignIn Button'
 		Mobile.tap(findTestObject('SCM Mobile/LogIn/SignIn Button'), 30)
-		
+
 		'Delay of 20 Sec'
 		Mobile.delay(20)
 	}
@@ -66,9 +66,9 @@ public class ReusableMethods {
 
 	public static void startApplication() {
 
-	//	'Unlock screen'
-	//	Mobile.unlockScreen()
-		
+		//	'Unlock screen'
+		//	Mobile.unlockScreen()
+
 		'Installing the Application on the Device'
 		Mobile.startApplication(GlobalVariable.sApplicationPath, false, FailureHandling.STOP_ON_FAILURE)
 
@@ -86,7 +86,7 @@ public class ReusableMethods {
 			System.out.print(elementName + " is not displayed on the Page");
 		}
 	}
-	
+
 	public static boolean  isMobileElementDisplayed(String locator) {
 		if (Mobile.verifyElementExist(findTestObject(locator), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
 		true) {
@@ -135,10 +135,10 @@ public class ReusableMethods {
 			messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'),
 					'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
 			System.out.print("User is unable to Login, Below Message Displayed :" + messageText)
-			
+
 			'Delay of 1 Sec'
 			Mobile.delay(1)
-			
+
 			'Clicking On Popup Ok Button'
 			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -150,4 +150,22 @@ public class ReusableMethods {
 			System.out.print("User successfully Logged In to the Application")
 		}
 	}
+
+	public static void verifyAttribute(String locator, String attName, String expAttValue) {
+
+		String actAttValue = Mobile.getAttribute(findTestObject(locator),attName, 5, FailureHandling.CONTINUE_ON_FAILURE)
+		println actAttValue
+		if(expAttValue.equals(actAttValue))
+		{
+			println "Element Attribute value is verified as Expected " + expAttValue
+			
+		}
+		else
+		{
+			println "Element Attribute value is verified and it as not Expected " + expAttValue
+			
+		}
+	
+		}
+	
 }

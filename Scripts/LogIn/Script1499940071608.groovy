@@ -52,5 +52,8 @@ static def verifyValidLogin() {
 
     'Clicking on SignIn Button'
     Mobile.tap(findTestObject('SCM Mobile/LogIn/SignIn Button'), 30)
+	Mobile.verifyElementAttributeValue(findTestObject('SCM Mobile/LandingPage/My Account Menu'), 'text', 'My Account', 2)
+
+	
 }
 
