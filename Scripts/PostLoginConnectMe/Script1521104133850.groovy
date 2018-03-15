@@ -34,7 +34,7 @@ applicationMethods.ReusableMethods.verifyValidLogin()
 
 'Delay of 30 Sec'
 Mobile.delay(30)
-
+//
 @com.kms.katalon.core.annotation.TearDown
 static void verifyConnectMeTestCases() {
     boolean bElementVisible = Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/ConnectMe Menu'), 2, FailureHandling.CONTINUE_ON_FAILURE)
