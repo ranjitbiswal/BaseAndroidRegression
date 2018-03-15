@@ -1,297 +1,70 @@
-[Appium] Welcome to Appium v1.6.5
+[Appium] Welcome to Appium v1.7.1
 [Appium] Non-default server args:
-[Appium]   port: 62245
-[Appium]   chromeDriverPort: 62246
-[Appium]   tmpDir: C:\Users\SAHIL~1.DHE\AppData\Local\Temp\\Katalon\Appium\Temp1520857929667
-[Appium] Appium REST http interface listener started on 0.0.0.0:62245
+[Appium]   port: 63274
+[Appium]   loglevel: info
+[Appium]   chromeDriverPort: 63275
+[Appium]   tmpDir: C:\Users\RANJIT~1.BIS\AppData\Local\Temp\\Katalon\Appium\Temp1521109296615
+[Appium] Appium REST http interface listener started on 0.0.0.0:63274
 [HTTP] --> GET /wd/hub/status {}
-[debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
-[debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
-[HTTP] <-- GET /wd/hub/status 200 223 ms - 83 
+[HTTP] <-- GET /wd/hub/status 200 77 ms - 83 
 [HTTP] --> GET /wd/hub/status {}
-[debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
-[debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
-[HTTP] <-- GET /wd/hub/status 200 141 ms - 83 
-[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 5.0.1","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"capabilities":{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 5.0.1","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}}
-[debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 5.0.1","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},null,{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 5.0.1","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}]
-[debug] [BaseDriver] Event 'newSessionRequested' logged at 1520857935671 (18:02:15 GMT+0530 (India Standard Time))
-[Appium] Creating new AndroidDriver (v1.20.0) session
+[HTTP] <-- GET /wd/hub/status 200 74 ms - 83 
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"capabilities":{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}}
+[Appium] Creating new AndroidDriver (v1.28.1) session
 [Appium] Capabilities:
 [Appium]   app: 'E:\\SCM.apk'
 [Appium]   appWaitActivity: 'com.*'
 [Appium]   autoGrantPermissions: true
 [Appium]   deviceId: ''
-[Appium]   deviceName: 'samsung GT-I9500 5.0.1'
+[Appium]   deviceName: 'samsung GT-I9500 (Android 5.0.1)'
 [Appium]   fullReset: false
 [Appium]   newCommandTimeout: 1800
 [Appium]   noReset: true
 [Appium]   platform: 'ANDROID'
 [Appium]   platformName: 'Android'
 [Appium]   udid: '4d00c4b5b0a160b9'
-[debug] [AndroidDriver] AndroidDriver version: 1.20.0
 [BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
-[BaseDriver] Session created with session id: 04d4fb1e-9633-466a-b8ed-85c50259a475
-[debug] [AndroidDriver] Getting Java version
+[BaseDriver] Session created with session id: 1fb1efb6-1977-42c3-ae3b-3641dc401b49
 [AndroidDriver] Java version is: 1.8.0_102
 [ADB] Checking whether adb is present
-[ADB] Using adb.exe from C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe
+[ADB] Using adb.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\platform-tools\adb.exe
 [AndroidDriver] Retrieving device list
-[debug] [ADB] Trying to find a connected android device
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 0 device(s) connected
-[debug] [ADB] Could not find devices, restarting adb server...
-[debug] [ADB] Restarting adb
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
 [AndroidDriver] Using device: 4d00c4b5b0a160b9
 [ADB] Checking whether adb is present
-[ADB] Using adb.exe from C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe
-[debug] [ADB] Setting device id to 4d00c4b5b0a160b9
+[ADB] Using adb.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\platform-tools\adb.exe
 [BaseDriver] Using local app 'E:\SCM.apk'
-[debug] [AndroidDriver] Checking whether app is actually present
 [AndroidDriver] Starting Android session
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","wait-for-device"]
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","echo","ping"]
-[debug] [Logcat] Starting logcat capture
-[debug] [AndroidDriver] Pushing settings apk to device...
-[debug] [ADB] Getting install status for io.appium.settings
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","pm","list","packages","io.appium.settings"]
-[debug] [ADB] App is installed
-[debug] [ADB] Getting package info for io.appium.settings
-[debug] [ADB] Getting connected devices...
-[ADB] Checking whether aapt is present
-[ADB] Using aapt.exe from C:\Users\sahil.dheer\.katalon\tools\android_sdk\build-tools\27.0.3\aapt.exe
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","dumpsys","package","io.appium.settings"]
-[ADB] Cannot read version codes of C:\Users\sahil.dheer\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk and/or io.appium.settings. Assuming correct app version is already installed
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","getprop","ro.build.version.sdk"]
-[debug] [ADB] Device API level: 21
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","dumpsys","package","io.appium.settings"]
-[debug] [AndroidDriver] Pushing unlock helper app to device...
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","install","C:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-unlock\\bin\\unlock_apk-debug.apk"]
-[debug] [ADB] Device API level: 21
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","settings","put","secure","mock_location","1"]
+[ADB] io.appium.settings was successfully uninstalled
 [ADB] Getting device platform version
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","getprop","ro.build.version.release"]
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","wm","size"]
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","getprop","ro.product.model"]
-[debug] [ADB] Current device property 'ro.product.model': GT-I9500
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","getprop","ro.product.manufacturer"]
-[debug] [ADB] Current device property 'ro.product.manufacturer': samsung
-[debug] [AndroidDriver] Parsing package and activity from app manifest
 [ADB] Checking whether aapt is present
-[ADB] Using aapt.exe from C:\Users\sahil.dheer\.katalon\tools\android_sdk\build-tools\27.0.3\aapt.exe
+[ADB] Using aapt.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\build-tools\28.0.0\aapt.exe
 [ADB] Extracting package and launch activity from manifest
-[debug] [ADB] badging package: com.sus.scm_mobile
-[debug] [ADB] badging act: com.sus.scm_mobile.Login.controller.Splash_Screen
-[debug] [AndroidDriver] Parsed package and activity are: com.sus.scm_mobile/com.sus.scm_mobile.Login.controller.Splash_Screen
 [AndroidDriver] Remote apk path is /data/local/tmp/9ac06dd1101d05fe6946311bfac21cb9.apk
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","ls","/data/local/tmp/9ac06dd1101d05fe6946311bfac21cb9.apk"]
-[debug] [AndroidDriver] Checking if app is installed
-[debug] [ADB] Getting install status for com.sus.scm_mobile
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","pm","list","packages","com.sus.scm_mobile"]
-[debug] [ADB] App is installed
-[debug] [ADB] Device API level: 21
 [ADB] Checking whether aapt is present
-[ADB] Using aapt.exe from C:\Users\sahil.dheer\.katalon\tools\android_sdk\build-tools\27.0.3\aapt.exe
+[ADB] Using aapt.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\build-tools\28.0.0\aapt.exe
 [ADB] Extracting package and launch activity from manifest
-[debug] [AndroidDriver] Extracting strings from apk E:\SCM.apk null C:\Users\SAHIL~1.DHE\AppData\Local\Temp\Katalon\Appium\Temp1520857929667\com.sus.scm_mobile
-[debug] [ADB] Extracting strings for language: default
-[debug] [ADB] Device API level: 21
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","getprop","persist.sys.language"]
-[debug] [ADB] Current device property 'persist.sys.language': en
-[debug] [ADB] No strings.xml for language 'en', getting default strings.xml
-[debug] [ADB] Reading strings from converted strings.json
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","push","C:\\Users\\SAHIL~1.DHE\\AppData\\Local\\Temp\\Katalon\\Appium\\Temp1520857929667\\com.sus.scm_mobile\\strings.json","/data/local/tmp"]
-[debug] [AndroidBootstrap] Watching for bootstrap disconnect
-[debug] [ADB] Forwarding system: 4724 to device: 4724
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","forward","tcp:4724","tcp:4724"]
-[debug] [UiAutomator] Starting UiAutomator
-[debug] [UiAutomator] Moving to state 'starting'
-[debug] [UiAutomator] Parsing uiautomator jar
-[debug] [UiAutomator] Found jar name: 'AppiumBootstrap.jar'
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","push","C:\\Users\\sahil.dheer\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-bootstrap\\bootstrap\\bin\\AppiumBootstrap.jar","/data/local/tmp/"]
-[debug] [ADB] Attempting to kill all uiautomator processes
-[debug] [ADB] Getting all processes with uiautomator
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","ps"]
 [ADB] No uiautomator process found to kill, continuing...
-[debug] [UiAutomator] Starting UIAutomator
-[debug] [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","uiautomator","runtest","AppiumBootstrap.jar","-c","io.appium.android.bootstrap.Bootstrap","-e","pkg","com.sus.scm_mobile","-e","disableAndroidWatchers",false,"-e","acceptSslCerts",false]
-[debug] [UiAutomator] Moving to state 'online'
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Loading json...
 [AndroidBootstrap] Android bootstrap socket is now connected
-[debug] [ADB] Getting connected devices...
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] json loading complete.
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Registered crash watchers.
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Client connected
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","dumpsys","window"]
 [AndroidDriver] Screen already unlocked, doing nothing
-[debug] [ADB] Device API level: 21
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","am","start","-W","-n","com.sus.scm_mobile/com.sus.scm_mobile.Login.controller.Splash_Screen","-S","-a","android.intent.action.MAIN","-c","android.intent.category.LAUNCHER","-f","0x10200000"]
-[debug] [ADB] Waiting for activity matching pkg: 'com.sus.scm_mobile' and activity: 'com.*' to be focused
-[debug] [ADB] Possible activities, to be checked: com.*, com.sus.scm_mobile.com.*
-[debug] [ADB] Getting focused package and activity
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","dumpsys","window","windows"]
-[debug] [ADB] Found package: 'com.sus.scm_mobile' and fully qualified activity name : 'com.sus.scm_mobile.Login.controller.Splash_Screen'
-[Appium] New AndroidDriver session created successfully, session 04d4fb1e-9633-466a-b8ed-85c50259a475 added to master session list
-[debug] [BaseDriver] Event 'newSessionStarted' logged at 1520857954835 (18:02:34 GMT+0530 (India Standard Time))
-[debug] [MJSONWP] Responding to client with driver.createSession() result: {"platform":"ANDROID","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 5.0.1","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"4d00c4b5b0a160b9","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platformName":"Android","udid":"4d00c4b5b0a160b9","deviceUDID":"4d00c4b5b0a160b9","platformVersion":"5.0.1","deviceScreenSize":"1080x1920","deviceModel":"GT-I9500","deviceManufacturer":"samsung","appPackage":"com.sus.scm_mobile","appWaitPackage":"com.sus.scm_mobile","appActivity":"com.sus.scm_mobile.Login.controller.Splash_Screen"}
-[HTTP] <-- POST /wd/hub/session 200 19168 ms - 1049 
+[Appium] New AndroidDriver session created successfully, session 1fb1efb6-1977-42c3-ae3b-3641dc401b49 added to master session list
+[HTTP] <-- POST /wd/hub/session 200 24539 ms - 1059 
 [HTTP] --> GET /wd/hub/status {}
-[debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
-[debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.5","revision":null}}
-[HTTP] <-- GET /wd/hub/status 200 125 ms - 83 
-[HTTP] --> POST /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/timeouts {"type":"implicit","ms":60000}
-[debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",60000,"04d4fb1e-9633-466a-b8ed-85c50259a475"]
-[debug] [BaseDriver] Set implicit wait to 60000ms
-[debug] [MJSONWP] Responding to client with driver.timeouts() result: null
-[HTTP] <-- POST /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/timeouts 200 7 ms - 76 
-[HTTP] --> GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/source {}
-[debug] [MJSONWP] Calling AppiumDriver.getPageSource() with args: ["04d4fb1e-9633-466a-b8ed-85c50259a475"]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"source","params":{}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: source
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,823][684,1097]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,823][684,1097]\" resource-id=\"\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,823][684,1097]\" resource-id=\"android:id\/content\" instance=\"2\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" co
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] ntent-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,823][684,1097]\" resource-id=\"com.sus.scm_mobile:id\/llMainLayout\" instance=\"0\"><android.widget.ProgressBar index=\"0\" text=\"\" class=\"android.widget.ProgressBar\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[492,871][588,967]\" resource-id=\"\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"Loading...\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[444,991][636,1049]\" resource-id=\"com.sus.scm_mobile:id\/id_tv_loadingmsg\" instance=\"0\"\/><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/hierarchy>"}[/APPIUM-UIAUTO]
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [MJSONWP] Responding to client with driver.getPageSource() result: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,823][684,1097]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[396,823][684,1097]\" resource-id=\"\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" chec...
-[HTTP] <-- GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/source 200 3310 ms - 2744 
-[HTTP] --> GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/screenshot {}
-[debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["04d4fb1e-9633-466a-b8ed-85c50259a475"]
-[debug] [ADB] Device API level: 21
-[AndroidDriver] Cannot get screenshot data with 'adb exec-out' because of 'Command output is not a valid PNG file (fd504e47 !== 89504e47)'. Defaulting to 'adb shell' call
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","/system/bin/rm","/data/local/tmp/screenshot.png;","/system/bin/screencap","-p","/data/local/tmp/screenshot.png"]
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","pull","/data/local/tmp/screenshot.png","C:\\Users\\SAHIL~1.DHE\\AppData\\Local\\Temp\\appium118212-8452-clsbkt.198girizfr.png"]
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","dumpsys","input"]
-[debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAACAAElEQVR4AezB+Xeld33g+ffn+yx3v1dXa0mlKpVqX71g4zJ2bLxgg8EhZjFJuiENndPZmHSmp09+mT+gz/w0nfT0TCeTE3LoTIAQIAnBODY2hoAxGJf3WlyrVKuk0nav7n6f5/kMckWuq9pLrjKS6vt6yYNf3adYlmVZlmVZlmVZlmUtYQbLsizLsizLsizLsqwlzmBZlmVZlmVZlmVZlrXEGSzLsizLsizLsizLspY4g2VZlmVZlmVZlmVZ1hJnsCzLsizLsizLsizLWuIMlmVZlmVZlmVZlmVZS5zBsizLsizLsizLsixriTNYlmVZlmVZlmVZlmUtcQbLsizLsizLsizLsqwlzmBZlmVZlmVZlmVZlrXEuViWZVmWZVnzdCVdBnIx2uMu7XGHrqTHrJRnaIs7zJquhZSbEbNOV5pM1kKmagHDhQZjlSaWZVmWZb23XCzLsizLsm5wKc+wvSvB+nycwVyMjG+YJSK0Es7qSLi0J3jbqqzPLFVlVqkRMVys89Zkjd3jVUqNCMuyLMuyri+XRey/fLAfIyx5//sPjxMplmVZlmUtIo4IN3UnuLk7yeb2OCIgIghXTphPRJiVjTls70qyrTPBYxvyHJiq8cpohTdOVwkixbKsy8vFHB5d14YIl/XEoQJTtQDLsm5sLouYEXBEsCzLsizLulbiruH2FSnuXZUmF3MQEYRrTwARwQhs7kiwqT3OR9dF/Pj4DC+eLFMNIqyr9/Bgju8NFVDFWuYSrmFHdwIjwuU8O1xEAMWyrBuZi2VZV8QRwTHQjBRV5hHAd4QggkgVxbIsy1psHBE+sDLNh9ZkSLgGI8J7RQARoS3m8NG1Oe5fneX7w0V+cqJEECnWlXl4MMeDAxmeGSqgWDcCAQTLsqwr42JZ1kUZgd60z0DWpz/j05V0eeJQgeFCHeWs7pTH45vzjFcCTpaaDBXqnCw1CSLFsixruYq7hl/b...
-[HTTP] <-- GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/screenshot 200 9766 ms - 2528174 
-[HTTP] --> GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/source {}
-[debug] [MJSONWP] Calling AppiumDriver.getPageSource() with args: ["04d4fb1e-9633-466a-b8ed-85c50259a475"]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"action","action":"source","params":{}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type ACTION
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command action: source
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"com.sus.scm_mobile:id\/action_bar_root\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"android:id\/content\" instance=\"2\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"0\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"com.sus.scm_mobile:id\/li_mainlayout\" instance=\"1\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"2\"><android.widget.GridView index=\"0\" text=\"\" class=\"android.widget.GridView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" 
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] bounds=\"[9,1716][1071,1920]\" resource-id=\"com.sus.scm_mobile:id\/gridView_prelogin\" instance=\"0\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[9,1716][270,1911]\" resource-id=\"\" instance=\"3\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[9,1716][270,1911]\" resource-id=\"com.sus.scm_mobile:id\/ll_griditemcontainer_home\" instance=\"2\"><android.widget.TextView index=\"0\" text=\"\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[76,1722][202,1849]\" resource-id=\"com.sus.scm_mobile:id\/iv_module_image\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"Pay Bill\" class=\"android.widget.T
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] extView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[15,1849][264,1905]\" resource-id=\"com.sus.scm_mobile:id\/tv_module_name\" instance=\"1\"\/><\/android.widget.LinearLayout><\/android.widget.RelativeLayout><android.widget.RelativeLayout index=\"1\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[276,1716][537,1911]\" resource-id=\"\" instance=\"4\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[276,1716][537,1911]\" resource-id=\"com.sus.scm_mobile:id\/ll_griditemcontainer_home\" instance=\"3\"><android.widget.TextView index=\"0\" text=\"\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[343,1722][469,1849]\" resource-id=\"com.sus.scm_mobile:id\/iv_module_image\" instance=\"2\"\/><android.widget.TextView index=\"1\" text=\"Outages\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[282,1849][531,1905]\" resource-id=\"com.sus.scm_mobile:id\/tv_module_name\" instance=\"3\"\/><\/android.widget.LinearLayout><android.widget.TextView index=\"1\" text=\"1\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[447,1716][537,1806]\" resource-id=\"com.sus.scm_mobile:id\/txtOutageCount\" instance=\"4\"\/><\/android.widget.RelativeLayout
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] ><android.widget.RelativeLayout index=\"2\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[543,1716][804,1911]\" resource-id=\"\" instance=\"5\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[543,1716][804,1911]\" resource-id=\"com.sus.scm_mobile:id\/ll_griditemcontainer_home\" instance=\"4\"><android.widget.TextView index=\"0\" text=\"\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[610,1722][736,1849]\" resource-id=\"com.sus.scm_mobile:id\/iv_module_image\" instance=\"5\"\/><android.widget.TextView index=\"1\" text=\"Efficiency\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] " clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[549,1849][798,1905]\" resource-id=\"com.sus.scm_mobile:id\/tv_module_name\" instance=\"6\"\/><\/android.widget.LinearLayout><\/android.widget.RelativeLayout><android.widget.RelativeLayout index=\"3\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[810,1716][1071,1911]\" resource-id=\"\" instance=\"6\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[810,1716][1071,1911]\" resource-id=\"com.sus.scm_mobile:id\/ll_griditemcontainer_home\" instance=\"5\"><android.widget.TextView index=\"0\" text=\"\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[877,1722][1003,1849]\" resource-id=\"com.sus.scm_mobile:id\/iv_module_image\" instance=\"7\"\/><android.widget.TextView index=\"1\" text=\"Contact Us\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[816,1849][1065,1905]\" resource-id=\"com.sus.scm_mobile:id\/tv_module_name\" instance=\"8\"\/><\/android.widget.LinearLayout><\/android.widget.RelativeLayout><\/android.widget.GridView><\/android.widget.RelativeLayout><android.widget.TextView index=\"1\" text=\"\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[978,93][1074,190]\" resource-id=\"com.sus.scm_mobile:id\/btn_popup_menu\" instance=\"9\"\/><android.widget.ScrollView 
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] index=\"2\" text=\"\" class=\"android.widget.ScrollView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,384][1080,1611]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,384][1044,1611]\" resource-id=\"\" instance=\"6\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,384][996,600]\" resource-id=\"\" instance=\"7\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,384][996,600]\" resource-id=\"com.sus.scm_mobile:id\/suslogo\" instance=\"0\"\/><\/android.widget.RelativeLayout><android.widget.RelativeLayout index=\"1\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,705][1044,1350]\" resource-id=\"com.sus.scm_mobile:id\/rel_logindetails\" instance=\"8\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,705][1044,1350]\" resource-id=\"com.sus.scm_mobile:id\/rel_log\" instance=\"9\"><android.widget.EditText index=\"0\" text=\"Username\" class=\"android.widget.EditText\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"true\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[36,705][1044,853]\" resource-id=\"com.sus.scm_mobile:id\/et_userid\" instance=\"0\"\/><a
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] ndroid.widget.EditText NAF=\"true\" index=\"1\" text=\"\" class=\"android.widget.EditText\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"true\" selected=\"false\" bounds=\"[36,889][1044,1044]\" resource-id=\"com.sus.scm_mobile:id\/et_userpassword\" instance=\"1\"\/><android.widget.LinearLayout index=\"2\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,1074][1044,1170]\" resource-id=\"com.sus.scm_mobile:id\/layRemberPass\" instance=\"7\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" pas
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] sword=\"false\" selected=\"false\" bounds=\"[36,1074][1044,1170]\" resource-id=\"com.sus.scm_mobile:id\/rel_loginstate\" instance=\"10\"><android.widget.CheckBox NAF=\"true\" index=\"0\" text=\"\" class=\"android.widget.CheckBox\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"true\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[675,1074][771,1170]\" resource-id=\"com.sus.scm_mobile:id\/cb_rememberme\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"Remember Me\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[771,1096][1029,1147]\" resource-id=\"com.sus.scm_mobile:id\/tv_rememberme\" instance=\"10\"\/><\/android.widget.RelativeLayout><\/android.widget.LinearLayout><android.widget.RelativeLayout index=\"3\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,1200][1044,1350]\" resource-id=\"com.sus.scm_mobile:id\/rel_login\" instance=\"11\"><android.widget.TextView index=\"0\" text=\"Sign In\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[454,1238][626,1311]\" resource-id=\"\" instance=\"11\"\/><\/android.widget.RelativeLayout><\/android.widget.RelativeLayout><\/android.widget.RelativeLayout><android.widget.RelativeLayout index=\"2\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,1380][1044,1431]\" resource-id=\"\" instance=\"12\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[186,1404][454,1407]\" resource-id=\"com.sus.scm_mobile:id\/line_one\" instance=\"1\"\/><android.widget.TextView index=\"1\" text=\"OR\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[514,1380][566,1431]\" resource-id=\"com.sus.scm_mobile:id\/tv_or\" instance=\"12\"\/><android.view.View index=\"2\" text=\"\" class=\"android.view.View\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[626,1404][894,1407]\" resource-id=\"com.sus.scm_mobile:id\/line_two\" instance=\"2\"\/><\/android.widget.RelativeLayout><android.widget.LinearLayout index=\"3\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,1431][1044,1611]\" resource-id=\"\" instance=\"
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] 8\"><android.widget.TextView index=\"0\" text=\"Register Now\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[36,1461][510,1611]\" resource-id=\"com.sus.scm_mobile:id\/tv_registeraccount\" instance=\"13\"\/><android.widget.LinearLayout index=\"1\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[570,1461][1044,1611]\" resource-id=\"com.sus.scm_mobile:id\/ll_facebookLogin\" instance=\"9\"><android.widget.TextView index=\"0\" text=\"\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[570,1487][688,1584]\" resource-id=\"\" instance=\"14\"\/><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[688,1461][689,1611]\" resource-id=\"\" instance=\"3\"\/><android.widget.TextView index=\"2\" text=\"Facebook\" class=\"android.widget.TextView\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[689,1499][1044,1572]\" resource-id=\"\" instance=\"15\"\/><\/android.widget.LinearLayout><\/android.widget.LinearLayout><\/android.widget.LinearLayout><\/android.widget.ScrollView><\/android.widget.RelativeLayout><\/android.view.View><\/android.widget.RelativeLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,75]\" resource-id=\"android:id\/statusBarBackground\" instance=\"4\"\/><\/android.widget.FrameLayout><\/hierarchy>"}[/APPIUM-UIAUTO]
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [AndroidBootstrap] Stream still not complete, waiting
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [MJSONWP] Responding to client with driver.getPageSource() result: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.sus.scm_mobile\" content-desc=\"\" checkable=\"false\" checked=...
-[HTTP] <-- GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/source 200 173 ms - 23251 
-[HTTP] --> GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/screenshot {}
-[debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["04d4fb1e-9633-466a-b8ed-85c50259a475"]
-[debug] [ADB] Device API level: 21
-[AndroidDriver] Cannot get screenshot data with 'adb exec-out' because of 'Command output is not a valid PNG file (fd504e47 !== 89504e47)'. Defaulting to 'adb shell' call
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","/system/bin/rm","/data/local/tmp/screenshot.png;","/system/bin/screencap","-p","/data/local/tmp/screenshot.png"]
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","pull","/data/local/tmp/screenshot.png","C:\\Users\\SAHIL~1.DHE\\AppData\\Local\\Temp\\appium118212-8452-bky0w0.thd3fbhuxr.png"]
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","dumpsys","input"]
-[debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAACAAElEQVR4AezB+Zedd33g+ffn+yx3v7f2Ui2qUknWLnnBxjZ2DF6wwUCIWQxJGtLQOZ2NTmd6cvLL/AF95oc500lPZ5JMTsjQmQBNA0kIxrGxMZsxGMu7JFtrldaqUm331t3v8zyfoayUdUtrqSyJqtL39ZIHvvKGYlmWZVmWZVmWZVmWtYIZLMuyLMuyLMuyLMuyVjiDZVmWZVmWZVmWZVnWCmewLMuyLMuyLMuyLMta4QyWZVmWZVmWZVmWZVkrnMGyLMuyLMuyLMuyLGuFM1iWZVmWZVmWZVmWZa1wBsuyLMuyLMuyLMuyrBXOYFmWZVmWZVmWZVmWtcIZLMuyLMuyLMuyLMuyVjiDZVmWZVmWZVmWZVnWCudiWZZlWZZlLdCZdBnMxWiLu7TFHTqTHnNSnqEl7jBnphpSakTMOVVuMFUNma4GjOTrjJcbWJZlWZZ1bblYlmVZlmVd51KeYUdnghta4wzlYmR8wxwRoZlwRnvCpS3BW9ZmfeaoKnOK9YiRQo03p6rsnqhQrEdYlmVZlnV1uSxj//l9/RhhxfvffnCMSLEsy7IsaxlxRLixK8FNXUm2tMURARFBWDxhIRFhTjbmsKMzyfaOBI9sbGX/dJWXxsq8dqpCECmWZV1aLubwkQ0tiHBJjx3MM10NsCzr+uayjBkBRwTLsizLsqwrJe4abluT4r1r0+RiDiKCcOUJICIYgS3tCTa3xfnQhogfH5vl+RMlKkGEdfkeGsrx3eE8qlirXMI17OxKYES4lKdHCgigWJZ1PXOxLGtRHBEcA41IUWUBAXxHCCKIVFEsy7Ks5cYR4T19ad6/LkPCNRgRrhUBRISWmMOH1ue4byDL90YK/OR4kSBSrMV5aCjHA4MZnhrOo1jXAwEEy7KsxXGxLOuCjEBP2mcw69Of8elMujx2MM9IvoZyRlfK49EtrUyUA04UGwzna5woNggixbIsa7WKu4Zf...
-[HTTP] <-- GET /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475/screenshot 200 9545 ms - 2529058 
-[HTTP] --> DELETE /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475 {}
-[debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["04d4fb1e-9633-466a-b8ed-85c50259a475"]
-[debug] [BaseDriver] Event 'quitSessionRequested' logged at 1520858121032 (18:05:21 GMT+0530 (India Standard Time))
-[debug] [AndroidDriver] Shutting down Android driver
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","am","force-stop","com.sus.scm_mobile"]
-[debug] [ADB] Pressing the HOME button
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","input","keyevent",3]
-[debug] [AndroidBootstrap] Sending command to android: {"cmd":"shutdown"}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got data from client: {"cmd":"shutdown"}
-[debug] [AndroidBootstrap] Received command result from bootstrap
-[debug] [UiAutomator] Shutting down UiAutomator
-[debug] [UiAutomator] Moving to state 'stopping'
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Got command of type SHUTDOWN
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
-[AndroidBootstrap] [BOOTSTRAP LOG] [debug] Closed client connection
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: numtests=1
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: stream=.
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS: current=1
-[debug] [AndroidBootstrap] [UIAUTO STDOUT] INSTRUMENTATION_STATUS_CODE: 0
-[debug] [UiAutomator] UiAutomator shut down normally
-[debug] [UiAutomator] Moving to state 'stopped'
-[debug] [ADB] Attempting to kill all uiautomator processes
-[debug] [ADB] Getting all processes with uiautomator
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","ps"]
+[HTTP] <-- GET /wd/hub/status 200 67 ms - 83 
+[HTTP] --> POST /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/timeouts {"type":"implicit","ms":60000}
+[HTTP] <-- POST /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/timeouts 200 8 ms - 76 
+[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source {}
+[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source 200 169 ms - 2777 
+[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot 200 1899 ms - 104354 
+[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source {}
+[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source 200 153 ms - 26923 
+[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot 200 2058 ms - 239126 
+[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source {}
+[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source 200 203 ms - 26923 
+[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot 200 2320 ms - 239266 
+[HTTP] --> DELETE /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49 {}
+[Appium] Removing session 1fb1efb6-1977-42c3-ae3b-3641dc401b49 from our master session list
 [ADB] No uiautomator process found to kill, continuing...
-[debug] [UiAutomator] Moving to state 'stopped'
-[debug] [Logcat] Stopping logcat capture
-[debug] [ADB] Getting connected devices...
-[debug] [ADB] 1 device(s) connected
-[debug] [ADB] Running 'C:\Users\sahil.dheer\.katalon\tools\android_sdk\platform-tools\adb.exe' with args: ["-P",5037,"-s","4d00c4b5b0a160b9","shell","am","force-stop","io.appium.unlock"]
-[debug] [AndroidDriver] Not cleaning generated files. Add `clearSystemFiles` capability if wanted.
-[Appium] Removing session 04d4fb1e-9633-466a-b8ed-85c50259a475 from our master session list
-[debug] [BaseDriver] Event 'quitSessionFinished' logged at 1520858123848 (18:05:23 GMT+0530 (India Standard Time))
-[debug] [MJSONWP] Received response: null
-[debug] [MJSONWP] But deleting session, so not returning
-[debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
-[HTTP] <-- DELETE /wd/hub/session/04d4fb1e-9633-466a-b8ed-85c50259a475 200 2820 ms - 76 
+[HTTP] <-- DELETE /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49 200 2674 ms - 76 
