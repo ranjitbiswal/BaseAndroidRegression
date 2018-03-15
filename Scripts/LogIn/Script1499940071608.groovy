@@ -23,10 +23,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 'Method to check the Objects'
-
+//Prepared By Sahil
 @com.kms.katalon.core.annotation.SetUp
-
-public static def verifyValidLogin() {
+static def verifyValidLogin() {
     'Check Application is Already Installed on Device or Not'
     Mobile.startApplication(GlobalVariable.sApplicationPath, false)
 
@@ -54,3 +53,4 @@ public static def verifyValidLogin() {
     'Clicking on SignIn Button'
     Mobile.tap(findTestObject('SCM Mobile/LogIn/SignIn Button'), 30)
 }
+

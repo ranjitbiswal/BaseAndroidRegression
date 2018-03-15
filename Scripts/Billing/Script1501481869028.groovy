@@ -30,7 +30,7 @@ import io.appium.java_client.TouchAction as TouchAction
 applicationMethods.ReusableMethods.verifyValidLogin()
 
 'Delay of 15 Sec'
-Mobile.delay(15)
+Mobile.delay(20)
 
 @com.kms.katalon.core.annotation.TearDown
 static void verifyBillingTestCases() {

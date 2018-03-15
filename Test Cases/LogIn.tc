@@ -3,6 +3,6 @@
    <description>LogIn</description>
    <name>LogIn</name>
    <tag></tag>
-   <comment></comment>
+   <comment>Method to check the Objects</comment>
    <testCaseGuid>a0d6603e-4254-401c-af22-1b25a91ccdf4</testCaseGuid>
 </TestCaseEntity>
