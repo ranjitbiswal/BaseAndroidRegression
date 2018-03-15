@@ -151,6 +151,7 @@ public class ReusableMethods {
 		}
 	}
 
+	//This utility method validates the attribute of a variable
 	public static void verifyAttribute(String locator, String attName, String expAttValue) {
 
 		String actAttValue = Mobile.getAttribute(findTestObject(locator),attName, 5, FailureHandling.CONTINUE_ON_FAILURE)
