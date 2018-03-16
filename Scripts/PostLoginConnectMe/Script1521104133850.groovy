@@ -77,5 +77,7 @@ static void verifyConnectMeTestCases() {
     } else {
         println('The webelement Connect me is missing')
     }
+	
+	//Added  by Bharti
 }
 
