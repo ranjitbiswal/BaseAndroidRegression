@@ -67,17 +67,23 @@ static void verifyConnectMeTestCases() {
 				'Connect Me- Comments')
 			
 			
-			'TC --> TC_COM_03 -->To verify the correct Customer Name/Business Name(in case of commercial) is displayed for Customer Name/Business Name(in case of commercial) field which is same as User name.'
+			'TC --> TC_COM_03 -->To verify the correct Customer Name is displayed in the CN field which is same as User name.'
 			
 			applicationMethods.ReusableMethods.verifyAttribute('SCM Mobile/Connect Me/Customer Name', "text", "John  Doe")
 			
-        } else {
+        } 
+		else 
+		{
             System.out.println('On Click on Connect Me from the My Account Tab, user might route to the Connect Me Module or something issue with the Module Name. Expected Module Name is : Marketing Preferences. Please check manually. ')
         }
-    } else {
+    } 
+	//End of Module Connect Me
+	else
+ 		{
         println('The webelement Connect me is missing')
-    }
+		 }
 	
 	//Added  by Bharti
+		 //Added byy Ranjit
 }
 
