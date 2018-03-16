@@ -257,11 +257,8 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
                 }
                 
                 Mobile.pressBack()
-
                 Mobile.delay(3)
-
                 Mobile.pressBack()
-
                 Mobile.delay(3)
             }
             
@@ -274,7 +271,6 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
             } else {
                 'Clicking On Notifications Tab'
                 Mobile.tap(findTestObject('SCM Mobile/LandingPage/Notifications Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE)
-
                 Mobile.delay(3)
 
                 'Clicking On Notifications Hamburger Menu'
@@ -289,7 +285,6 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
                 }
                 
                 Mobile.pressBack()
-
                 Mobile.delay(3)
             }
         } else {
@@ -337,7 +332,6 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
 
             'Clicking on PressBack'
             Mobile.pressBack()
-
             Mobile.delay(2)
 
             'Verifying Billing Module is Displayed or not'
@@ -372,11 +366,8 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
                 }
                 
                 Mobile.pressBack()
-
                 Mobile.delay(3)
-
                 Mobile.pressBack()
-
                 Mobile.delay(3)
             }
             
@@ -402,11 +393,8 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
                 }
                 
                 Mobile.pressBack()
-
                 Mobile.delay(3)
-
                 Mobile.pressBack()
-
                 Mobile.delay(3)
             }
         } else {
