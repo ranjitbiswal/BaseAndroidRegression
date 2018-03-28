@@ -282,4 +282,29 @@
       <initValue>'Bank Account number Already Exist'</initValue>
       <name>sBankAccountDuplicateCardMessageText</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'By deleting these details, you will be un-enrolled from Auto Pay. Continue?'</initValue>
+      <name>sLblTxtDeleteAutoPay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'You have been successfully unenrolled from Auto Pay.'</initValue>
+      <name>sLblTxtYouAreUnEnrolledAutoPay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Your Auto Pay details have been saved successfully.'</initValue>
+      <name>sEnrollAutoPayText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'You are enrolled in Auto Pay.'</initValue>
+      <name>sLblTxtYouAreEnrolledAutoPay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Unenroll'</initValue>
+      <name>sLblTxtButtonUnenrollAutoPay</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
