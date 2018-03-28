@@ -871,7 +871,7 @@ static void verifyAutoPayTestCases() {
 			}
 		} else {
 			System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
-					GlobalVariable.sEnrollAutoPayText) + 'but Actual Text is ') + messageText)
+					GlobalVariable.sLblTxtDeleteAutoPay) + 'but Actual Text is ') + messageText)
 		}
 	}
 
@@ -943,12 +943,25 @@ static void verifyAutoPayTestCases() {
 
 		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
-		'TC_BLG_66_TC_BLG_68 To verify that Button text Changes to Already Enrolled when user is successfully enrolled for Auto Pay.'
+		'TC_BLG_66_TC_BLG_68_TC_BLG_69 To verify that Button text Changes to Already Enrolled when user is successfully enrolled for Auto Pay.'
 		
 		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay')
 
 		applicationMethods.ReusableMethods.verifyAttribute('SCM Mobile/Billing/Auto Pay/lblTxtYouAreEnrolledAutoPay', 'text',
 				GlobalVariable.sLblTxtYouAreEnrolledAutoPay)
+		
+		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+		
+					if (messageText.equals(GlobalVariable.sLblTxtButtonUnenrollAutoPay)) {
+						System.out.println(GlobalVariable.sLblTxtButtonUnenrollAutoPay)
+		
+					
+					} else {
+						System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
+								GlobalVariable.sLblTxtButtonUnenrollAutoPay) + 'but Actual Text is ') + messageText)
+					}
+		
+		
 	} else {
 		println('The credit card radio button is unavaialble')
 	}

@@ -1,70 +1,66 @@
-[Appium] Welcome to Appium v1.7.1
+[Appium] Welcome to Appium v1.7.2
 [Appium] Non-default server args:
-[Appium]   port: 63274
+[Appium]   port: 37446
 [Appium]   loglevel: info
-[Appium]   chromeDriverPort: 63275
-[Appium]   tmpDir: C:\Users\RANJIT~1.BIS\AppData\Local\Temp\\Katalon\Appium\Temp1521109296615
-[Appium] Appium REST http interface listener started on 0.0.0.0:63274
+[Appium]   chromeDriverPort: 37449
+[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1522212488580
+[Appium] Appium REST http interface listener started on 0.0.0.0:37446
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 77 ms - 83 
+[HTTP] <-- GET /wd/hub/status 200 11 ms - 72 
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 74 ms - 83 
+[HTTP] <-- GET /wd/hub/status 200 4 ms - 72 
 [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"capabilities":{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}}
-[Appium] Creating new AndroidDriver (v1.28.1) session
+[Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"E:\\SCM.apk","ap... into desiredCapabilities object {"app":"E:\\SCM.apk","appWaitActivity":"com.*",...
+[Appium] Creating new AndroidDriver (v1.37.0) session
 [Appium] Capabilities:
-[Appium]   app: 'E:\\SCM.apk'
-[Appium]   appWaitActivity: 'com.*'
+[Appium]   app: E:\SCM.apk
+[Appium]   appWaitActivity: com.*
 [Appium]   autoGrantPermissions: true
-[Appium]   deviceId: ''
-[Appium]   deviceName: 'samsung GT-I9500 (Android 5.0.1)'
+[Appium]   deviceId: 
+[Appium]   deviceName: samsung GT-I9500 (Android 5.0.1)
 [Appium]   fullReset: false
 [Appium]   newCommandTimeout: 1800
 [Appium]   noReset: true
-[Appium]   platform: 'ANDROID'
-[Appium]   platformName: 'Android'
-[Appium]   udid: '4d00c4b5b0a160b9'
+[Appium]   platform: ANDROID
+[Appium]   platformName: android
+[Appium]   udid: 4d00c4b5b0a160b9
 [BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
-[BaseDriver] Session created with session id: 1fb1efb6-1977-42c3-ae3b-3641dc401b49
+[BaseDriver] Session created with session id: 449918ff-d4a7-4708-ad95-9ac07c605018
 [AndroidDriver] Java version is: 1.8.0_102
 [ADB] Checking whether adb is present
-[ADB] Using adb.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\platform-tools\adb.exe
+[ADB] Using adb.exe from C:\Users\bharti.garg\.katalon\tools\android_sdk\platform-tools\adb.exe
 [AndroidDriver] Retrieving device list
 [AndroidDriver] Using device: 4d00c4b5b0a160b9
 [ADB] Checking whether adb is present
-[ADB] Using adb.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\platform-tools\adb.exe
 [BaseDriver] Using local app 'E:\SCM.apk'
 [AndroidDriver] Starting Android session
-[ADB] io.appium.settings was successfully uninstalled
+[AndroidDriver] setDeviceLanguageCountry requires language or country.
+[AndroidDriver] Got language: 'null' and country: 'null'
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from C:\Users\bharti.garg\.katalon\tools\android_sdk\build-tools\28.0.0\aapt.exe
+[ADB] Checking whether aapt is present
 [ADB] Getting device platform version
 [ADB] Checking whether aapt is present
-[ADB] Using aapt.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\build-tools\28.0.0\aapt.exe
 [ADB] Extracting package and launch activity from manifest
 [AndroidDriver] Remote apk path is /data/local/tmp/9ac06dd1101d05fe6946311bfac21cb9.apk
 [ADB] Checking whether aapt is present
-[ADB] Using aapt.exe from C:\Users\ranjit.biswal\.katalon\tools\android_sdk\build-tools\28.0.0\aapt.exe
 [ADB] Extracting package and launch activity from manifest
 [ADB] No uiautomator process found to kill, continuing...
 [AndroidBootstrap] Android bootstrap socket is now connected
 [AndroidDriver] Screen already unlocked, doing nothing
-[Appium] New AndroidDriver session created successfully, session 1fb1efb6-1977-42c3-ae3b-3641dc401b49 added to master session list
-[HTTP] <-- POST /wd/hub/session 200 24539 ms - 1059 
+[Appium] New AndroidDriver session created successfully, session 449918ff-d4a7-4708-ad95-9ac07c605018 added to master session list
+[HTTP] <-- POST /wd/hub/session 200 24321 ms - 1059 
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 67 ms - 83 
-[HTTP] --> POST /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/timeouts {"type":"implicit","ms":60000}
-[HTTP] <-- POST /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/timeouts 200 8 ms - 76 
-[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source {}
-[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source 200 169 ms - 2777 
-[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot 200 1899 ms - 104354 
-[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source {}
-[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source 200 153 ms - 26923 
-[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot 200 2058 ms - 239126 
-[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source {}
-[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/source 200 203 ms - 26923 
-[HTTP] --> GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49/screenshot 200 2320 ms - 239266 
-[HTTP] --> DELETE /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49 {}
-[Appium] Removing session 1fb1efb6-1977-42c3-ae3b-3641dc401b49 from our master session list
+[HTTP] <-- GET /wd/hub/status 200 4 ms - 83 
+[HTTP] --> POST /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018/timeouts {"type":"implicit","ms":60000}
+[HTTP] <-- POST /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018/timeouts 200 11 ms - 76 
+[HTTP] --> GET /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018/source {}
+[HTTP] <-- GET /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018/source 200 188 ms - 2777 
+[HTTP] --> GET /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018/screenshot {}
+[HTTP] <-- GET /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018/screenshot 200 1967 ms - 104146 
+[BaseDriver] Shutting down because we waited 1800 seconds for a command
+[Appium] Closing session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[Appium] Removing session 449918ff-d4a7-4708-ad95-9ac07c605018 from our master session list
 [ADB] No uiautomator process found to kill, continuing...
-[HTTP] <-- DELETE /wd/hub/session/1fb1efb6-1977-42c3-ae3b-3641dc401b49 200 2674 ms - 76 
+[HTTP] --> DELETE /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018 {}
+[HTTP] <-- DELETE /wd/hub/session/449918ff-d4a7-4708-ad95-9ac07c605018 404 8 ms - 131 
