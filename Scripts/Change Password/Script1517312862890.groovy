@@ -274,4 +274,5 @@ static void verifyChangePasswordTestCases() {
             System.out.println('On Click on Change Password from the Hamburger Menu, user might route to the Change Password Module or something issue with the Module Name. Expected Module Name is : Change Password. Please check manually. ')
         }
     }
+	'test'
 }
