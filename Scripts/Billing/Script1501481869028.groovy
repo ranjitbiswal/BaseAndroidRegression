@@ -68,6 +68,9 @@ static void verifyBillingTestCases() {
 			'Verify Auto Pay Test Cases'
 			verifyAutoPayTestCases()
 		}
+			'Verify Biling History Test Cases'
+			verifyBillingHistoryTestCases()
+			
 
 		if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/Utility Bill Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
 		false) {
@@ -843,11 +846,184 @@ static void verifyAutoPayTestCases() {
 	'Clicking on Auto Pay Menu from Billing Menu'
 	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
-	'TC --> TC_BLG_64 -->To verify Auto Pay Menu Page Objects'
 	'This test cases is for unenroll'
 	if (applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay')) {
+	//unenrollAlreadyEnrolledAutoPayButton()
+	}
+	'TC --> TC_BLG_64 -->To verify Auto Pay Menu Page Objects'
+	//verifyAutoPayObjects()
+	
+	'TC --> TC_BLG_66_69_70_To verify if user should not be able to enroll for auto pay without choosing Payment method ' 
+	'TC --> TC_BLG_65_To verify if choose auto pay and Enroll for it after fill all the mandatory information.'
+	//enrollExistingCreditCardAutoPay()
 
-		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	'TC --> TC_BLG_81_Verify that System shall not allow user to delete Credit/Debit card or Bank account if it has been assigned for Auto Pay'
+	//verifyUneditEnrolleMethods()
+	
+	'Calling the Press Back Inbuilt funtion'
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+}
+
+static void verifyBillingHistoryTestCases() {
+	
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+
+	String messageText
+	Mobile.tap(findTestObject('SCM Mobile/Billing/History Menu'), 15)
+	
+	'TC : TC_BLG_86'
+	verifyBillingHistoryObjects()
+	
+	
+	'Calling the Press Back Inbuilt funtion'
+	 Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+}
+
+
+'test reusable functions'
+
+static void verifyBillingHistoryObjects() {
+'TC : TC_BLG_86 To verify that the system shall billing history with the following details in two tabs '
+AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+			   false) {
+					System.out.println('Bill Statement Tab is not displayed in the Billing History')
+				} else {
+					System.out.println('Bill Statement Tab is displayed in the Billing History Menu')
+	
+					'Clicking on Bill Statement Tab'
+					Mobile.tap(findTestObject('SCM Mobile/Billing/History/Bill Statement tab'), 15)
+	
+					'Delay of 35 seconds'
+					Mobile.delay(35)
+					ArrayList<MobileElement> lHistoryRow = driver.findElementsByClassName('XCUIElementTypeCell')
+					
+									println('History Row Count :' + lHistoryRow.size())
+					
+								   if (lHistoryRow.size() > 0) {
+										System.out.println('Bill Statement Tab have history rows count : ' + lHistoryRow.size())
+									} else {
+										System.out.println('Bill Statement Tab dont have history')
+									}
+					
+				}
+				if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/History/Payments tab'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+								false) {
+									System.out.println('Payments Tab is not displayed in the Billing History')
+								} else {
+									System.out.println('Payments Tab is displayed in the Billing History Menu')
+					
+									'Clicking on Bill Payments Tab'
+									Mobile.tap(findTestObject('null'), 15)
+					
+									'Delay of 35 seconds'
+									Mobile.delay(35)
+					
+									ArrayList<MobileElement> lHistoryRow = driver.findElementsByClassName('XCUIElementTypeCell')
+							
+									println('History Row Count :' + lHistoryRow.size())
+					
+									if (lHistoryRow.size() > 0) {
+										System.out.println('Payments Tab have history rows count : ' + lHistoryRow.size())
+									} else {
+										System.out.println('Payments Tab dont have history')
+									}
+				  }
+					
+								if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/History/Bill Filter Button'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+								false) {
+									System.out.println('Bill Filter Button is not displayed in the Billing History')
+								} else {
+									System.out.println('Bill Filter Button is displayed in the Billing History Menu')
+							   }
+					
+					
+							   'Delay'
+								Mobile.delay(10)
+}
+static void enrollExistingCreditCardAutoPay() {
+	String messageText
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Credit Card Tab'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	Mobile.scrollToText('Select Credit Card', FailureHandling.CONTINUE_ON_FAILURE)
+
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/AutoPay Calendar Icon'), 5)
+	
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Calendar Select Button1'), 2)
+	
+	Mobile.scrollToText('I Agree To Terms & Conditions', FailureHandling.CONTINUE_ON_FAILURE)
+	
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/I Agree To Terms and Conditions CheckBox'), 2)
+	
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/btnEnroll'), 2)
+	
+	messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+	
+	if (messageText.equals(GlobalVariable.slblTxtSelectPaymentMethodAutoPay)) {
+		System.out.println('Your Auto Pay details have been saved successfully.')
+	} else {
+		System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
+				GlobalVariable.slblTxtSelectPaymentMethodAutoPay) + 'but Actual Text is ') + messageText)
+	}
+
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	Mobile.scrollToText('Select Credit Card', FailureHandling.CONTINUE_ON_FAILURE)
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Select Credit Card Heading'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	if (applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/rdoBtnCreditCardOne')) {
+		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/rdoBtnCreditCardOne'), 2)
+
+		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Credit Card Heading')
+
+		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/btnEnroll'), 2)
+
+		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+
+		if (messageText.equals(GlobalVariable.sEnrollAutoPayText)) {
+			System.out.println('Your Auto Pay details have been saved successfully.')
+		} else {
+			System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
+					GlobalVariable.sEnrollAutoPayText) + 'but Actual Text is ') + messageText)
+		}
+
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+		
+		'TC_BLG_66_TC_BLG_68_TC_BLG_70 To verify that Button text Changes to Already Enrolled when user is successfully enrolled for Auto Pay.'
+		verifyAlreadyEnrolledAutoPayButton()
+	}
+	
+	 else {
+		println('Enrollment is not happened yet')
+	}
+}
+
+
+static void verifyAlreadyEnrolledAutoPayButton() {
+	
+	String messageText
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay')
+
+applicationMethods.ReusableMethods.verifyAttribute('SCM Mobile/Billing/Auto Pay/lblTxtYouAreEnrolledAutoPay', 'text',
+		GlobalVariable.sLblTxtYouAreEnrolledAutoPay)
+
+messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+
+			if (messageText.equals(GlobalVariable.sLblTxtButtonUnenrollAutoPay)) {
+				System.out.println(GlobalVariable.sLblTxtButtonUnenrollAutoPay)
+
+			
+			} else {
+				System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
+						GlobalVariable.sLblTxtButtonUnenrollAutoPay) + 'but Actual Text is ') + messageText)
+			}
+}
+
+static void unenrollAlreadyEnrolledAutoPayButton() {
+	String messageText
+
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
 		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnDeleteAutoPay')
 
@@ -874,102 +1050,123 @@ static void verifyAutoPayTestCases() {
 					GlobalVariable.sLblTxtDeleteAutoPay) + 'but Actual Text is ') + messageText)
 		}
 	}
+static void verifyAutoPayObjects() {
+	String messageText
+'Chcking Auto Pay Page Objects'
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Credit Card Tab', 'Credit Card Tab')
 
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Bank Account Tab', 'Bank Account Tab')
 
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Informational Text 1', 'Informational Text 1')
 
-	'Chcking Auto Pay Page Objects'
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Credit Card Tab', 'Credit Card Tab')
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Credit Card Heading',
+		'Select Credit Card Heading')
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Bank Account Tab', 'Bank Account Tab')
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Make Payment Heading', 'Make Payment Heading')
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Informational Text 1', 'Informational Text 1')
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Auto Pay Calendar Icon', 'Auto Pay Calendar Icon')
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Credit Card Heading',
-			'Select Credit Card Heading')
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Informational Text 2', 'Informational Text 2')
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Make Payment Heading', 'Make Payment Heading')
+Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Bank Account Tab'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Auto Pay Calendar Icon', 'Auto Pay Calendar Icon')
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Bank Account Heading',
+		'Select Bank Account Heading')
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Informational Text 2', 'Informational Text 2')
+'Scroll to View Bill'
+Mobile.scrollToText('I Agree To Terms & Conditions', FailureHandling.CONTINUE_ON_FAILURE)
 
-	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Bank Account Tab'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/I Agree To Terms and Conditions CheckBox',
+		'I Agree To Terms and Conditions CheckBox ')
 
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Bank Account Heading',
-			'Select Bank Account Heading')
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Bank Account Heading',
+		'Select Bank Account Heading')
 
-	'Scroll to View Bill'
-	Mobile.scrollToText('I Agree To Terms & Conditions', FailureHandling.CONTINUE_ON_FAILURE)
-
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/I Agree To Terms and Conditions CheckBox',
-			'I Agree To Terms and Conditions CheckBox ')
-
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Bank Account Heading',
-			'Select Bank Account Heading')
-
-	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Enroll Button', 'Enroll Button')
-
-	
-	'TC --> TC_BLG_65_To verify if choose auto pay and Enroll for it after fill all the mandatory information.'
-	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Credit Card Tab'), 3, FailureHandling.CONTINUE_ON_FAILURE)
-
-	Mobile.scrollToText('Select Credit Card', FailureHandling.CONTINUE_ON_FAILURE)
-
-	Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Select Credit Card Heading'), 3, FailureHandling.CONTINUE_ON_FAILURE)
-
-	if (applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/rdoBtnCreditCardOne')) {
-		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/rdoBtnCreditCardOne'), 2)
-
-		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Select Credit Card Heading')
-
-		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/AutoPay Calendar Icon'), 5)
-
-		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/Calendar Select Button1'), 2)
-
-		Mobile.scrollToText('I Agree To Terms & Conditions', FailureHandling.CONTINUE_ON_FAILURE)
-
-		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/I Agree To Terms and Conditions CheckBox'), 2)
-
-		Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay/btnEnroll'), 2)
-
-		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
-
-		if (messageText.equals(GlobalVariable.sEnrollAutoPayText)) {
-			System.out.println('Your Auto Pay details have been saved successfully.')
-		} else {
-			System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
-					GlobalVariable.sEnrollAutoPayText) + 'but Actual Text is ') + messageText)
-		}
-
-		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
-
-		'TC_BLG_66_TC_BLG_68_TC_BLG_69 To verify that Button text Changes to Already Enrolled when user is successfully enrolled for Auto Pay.'
-		
-		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay')
-
-		applicationMethods.ReusableMethods.verifyAttribute('SCM Mobile/Billing/Auto Pay/lblTxtYouAreEnrolledAutoPay', 'text',
-				GlobalVariable.sLblTxtYouAreEnrolledAutoPay)
-		
-		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
-		
-					if (messageText.equals(GlobalVariable.sLblTxtButtonUnenrollAutoPay)) {
-						System.out.println(GlobalVariable.sLblTxtButtonUnenrollAutoPay)
-		
-					
-					} else {
-						System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
-								GlobalVariable.sLblTxtButtonUnenrollAutoPay) + 'but Actual Text is ') + messageText)
-					}
-		
-		
-	} else {
-		println('The credit card radio button is unavaialble')
-	}
-
-	'Calling the Press Back Inbuilt funtion'
-	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Enroll Button', 'Enroll Button')
 }
 
+static void verifyUneditEnrolleMethods() {
+	String messageText
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+	'TC_BLG_81-Verify that System shall not allow user to delete Credit/Debit card or Bank account if it has been assigned for Auto Pay'
+	if (applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay')) {
+		'Calling the Press Back Inbuilt funtion'
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+		
+		'Calling the Press Back Inbuilt funtion'
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+		if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/My Account Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
+			false) {
+				System.out.println('My Account is not displayed in the Dashboard/Landing Page')
+			} else {
+				System.out.println('My Account is displayed on the Dashboard/Landing Page')
+		
+				'Clicking on My Account Menu from Dashboard/Landing Page'
+				Mobile.tap(findTestObject('SCM Mobile/LandingPage/My Account Menu'), 10)
+				'Clicking on Payment Information from My Account Menu'
+				Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Payment Information Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+			
+				'Delay'
+				Mobile.delay(3)
+			
+				'Check Module Name'
+				messageText = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
+			
+				if (messageText.equals('Payment Information')) {
+					System.out.println('On Click on Payment Information from the My Account Tab, User is routing to the Payment Information Module')
+				} else {
+					System.out.println('On Click on Payment Information from the My Account Tab, user might route to the Payment Information Module or something issue with the Module Name. Expected Module Name is : Payment Information. Please check manually. ')
+				}
+				
+				
+			
+				Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/rdBtnCreditCardPaymentInfo'), 0, 0)
+	
+				'Clicking on Popup Delete button'
+				Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/btnDltCreditCardPaymentInfo'),
+					3, FailureHandling.CONTINUE_ON_FAILURE)
+				
+				Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/btnYesPopUpDltCreditCardPaymentInfo'),
+					3, FailureHandling.CONTINUE_ON_FAILURE)
+				
+				messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+				
+						if (messageText.equals(GlobalVariable.sLblTxtNonDltEnrolledCreditCard)) {
+							System.out.println(GlobalVariable.sLblTxtNonDltEnrolledCreditCard)
+								Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+				
+						
+				
+						} else {
+							System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
+									GlobalVariable.sLblTxtNonDltEnrolledCreditCard) + 'but Actual Text is ') + messageText)
+						}
+	   }
+			'Calling the Press Back Inbuilt funtion'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+			
+			'Calling the Press Back Inbuilt funtion'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+			
+			'Checking Billing Menu is Displayed on Dashboard or Not'
+			if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/Billing Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
+			false) {
+				System.out.println('Billing is not displayed in the Dashboard/Landing Page')
+			} else {
+				System.out.println('Billing is displayed on the Dashboard/Landing Page')
+				
+				'Clicking on Billing Menu from Dashboard/Landing Page'
+				Mobile.tap(findTestObject('SCM Mobile/LandingPage/Billing Menu'), 10)
+				
+				'Clicking on Auto Pay Menu from Billing Menu'
+				Mobile.tap(findTestObject('SCM Mobile/Billing/Auto Pay Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+			
+			}
+			
+	}
+		
+
+}
 //'Checking Billing Menu is Displayed on Dashboard or Not'
 //if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/Billing Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
 //false) {
@@ -1096,14 +1293,14 @@ static void verifyAutoPayTestCases() {
 //            'Delay of 50 seconds'
 //            Mobile.delay(50)
 //
-//            if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/History/Bill Statement Tab'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+//            if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
 //            false) {
 //                System.out.println('Bill Statement Tab is not displayed in the Billing History')
 //            } else {
 //                System.out.println('Bill Statement Tab is displayed in the Billing History Menu')
 //
 //                'Clicking on Bill Statement Tab'
-//                Mobile.tap(findTestObject('SCM Mobile/Billing/History/Bill Statement Tab'), 15)
+//                Mobile.tap(findTestObject('null'), 15)
 //
 //                'Delay of 35 seconds'
 //                Mobile.delay(35)
@@ -1119,14 +1316,14 @@ static void verifyAutoPayTestCases() {
 //                }
 //            }
 //
-//            if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/History/Payments Tab'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+//            if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
 //            false) {
 //                System.out.println('Payments Tab is not displayed in the Billing History')
 //            } else {
 //                System.out.println('Payments Tab is displayed in the Billing History Menu')
 //
 //                'Clicking on Bill Payments Tab'
-//                Mobile.tap(findTestObject('SCM Mobile/Billing/History/Payments Tab'), 15)
+//                Mobile.tap(findTestObject('null'), 15)
 //
 //                'Delay of 35 seconds'
 //                Mobile.delay(35)
@@ -1142,7 +1339,7 @@ static void verifyAutoPayTestCases() {
 //                }
 //            }
 //
-//            if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/History/Bill Filter Button'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+//            if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
 //            false) {
 //                System.out.println('Bill Filter Button is not displayed in the Billing History')
 //            } else {

@@ -307,4 +307,14 @@
       <initValue>'Unenroll'</initValue>
       <name>sLblTxtButtonUnenrollAutoPay</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Please select Payment Method.'</initValue>
+      <name>slblTxtSelectPaymentMethodAutoPay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'You are enrolled for auto payments with card 5454. If you wish to delete this card, please disenroll from Auto-Pay set up and then try again.'</initValue>
+      <name>sLblTxtNonDltEnrolledCreditCard</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

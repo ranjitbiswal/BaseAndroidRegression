@@ -1038,11 +1038,11 @@ static void verifyMyAccountPaymentInformationCreditCardTestCases() {
 
     if (meCreditCardRadio.size > 0) {
         'Clicking on the first card from the list'
-		MobileElement meFirstCreditCardRadio = driver.findElementsById('com.sus.scm_mobile:id/rb_payment')
+		//MobileElement meFirstCreditCardRadio = driver.findElementsById('com.sus.scm_mobile:id/rb_payment')
 		
 		//action.longPress(meFirstCreditCardRadio).perform();
 		
-        Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/android.widget.RadioButton0'), 1, 1, 
+        Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/android.widget.RadioButton0'), 0, 0, 
             FailureHandling.CONTINUE_ON_FAILURE)
 
         'Clicking on Popup Update button'
