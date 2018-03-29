@@ -71,7 +71,9 @@ static void verifyBillingTestCases() {
 			'Verify Biling History Test Cases'
 			verifyBillingHistoryTestCases()
 			
-
+			'Verify Budget My Bill Test Cases'
+			verifyBudgetMyBillTestCases()
+			
 		if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/Utility Bill Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
 		false) {
 			System.out.println('Utility Bill is not displayed in the Billing Menu')
@@ -864,6 +866,7 @@ static void verifyAutoPayTestCases() {
 	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
 }
 
+'Veryfing Billing - History'
 static void verifyBillingHistoryTestCases() {
 	
 	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
@@ -872,20 +875,106 @@ static void verifyBillingHistoryTestCases() {
 	Mobile.tap(findTestObject('SCM Mobile/Billing/History Menu'), 15)
 	
 	'TC : TC_BLG_86'
-	verifyBillingHistoryObjects()
-	
-	
+	//verifyBillingHistoryObjects()
+		
 	'Calling the Press Back Inbuilt funtion'
 	 Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
 }
 
+'Veryfing Billing - Budget My Bill'
+static void verifyBudgetMyBillTestCases() {
+	
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
+	String messageText
+	
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Budget My Bill Menu'), 15)
+	
+	'TC : TC_BLG_95_96 To verify the Budget My bil hyperlink and its amodule '
+
+		'Check Module Name'
+	 messageText = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
+
+	if (messageText.equals('Budget My Bill')) {
+		System.out.println('On Click on Connect me from the My Account Tab, User is on to the Payment History Module')
+		
+	}
+	
+	'TC : TC_BLG_98 Verify that clicking on "Budget My Bill" link, page redirects on  compare his Cost of Units Consume with his Usage, budget and zip average though a graph page'
+            'Delay of 50 seconds'
+            Mobile.delay(50)
+
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Budget My Bill/Graph_BudgetMyBill')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Budget My Bill/MyBudget_BudgetMyBill')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Budget My Bill/MyUsage_BudgetMyBill')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Budget My Bill/ZipAverage_BudgetMyBill')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Budget My Bill/Set Budget Button')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Budget My Bill/Monthly Budget TextBox')
+			
+            'Updating the Budget My Bill'
+			'TC : TC_BLG_104 Verify the user is able to save the monthly budget setting by clicking on Budget Set button'
+            
+			'Clicking on Monthly Budget TextBox'
+            Mobile.tap(findTestObject('SCM Mobile/Billing/Budget My Bill/Monthly Budget TextBox'), 5)
+
+            'Entering the Monthly Budget'
+            Mobile.setText(findTestObject('SCM Mobile/Billing/Budget My Bill/Monthly Budget TextBox'), GlobalVariable.sMonthlyBudget,
+                4)
+
+            'Clicking on the Keyboard Ok Button'
+            Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 15)
+
+            'Clicking on Set Budget Button'
+            Mobile.tap(findTestObject('SCM Mobile/Billing/Budget My Bill/Set Budget Button'), 5)
+
+            'Delay of 15 sec'
+            Mobile.delay(15)
+
+            messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'value',
+                5, FailureHandling.CONTINUE_ON_FAILURE)
+
+            'Checking Budget My Bill Updation Message Text is matching with the Expeced Text or Not'
+            if (messageText.equals(GlobalVariable.sBudgetMyBillMessageText)) {
+                System.out.println('Budget My Bill Updated Successfully')
+            } else {
+                System.out.println((('Budget My Bill Text is not matching with the Expected Text, Expected Text is : ' +
+                    GlobalVariable.sBudgetMyBillMessageText) + ' but Actual Text is ') + messageText)
+            }
+
+            'Clicking on the PopUp Ok Button'
+            Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
+            'Delay of 5 seconds'
+            Mobile.delay(5)
+
+            'Checking Notify Over Budget Switch'
+            if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/Budget My Bill/Notify Over Budget Switch'),
+                10, FailureHandling.CONTINUE_ON_FAILURE) == false) {
+                System.out.println('Notify Over Budget Switch is not displayed in the Budget My Bill')
+            } else {
+                System.out.println('Notify Over Budget Switch is displayed in the Budget My Bill Menu')
+
+                String sSwitchSelection = driver.findElementByClassName('XCUIElementTypeSwitch').getAttribute('value').toString()
+
+                println(sSwitchSelection)
+
+                if (sSwitchSelection.equals('true')) {
+                    System.out.println('Notify Over Budget Switch is enabled')
+                } else {
+                    System.out.println('Notify Over Budget Switch is disabled')
+                }
+            }
+			
+			'Calling the Press Back Inbuilt funtion'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+
+}
 'test reusable functions'
 
 static void verifyBillingHistoryObjects() {
 'TC : TC_BLG_86 To verify that the system shall billing history with the following details in two tabs '
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
-if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
+if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/History/Bill Statement tab'), 10, FailureHandling.CONTINUE_ON_FAILURE) ==
 			   false) {
 					System.out.println('Bill Statement Tab is not displayed in the Billing History')
 				} else {
@@ -896,12 +985,29 @@ if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONT
 	
 					'Delay of 35 seconds'
 					Mobile.delay(35)
-					ArrayList<MobileElement> lHistoryRow = driver.findElementsByClassName('XCUIElementTypeCell')
-					
+					ArrayList<MobileElement> lHistoryRow = driver.findElementsByClassName('android.widget.RelativeLayout')
 									println('History Row Count :' + lHistoryRow.size())
 					
 								   if (lHistoryRow.size() > 0) {
 										System.out.println('Bill Statement Tab have history rows count : ' + lHistoryRow.size())
+										
+										'TC : TC_BLG_92 Verify that clicking on the History (Billing/Payment) link, page redirects to the last payment history section on the same billing page.'
+										'Delay of 35 seconds'
+										Mobile.delay(35)
+										lHistoryRow.get(0).click()
+										
+										'Delay of 35 seconds'
+										Mobile.delay(35)
+										'Check Module Name'
+										String messageText = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
+									
+										if (messageText.equals('Payment History')) {
+											System.out.println('On Click on Connect me from the My Account Tab, User is on to the Payment History Module')
+											
+										}
+										'Calling the Press Back Inbuilt funtion'
+										Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+										
 									} else {
 										System.out.println('Bill Statement Tab dont have history')
 									}
@@ -914,12 +1020,12 @@ if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONT
 									System.out.println('Payments Tab is displayed in the Billing History Menu')
 					
 									'Clicking on Bill Payments Tab'
-									Mobile.tap(findTestObject('null'), 15)
+									Mobile.tap(findTestObject('SCM Mobile/Billing/History/Payments tab'), 15)
 					
 									'Delay of 35 seconds'
 									Mobile.delay(35)
 					
-									ArrayList<MobileElement> lHistoryRow = driver.findElementsByClassName('XCUIElementTypeCell')
+									ArrayList<MobileElement> lHistoryRow = driver.findElementsByClassName('android.widget.RelativeLayout')
 							
 									println('History Row Count :' + lHistoryRow.size())
 					
@@ -936,8 +1042,6 @@ if (Mobile.verifyElementVisible(findTestObject('null'), 10, FailureHandling.CONT
 								} else {
 									System.out.println('Bill Filter Button is displayed in the Billing History Menu')
 							   }
-					
-					
 							   'Delay'
 								Mobile.delay(10)
 }
@@ -1363,10 +1467,10 @@ static void verifyUneditEnrolleMethods() {
 //            'Updating the Budget My Bill'
 //
 //            'Clicking on Monthly Budget TextBox'
-//            Mobile.tap(findTestObject('SCM Mobile/Billing/Budget My Bill/Monthly Budget TextBox'), 5)
+//            Mobile.tap(findTestObject('null'), 5)
 //
 //            'Entering the Monthly Budget'
-//            Mobile.setText(findTestObject('SCM Mobile/Billing/Budget My Bill/Monthly Budget TextBox'), GlobalVariable.sMonthlyBudget,
+//            Mobile.setText(findTestObject('null'), GlobalVariable.sMonthlyBudget,
 //                4)
 //
 //            'Clicking on the Keyboard Ok Button'
