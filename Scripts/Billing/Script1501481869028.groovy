@@ -74,6 +74,9 @@ static void verifyBillingTestCases() {
 			'Verify Budget My Bill Test Cases'
 			verifyBudgetMyBillTestCases()
 			
+			'Verify Leve Pay Test Cases'
+			verifyBillingLevelPay()
+			
 		if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/Utility Bill Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
 		false) {
 			System.out.println('Utility Bill is not displayed in the Billing Menu')
@@ -838,7 +841,7 @@ static void verifySuccessfulPaymentUsingCreditCardTestCase() {
 		}
 	}
 }
-
+'Veryfing Billing - Auto Pay'
 static void verifyAutoPayTestCases() {
 	'TC : TC_BLG_64'
 	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
@@ -850,17 +853,17 @@ static void verifyAutoPayTestCases() {
 
 	'This test cases is for unenroll'
 	if (applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/btnUnenrollAutoPay')) {
-	//unenrollAlreadyEnrolledAutoPayButton()
+	unenrollAlreadyEnrolledAutoPayButton()
 	}
 	'TC --> TC_BLG_64 -->To verify Auto Pay Menu Page Objects'
-	//verifyAutoPayObjects()
+	verifyAutoPayObjects()
 	
 	'TC --> TC_BLG_66_69_70_To verify if user should not be able to enroll for auto pay without choosing Payment method ' 
 	'TC --> TC_BLG_65_To verify if choose auto pay and Enroll for it after fill all the mandatory information.'
-	//enrollExistingCreditCardAutoPay()
+	enrollExistingCreditCardAutoPay()
 
 	'TC --> TC_BLG_81_Verify that System shall not allow user to delete Credit/Debit card or Bank account if it has been assigned for Auto Pay'
-	//verifyUneditEnrolleMethods()
+	verifyUneditEnrolleMethods()
 	
 	'Calling the Press Back Inbuilt funtion'
 	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
@@ -875,7 +878,7 @@ static void verifyBillingHistoryTestCases() {
 	Mobile.tap(findTestObject('SCM Mobile/Billing/History Menu'), 15)
 	
 	'TC : TC_BLG_86'
-	//verifyBillingHistoryObjects()
+	verifyBillingHistoryObjects()
 		
 	'Calling the Press Back Inbuilt funtion'
 	 Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
@@ -969,8 +972,102 @@ static void verifyBudgetMyBillTestCases() {
 			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
 
 }
-'test reusable functions'
 
+'Verify Billing - Level Pay '
+static void verifyBillingLevelPay() {
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+	
+		String messageText
+		
+		Mobile.tap(findTestObject('SCM Mobile/Billing/Level Pay Menu'), 15)
+		
+		'TC : TC_BLG_120 To verify if user click on Level Pay option in Left panel of Billing user should see the following option.'
+	
+			'Check Module Name'
+		 messageText = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
+	
+		if (messageText.equals('Level Pay')) {
+			System.out.println('On Click on Level Pay from the Billing Tab, User is on to the Level Pay Module')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Level Pay/lblTxtLevelPayAmount')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Level Pay/lblTxtServiceAccountNumber')
+			
+			'TC : TC_BLG_193 To verify that if the user enrolls for the Level Pay Plan, system shall display “You have successfully enrolled for Level Pay Plan.”'
+			if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Billing/Level Pay/btnEnroll'), 3)) {
+			'Enrolling into Level Pay'
+			verifyEnrollLevelPay()
+			}
+			
+			else
+		
+			{			'TC : TC_BLG_194 125'
+			            'DisEnrolling from Level Pay'
+			            verifydisEnrollLevelPay()
+			}
+			            'Calling the Press Back Inbuilt funtion'
+			            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+			
+			            'Delay'
+			            Mobile.delay(10)
+		}
+}
+
+'test reusable functions'
+static void verifydisEnrollLevelPay() {
+'Clicking on DisEnroll Button'
+Mobile.tap(findTestObject('SCM Mobile/Billing/Level Pay/btnDisEnroll'), 3)
+String messageText
+'Delay of 6 seconds'
+Mobile.delay(6)
+
+messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'value',
+	5, FailureHandling.CONTINUE_ON_FAILURE)
+
+'Checking Level Pay Enrollment Text is matching with the Expeced Text or Not'
+if (messageText.equals(GlobalVariable.sLevelDisEnrollmentMessageText)) {
+	System.out.println('User Sucessfully DisEnrolled for Level Pay')
+} else {
+	System.out.println((('Level Pay DisEnrollment Text is not matching with the Expected Text, Expected Text is : ' +
+		GlobalVariable.sLevelDisEnrollmentMessageText) + ' but Actual Text is ') + messageText)
+}
+
+'Clicking on the PopUp Ok Button'
+Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
+'Delay of 5 seconds'
+Mobile.delay(5)
+}
+static void verifyEnrollLevelPay() {
+	
+String messageText
+'Selecting the Agree CheckBox'
+Mobile.checkElement(findTestObject('SCM Mobile/Billing/Level Pay/chkBoxIAgreeTo'), 3)
+
+'Delay of 2 seconds'
+Mobile.delay(2)
+
+'Clicking on Enroll Button'
+Mobile.tap(findTestObject('Object Repository/SCM Mobile/Billing/Level Pay/btnEnroll'), 3)
+
+'Delay of 8 seconds'
+Mobile.delay(8)
+
+messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'value',
+	5, FailureHandling.CONTINUE_ON_FAILURE)
+
+'Checking Level Pay Enrollment Text is matching with the Expeced Text or Not'
+if (messageText.equals(GlobalVariable.sLevelEnrollmentMessageText)) {
+	System.out.println('User Sucessfully Enrolled for Level Pay')
+} else {
+	System.out.println((('Level Pay Enrollment Text is not matching with the Expected Text, Expected Text is : ' +
+		GlobalVariable.sLevelEnrollmentMessageText) + ' but Actual Text is ') + messageText)
+}
+
+'Clicking on the PopUp Ok Button'
+Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
+'Delay of 5 seconds'
+Mobile.delay(5)
+}
 static void verifyBillingHistoryObjects() {
 'TC : TC_BLG_86 To verify that the system shall billing history with the following details in two tabs '
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
@@ -1102,8 +1199,6 @@ static void enrollExistingCreditCardAutoPay() {
 		println('Enrollment is not happened yet')
 	}
 }
-
-
 static void verifyAlreadyEnrolledAutoPayButton() {
 	
 	String messageText
@@ -1123,7 +1218,6 @@ messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Billing/Auto Pay/bt
 						GlobalVariable.sLblTxtButtonUnenrollAutoPay) + 'but Actual Text is ') + messageText)
 			}
 }
-
 static void unenrollAlreadyEnrolledAutoPayButton() {
 	String messageText
 
@@ -1188,7 +1282,6 @@ applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/
 
 applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Auto Pay/Enroll Button', 'Enroll Button')
 }
-
 static void verifyUneditEnrolleMethods() {
 	String messageText
 	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
@@ -1664,13 +1757,13 @@ static void verifyUneditEnrolleMethods() {
 //            'Enrolling in the Level Pay'
 //
 //            'Selecting the Agree CheckBox'
-//            Mobile.checkElement(findTestObject('SCM Mobile/Billing/Level Pay/I Agree CheckBox'), 3)
+//            Mobile.checkElement(findTestObject('null'), 3)
 //
 //            'Delay of 2 seconds'
 //            Mobile.delay(2)
 //
 //            'Clicking on Enroll Button'
-//            Mobile.tap(findTestObject('SCM Mobile/Billing/Level Pay/Enroll Button'), 3)
+//            Mobile.tap(findTestObject('null'), 3)
 //
 //            'Delay of 8 seconds'
 //            Mobile.delay(8)
@@ -1695,7 +1788,7 @@ static void verifyUneditEnrolleMethods() {
 //            'DisEnrolling from Level Pay'
 //
 //            'Clicking on DisEnroll Button'
-//            Mobile.tap(findTestObject('SCM Mobile/Billing/Level Pay/DisEnroll Button'), 3)
+//            Mobile.tap(findTestObject('null'), 3)
 //
 //            'Delay of 6 seconds'
 //            Mobile.delay(6)
