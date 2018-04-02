@@ -26,8 +26,8 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 //'Installing/Launching the Application on the Device'
 //Mobile.startApplication('E:\\app-debug.apk', false)
 
-//'Calling Login Page Test Case'
-//Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.STOP_ON_FAILURE)
+'Calling Login Page Test Case'
+Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.STOP_ON_FAILURE)
 
 'Delay of 50 seconds'
 Mobile.delay(50)

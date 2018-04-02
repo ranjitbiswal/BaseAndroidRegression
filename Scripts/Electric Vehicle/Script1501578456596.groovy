@@ -25,6 +25,8 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper as MobileElementCommonHelper
 import io.appium.java_client.TouchAction as TouchAction
 
+'Delay of 15 Sec'
+Mobile.delay(20)
 String messageText = null
 
 Boolean bResult = false
@@ -37,57 +39,78 @@ Integer iAfterCarCount = 0
 
 String sCar = null
 
-//'Calling Login Page Test Case'
-//Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+'Calling Login Page Test Case'
+Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 Mobile.delay(50)
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+
 
 x = UsageMenu.getLocation().getX()
 
 y = UsageMenu.getLocation().getY()
 
-TouchAction action = new TouchAction(driver)
+//TouchAction action = new TouchAction(driver)
 
-action.press(x, y).moveTo(x - 450, y).release().perform()
+//action.press(x, y).moveTo(x-450, y).release().perform()
+//Mobile.delay(30)
+//action.press(x, y).moveTo(x-500, y).release().perform()
 
-action.press(x, y).moveTo(x - 500, y).release().perform()
+//Mobile.delay(30)
 
-Mobile.delay(30)
+//'Bharti'
+////Get the size of screen.
+//size = driver.manage().window().getSize();
+//System.out.println(size);
+//
+////Find swipe x points from screen's with and height.
+////Find x1 point which is at right side of screen.
+//int x1 = (int) (size.width * 0.20);
+////Find x2 point which is at left side of screen.
+//int x2 = (int) (size.width * 0.80);
+//
+////Create object of TouchAction class.
+//TouchAction action = new TouchAction(driver);
+//
+////Here swipe to point x2 Is at right side of screen. So It will swipe element from left to right.
+//action.longPress(UsageMenu).moveTo(x2-590,580).release().perform();
+//
+//'Bharti'
 
 'Checking EV Menu is Displayed on Dashboard or Not'
 if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/EV Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) == 
 false) {
     System.out.println('EV is not displayed in the Dashboard/Landing Page')
 } else {
-    'Clicking on Billing Menu from Dashboard/Landing Page'
+    'Clicking on EV Menu from Dashboard/Landing Page'
     Mobile.tap(findTestObject('SCM Mobile/LandingPage/EV Menu'), 5)
 
     'Delay'
     Mobile.delay(10)
 
-    ArrayList<MobileElement> ls = driver.findElementsByClassName('XCUIElementTypeStaticText')
+    ArrayList<MobileElement> ls = driver.findElementsByClassName('android.widget.Button')
 
-    for (int index = 1; index < ls.size(); index++) {
-        if (ls.get(index).getText().equals('Electric Vehicle')) {
-            'Clicking on Electric Vehicle Side Menu'
-            ls.get(index).click()
-
+//    for (int index = 1; index < ls.size(); index++) {
+//        if (ls.get(index).getText().equals('Electric Vehicle')) {
+//            'Clicking on Electric Vehicle Side Menu'
+//            ls.get(index).click()
+			ls.get(1).click()
             'Delay'
             Mobile.delay(10)
 
-			'Click on Select Car Link'
-            ArrayList<MobileElement> lSelectCarBeforeEVUpdate = driver.findElementsByClassName('XCUIElementTypeCell')
-
-            for (int index1 = 0; index1 < 1; index1++) {
-                lSelectCarBeforeEVUpdate.get(index1).findElementByClassName('XCUIElementTypeStaticText').click()
-            }
-            
+			'Click on Select Car Link > on Car selection'  
+//            ArrayList<MobileElement> lSelectCarBeforeEVUpdate = driver.findElementsByClassName('XCUIElementTypeCell')
+//
+//            for (int index1 = 0; index1 < 1; index1++) {
+//                lSelectCarBeforeEVUpdate.get(index1).findElementByClassName('XCUIElementTypeStaticText').click()
+//            }
+			Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/SelectCarBeforeEVUpdate'), 15)
+			
 			'Car List Before EV Update'
-			ArrayList<MobileElement> lCarListBeforeEVUpdate = driver.findElementsByClassName('XCUIElementTypeCell')
+			ArrayList<MobileElement> lCarListBeforeEVUpdate = driver.findElementsByClassName('android.widget.CheckedTextView')
 			
 			'Car Count Before EV Update'
 			iBeforeCarCount = lCarListBeforeEVUpdate.size()
@@ -96,27 +119,27 @@ false) {
 			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
 
             'Clicking on Add Button'
-            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/Add Button'), 6)
+            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/btnAddEV'), 6)
 
             'Selecting/Unselecting the Car from the Car List'
-            ArrayList<MobileElement> lCarList = driver.findElementsByClassName('XCUIElementTypeCell')
+            ArrayList<MobileElement> lCarList = driver.findElementsByClassName('android.widget.CheckedTextView')
 
             println(lCarList.size())
 
             for (int index2 = 0; index2 < 1; index2++) {
       
-                sCar = lCarList.get(index2).findElementByClassName('XCUIElementTypeStaticText').getText()
+                sCar = lCarList.get(index2).getText()
                 lCarList.get(index2).click()
             }
             
             'Clicking on Save Button'
-            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/Save Button'), 6)
+            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/btnSaveAddedEV'), 6)
 
             'Delay'
             Mobile.delay(20)
 
             'Getting Message Text after click on Save'
-            messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Electric Vehicle/EV/EV Setting Save Text'), 'value', 
+            messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Electric Vehicle/EV/txtLblSettingSavePopUp'), 'value', 
                 5, FailureHandling.CONTINUE_ON_FAILURE)
 
             'Verifying EV Setting is Successfully Saved or Not'
@@ -132,28 +155,28 @@ false) {
             }
             
             'Clicking on the Ok Button'
-            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/EV Setting Save Popup Ok Button'), 30)
+            Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 30)
 
 			'Delay'
 			Mobile.delay(20)
 			
             'Checking Selected/UnSelected Car in the Car List DropDown'
 
-            'Clicking on Electric Vehicle Side Menu'
-            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/EV Side Menu'), 30)
-
-            'Delay'
-            Mobile.delay(20)
+//            'Clicking on Electric Vehicle Side Menu'
+//            Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/EV/EV Side Menu'), 30)
+//
+//            'Delay'
+//            Mobile.delay(20)
 
 			'Click on Select Car Link'
-            ArrayList<MobileElement> lSelectCarAfterEVUpdate = driver.findElementsByClassName('XCUIElementTypeCell')
-
-            for (int index3 = 0; index3 < 1; index3++) {
-                lSelectCarAfterEVUpdate.get(index3).findElementByClassName('XCUIElementTypeStaticText').click()
-            }
-            
+//            ArrayList<MobileElement> lSelectCarAfterEVUpdate = driver.findElementsByClassName('XCUIElementTypeCell')
+//
+//            for (int index3 = 0; index3 < 1; index3++) {
+//                lSelectCarAfterEVUpdate.get(index3).click()
+//            }
+			Mobile.tap(findTestObject('SCM Mobile/Electric Vehicle/SelectCarBeforeEVUpdate'), 15)
 			'Car List After EV Update'
-			ArrayList<MobileElement> lCarListAfterEVUpdate = driver.findElementsByClassName('XCUIElementTypeCell')
+			ArrayList<MobileElement> lCarListAfterEVUpdate = driver.findElementsByClassName('android.widget.CheckedTextView')
 			
 			'Car Count After EV Update'
 			iAfterCarCount = lCarListAfterEVUpdate.size()
@@ -161,7 +184,7 @@ false) {
 			if(iBeforeCarCount > iAfterCarCount)
 			{
 				for (int index4 = 0; index4 < lCarListAfterEVUpdate.size(); index4++) {
-					if (lCarListAfterEVUpdate.get(index4).findElementByClassName('XCUIElementTypeStaticText').getText().equals(sCar)) {
+					if (lCarListAfterEVUpdate.get(index4).getText().equals(sCar)) {
 						bResult1 = false
 						}
 					else
@@ -173,7 +196,7 @@ false) {
 			else if(iBeforeCarCount < iAfterCarCount)
 			{
 				for (int index4 = 0; index4 < lCarListAfterEVUpdate.size(); index4++) {
-					if (lCarListAfterEVUpdate.get(index4).findElementByClassName('XCUIElementTypeStaticText').getText().equals(sCar)) {
+					if (lCarListAfterEVUpdate.get(index4).getText().equals(sCar)) {
 						bResult1 = true
 						break
 					}
@@ -202,20 +225,21 @@ false) {
 
             'Delay'
             Mobile.delay(10)
-        } else if (ls.get(index).getText().equals('Charging Stationq')) {
-            'Veryfing EV - Electric Vehicle'
-            ls.get(index).click()
-
-            'Delay'
-            Mobile.delay(10)
-
-            'Calling the Press Back Inbuilt funtion'
-            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-
-            'Delay'
-            Mobile.delay(10)
-        }
-    }
+     //   } 
+//else if (ls.get(index).getText().equals('Charging Stationq')) {
+//            'Veryfing EV - Electric Vehicle'
+//            ls.get(index).click()
+//
+//            'Delay'
+//            Mobile.delay(10)
+//
+//            'Calling the Press Back Inbuilt funtion'
+//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+//
+//            'Delay'
+//            Mobile.delay(10)
+//        }
+  //  }
     
     'Delay'
     Mobile.delay(10)

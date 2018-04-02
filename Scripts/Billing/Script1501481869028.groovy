@@ -238,6 +238,20 @@ static void verifyBillingPayBillTestCases() {
 	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Utility Bill/Enter Payment Amount Page/Enter Payment Amount Page - Disclaimer Text',
 			'Enter Payment Amount Page - Disclaimer Text')
 
+	
+	'TC --> TC_BLG_228 --> To verify that if user click on Cancel button when on pay now screen, user should land on the utility Bill screen'
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Utility Bill/Enter Payment Amount Page/Enter Payment Amount Page - Cancel Button'),
+				3, FailureHandling.CONTINUE_ON_FAILURE)
+	'Check Module Name'
+	messageText = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
+
+   if (messageText.equals('Utility Bill')) {
+	   System.out.println('On Click on Cancl from the Pay now, User is on to the UtilityBill Module')
+   }
+	'Clicking on Pay Now Button'
+	Mobile.tap(findTestObject('SCM Mobile/Billing/Utility Bill/Pay Now Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	
+	
 	'TC --> TC_BLG_21 --> Test Case to check which payment amount option radio button is selected'
 	if (Mobile.getAttribute(findTestObject('SCM Mobile/Billing/Utility Bill/Enter Payment Amount Page/Enter Payment Amount Page - Current Outstanding Radio Button'),
 	'checked', 5, FailureHandling.CONTINUE_ON_FAILURE).equals('true')) {

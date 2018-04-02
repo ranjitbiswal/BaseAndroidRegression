@@ -224,7 +224,8 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
 
             'Clicking on PressBack'
             Mobile.pressBack()
-
+			
+			'TC_BLG_129 To verify if user has selected the pay you, user should see the following submodule  in Billing'
             'Verifying Billing Module is Displayed or not'
             if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/Billing Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) == 
             false) {
@@ -248,11 +249,18 @@ static void verifyMyAccountSettingsConfigurePaymentTestCases() {
                 Mobile.tap(findTestObject('SCM Mobile/Billing/Utility Bill Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
                 'Checking the Button name is Pay Now or Recharge'
-                String sButtonText = driver.findElementById('com.sus.scm_mobile:id/bt_paybill').getText()
-
+             
+				   String sButtonText = driver.findElementById('com.sus.scm_mobile:id//bt_paybill').getText()
+				'TC_BLG_134 To verify if user has selected Pay as you option, System shall display the following Bill summary on dashboard'
                 if (sButtonText.equals('Recharge')) {
                     System.out.println('Button text changes to Recharge is Utility Menu, which is as expected')
-                } else {
+					
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Utility Bill/txtLblRechargeAmount',
+						'Utility Button - Last Recharge Amount')
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Billing/Utility Bill/txtLblRemainingBalance',
+						'Utility Bill - Remaining Balance')
+					
+					 } else {
                     System.out.println('Button text is not as Expected. Payment Type updation not having any impact. Please check manually. ')
                 }
                 

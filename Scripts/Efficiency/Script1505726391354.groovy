@@ -36,8 +36,16 @@ Mobile.delay(50)
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+
+x = UsageMenu.getLocation().getX()
+y = UsageMenu.getLocation().getY()
+TouchAction action = new TouchAction(driver)
+action.press(x, y).moveTo(x - 450, y).release().perform()
+action.press(x, y).moveTo(x - 500, y).release().perform()
+Mobile.delay(30)
+
 //WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
-//
 //x = UsageMenu.getLocation().getX()
 //y = UsageMenu.getLocation().getY()
 //TouchAction action = new TouchAction(driver)
