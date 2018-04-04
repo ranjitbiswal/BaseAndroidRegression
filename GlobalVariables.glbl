@@ -317,4 +317,19 @@
       <initValue>'You are enrolled for auto payments with card 5454. If you wish to delete this card, please disenroll from Auto-Pay set up and then try again.'</initValue>
       <name>sLblTxtNonDltEnrolledCreditCard</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'&quot;bharti.garg@smartenergywater.in&quot;'</initValue>
+      <name>sEnrollEmailEfficiency</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'&quot;Subject&quot;'</initValue>
+      <name>sEnrollSubjectEfficiency</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'&quot;Comments&quot;'</initValue>
+      <name>sEnrollCommenctsEfficiency</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
