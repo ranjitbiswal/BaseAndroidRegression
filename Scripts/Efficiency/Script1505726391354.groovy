@@ -31,19 +31,17 @@ import io.appium.java_client.TouchAction as TouchAction
 'Calling Login Page Test Case'
 Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
-'Delay of 50 seconds'
-Mobile.delay(50)
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
 WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
 
-x = UsageMenu.getLocation().getX()
-y = UsageMenu.getLocation().getY()
-TouchAction action = new TouchAction(driver)
-action.press(x, y).moveTo(x - 450, y).release().perform()
-action.press(x, y).moveTo(x - 500, y).release().perform()
-Mobile.delay(30)
+//x = UsageMenu.getLocation().getX()
+//y = UsageMenu.getLocation().getY()
+//TouchAction action = new TouchAction(driver)
+//action.press(x, y).moveTo(x - 450, y).release().perform()
+//action.press(x, y).moveTo(x - 500, y).release().perform()
+//Mobile.delay(30)
 
 //WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
 //x = UsageMenu.getLocation().getX()
@@ -62,127 +60,184 @@ false) {
 	'Delay of 20 seconds'
 	Mobile.delay(20)
 	
+	'Check Module Name'
+	String messageText1 = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
 
-
-	ArrayList<MobileElement> lEfficiencySideMenu = driver.findElementsByClassName('XCUIElementTypeCell')
+	if (messageText1.equals('Efficiency')) {
+		
+	ArrayList<MobileElement> lEfficiencySideMenu = driver.findElementsByClassName('android.widget.TextView')
 
     println('Size of Billing Side Menu :' + lEfficiencySideMenu.size())
 
-    'Printing Billing Side Menu List'
-    println('Billing Side Menu List Contains :')
-
-    for (int index = 0; index < lEfficiencySideMenu.size(); index++) {
-        println(lEfficiencySideMenu.get(index).findElementByClassName('XCUIElementTypeStaticText').getText())
-
-        'Delay of 1 seconds'
-        Mobile.delay(1)
-    }
+	'TC_EEC_001'
+//    for (int index = 0; index < lEfficiencySideMenu.size(); index++) {
+//        println(lEfficiencySideMenu.get(index).getText())
+//
+//        'Delay of 1 seconds'
+//        Mobile.delay(1)
+//    }
     
     for (int index = 0; index < lEfficiencySideMenu.size(); index++) {
-        if (lEfficiencySideMenu.get(index).findElementByClassName('XCUIElementTypeStaticText').getText().equals('Rebates1')) {
-     	
-			lEfficiencySideMenu.get(index).click()
-			
+       // if (lEfficiencySideMenu.get(index).getText().equals('Rebates')) {
+		if (Mobile.getAttribute(findTestObject('SCM Mobile/Efficiency/lblRebatesMenuEfficiency'),
+			'text', 5, FailureHandling.CONTINUE_ON_FAILURE).equals('Rebates')) {
+		//	lEfficiencySideMenu.get(index).click()
+			Mobile.tap(findTestObject('SCM Mobile/Efficiency/lblRebatesMenuEfficiency'), 15)
 			'Delay of 50 seconds'
-			Mobile.delay(50)
+			Mobile.delay(10)
 			
-			ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
+			'bhartt'
+			ArrayList<MobileElement> lRebatesideMenu = driver.findElementsById('com.sus.scm_mobile:id/tv_rebates_details')
 			
-			println("Rebates Tip Count " + lTipsCount.size())
+				println('Size of Billing Side Menu :' + lRebatesideMenu.size())
 			
-			for(int index1=0;index1<1;index1++)
-			{
-				lTipsCount.get(index1).click()
-				
-				'Delay of 20 seconds'
-				Mobile.delay(20)
-				
-				String sViewCountBeforeClick = driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeStaticText[2]").getText()
-				println (sViewCountBeforeClick)
-				
-				String sLikeCountBeforeCLick =driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]").getText()
-				println (sLikeCountBeforeCLick)
-				
-				String[] s2 = sViewCountBeforeClick.split("\\s")
-				println (s2)
-				
-				String s3 =s2[1]
-				
-				int iViewCountBeforeClick =Integer.parseInt(s3)
-				int iLikeCountBeforeCLick =Integer.parseInt(sLikeCountBeforeCLick)
-				
-				
-				'Clicking on Like Button'
-				Mobile.tap(findTestObject('SCM Mobile/Efficiency/Rebates/Like Icon'), 10)
-
-				'Delay of 10 seconds'
-				Mobile.delay(10)
-			
-				String sLikeCountAfterCLick =driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]").getText()
-				println (sLikeCountAfterCLick)
-				
-				
-				int iLikeCountAfterCLick =Integer.parseInt(sLikeCountAfterCLick)
-				
-				'Calling the Press Back Inbuilt funtion'
-				Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-
-	
-				'Delay'
-				Mobile.delay(10)
-				
-				lTipsCount.get(index1).click()
-				
-				'Delay of 20 seconds'
-				Mobile.delay(20)
+				'Printing Billing Side Menu List'
+				println('Billing Side Menu List Contains :')
+				'TC_EEC_001'
+				for (int index2 = 0; index2 < lRebatesideMenu.size(); index2++) {
+					lRebatesideMenu.get(index2).click()
+					'verify Objects on Enroll into Rebates'
+					if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Efficiency/Rebates/btnEnrollEfficiency'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
+						false) {
+							System.out.println('EnrollButton is not displayed in the Efficiency Page, already enrolled')
+						} else {
+							System.out.println('Enroll Button is displayed on the Efficinecy Page')
+							Mobile.tap(findTestObject('SCM Mobile/Efficiency/Rebates/btnEnrollEfficiency'), 15)
+							'TC --> TC_EEC_012'
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Connect Me Submit Button',
+						'Connect Me- Submint Button')
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Customer Name',
+						'Connect Me- customer name')
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Service Account Number',
+						'Connect Me- SAN')
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Subject',
+						'Connect Me- Subject')
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Email Address',
+						'Connect Me- Email Address')
+					applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Comments',
+						'Connect Me- Comments')
 					
-				String sViewCountAfterClick = driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeStaticText[2]").getText()
-				println (sViewCountAfterClick)
-			
-				String[] s4 = sViewCountAfterClick.split("\\s")
-				println (s4)
+					'TC_EEC_010'
+					
+					'Entering Email Address'
+					Mobile.setText(findTestObject('SCM Mobile/Connect Me/Email Address'), GlobalVariable.sEnrollEmailEfficiency, 3)
+					'Entering Subject'
+					Mobile.setText(findTestObject('SCM Mobile/Connect Me/Subject'), GlobalVariable.sEnrollSubjectEfficiency, 3)
+					'Entering Comments'
+					Mobile.setText(findTestObject('SCM Mobile/Connect Me/Comments'), GlobalVariable.sEnrollCommenctsEfficiency, 3)
+					'Submit Enrollment Form'
+					Mobile.tap(findTestObject('SCM Mobile/Connect Me/Connect Me Submit Button'), 15)
+					
+					String messageText2 = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
+					
+						if (messageText2.equals('Efficiency')) {
+							println "Successfully Enrolled"
+						}
+						}
+//					'bharti'
+//					ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
+//					
+//					println("Rebates Tip Count " + lTipsCount.size())
+//					
+//					for(int index1=0;index1<1;index1++)
+//					{
+//						lTipsCount.get(index1).click()
+//						
+//						'Delay of 20 seconds'
+//						Mobile.delay(20)
+//						
+//						String sViewCountBeforeClick = driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeStaticText[2]").getText()
+//						println (sViewCountBeforeClick)
+//						
+//						String sLikeCountBeforeCLick =driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]").getText()
+//						println (sLikeCountBeforeCLick)
+//						
+//						String[] s2 = sViewCountBeforeClick.split("\\s")
+//						println (s2)
+//						
+//						String s3 =s2[1]
+//						
+//						int iViewCountBeforeClick =Integer.parseInt(s3)
+//						int iLikeCountBeforeCLick =Integer.parseInt(sLikeCountBeforeCLick)
+//						
+//						
+//						'Clicking on Like Button'
+//						Mobile.tap(findTestObject('SCM Mobile/Efficiency/Rebates/Like Icon'), 10)
+//		
+//						'Delay of 10 seconds'
+//						Mobile.delay(10)
+//					
+//						String sLikeCountAfterCLick =driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]").getText()
+//						println (sLikeCountAfterCLick)
+//						
+//						
+//						int iLikeCountAfterCLick =Integer.parseInt(sLikeCountAfterCLick)
+//						
+//						'Calling the Press Back Inbuilt funtion'
+//						Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+//		
+//			
+//						'Delay'
+//						Mobile.delay(10)
+//						
+//						lTipsCount.get(index1).click()
+//						
+//						'Delay of 20 seconds'
+//						Mobile.delay(20)
+//							
+//						String sViewCountAfterClick = driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeStaticText[2]").getText()
+//						println (sViewCountAfterClick)
+//					
+//						String[] s4 = sViewCountAfterClick.split("\\s")
+//						println (s4)
+//						
+//						String s5 =s4[1]
+//						int iViewCountAfterClick =Integer.parseInt(s5)
+//						
+//						if(iViewCountAfterClick ==iViewCountBeforeClick +1 )
+//						{
+//							println ("On Click on the Tip, Count Increased by 1 ")
+//						}
+//						else
+//						{
+//							println ("On Click on the Tip, Count mismatched please check manually ")
+//						}
+//						
+//						if(iLikeCountAfterCLick >  iLikeCountBeforeCLick)
+//						{
+//							println ("Like Button Clicked and Verified ")
+//						}
+//						else if(iLikeCountAfterCLick <  iLikeCountBeforeCLick)
+//						{
+//							println ("UnLike Button Clicked and Verified ")
+//						}
+//						else
+//						{
+//							println ("On Click on the Like/UnLike, Count mismatched please check manually")
+//						}
+//		
+//					}
+//					
+//					'Calling the Press Back Inbuilt funtion'
+//					Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+//		
+//		
+//					'Delay'
+//					Mobile.delay(10)
+//					
+					'Calling the Press Back Inbuilt funtion'
+					Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+		
+		
+					'Delay'
+					Mobile.delay(10)
+//		
+				}
 				
-				String s5 =s4[1]
-				int iViewCountAfterClick =Integer.parseInt(s5)
-				
-				if(iViewCountAfterClick ==iViewCountBeforeClick +1 )
-				{
-					println ("On Click on the Tip, Count Increased by 1 ")
-				}
-				else
-				{
-					println ("On Click on the Tip, Count mismatched please check manually ")
-				}
-				
-				if(iLikeCountAfterCLick >  iLikeCountBeforeCLick)
-				{
-					println ("Like Button Clicked and Verified ")
-				}
-				else if(iLikeCountAfterCLick <  iLikeCountBeforeCLick)
-				{
-					println ("UnLike Button Clicked and Verified ")
-				}
-				else
-				{
-					println ("On Click on the Like/UnLike, Count mismatched please check manually")
-				}
-
-			}
+			'bhartt'
+			'bharti'
 			
-			'Calling the Press Back Inbuilt funtion'
-			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-
-
-			'Delay'
-			Mobile.delay(10)
-			
-			'Calling the Press Back Inbuilt funtion'
-			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-
-
-			'Delay'
-			Mobile.delay(10)
-
+		
         }
 		else if(lEfficiencySideMenu.get(index).findElementByClassName('XCUIElementTypeStaticText').getText().equals('Programs')) {
 			
@@ -548,4 +603,5 @@ false) {
 
 		}
     }
+}
 }

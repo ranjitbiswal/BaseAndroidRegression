@@ -36,7 +36,7 @@ public class ReusableMethods {
 		Mobile.startApplication(GlobalVariable.sApplicationPath, false,FailureHandling.STOP_ON_FAILURE)
 
 		'Delay of 60 Sec'
-		Mobile.delay(60)
+		Mobile.delay(10)
 
 		'Clearing the UserName Text Field'
 		Mobile.clearText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), 3)
@@ -60,7 +60,7 @@ public class ReusableMethods {
 		Mobile.tap(findTestObject('SCM Mobile/LogIn/SignIn Button'), 30)
 
 		'Delay of 20 Sec'
-		Mobile.delay(20)
+		Mobile.delay(10)
 	}
 
 

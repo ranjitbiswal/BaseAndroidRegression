@@ -2,8 +2,6 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import org.junit.After as After
-import org.testng.annotations.Test as Test
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
@@ -18,42 +16,12 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKeywords
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
-import com.sun.beans.decoder.FalseElementHandler as FalseElementHandler
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-'Method to check the Objects'
-//Prepared By Sahil
-@com.kms.katalon.core.annotation.SetUp
-static def verifyValidLogin() {
-    'Check Application is Already Installed on Device or Not'
-    Mobile.startApplication(GlobalVariable.sApplicationPath, false)
 
-    'Delay of 60 Sec'
-    Mobile.delay(20)
 
-    'Clearing the UserName Text Field'
-    Mobile.clearText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), 3)
+def  Rate = "Rate $1.1/kwh"
 
-    'Entering UserName'
-    Mobile.setText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), GlobalVariable.sUserName, 3)
-
-    'Hide KeyBoard'
-    Mobile.hideKeyboard()
-
-    'Clearing the Password Text Field'
-    Mobile.clearText(findTestObject('SCM Mobile/LogIn/Password TextBox'), 3)
-
-    'Entering Password'
-    Mobile.setText(findTestObject('SCM Mobile/LogIn/Password TextBox'), GlobalVariable.sPassword, 3)
-
-    'Hide KeyBoard'
-    Mobile.hideKeyboard()
-
-    'Clicking on SignIn Button'
-    Mobile.tap(findTestObject('SCM Mobile/LogIn/SignIn Button'), 30)
-	Mobile.verifyElementAttributeValue(findTestObject('SCM Mobile/LandingPage/My Account Menu'), 'text', 'My Account', 2)
-
-	
-}
-
+Rate.replaceAll(/\/kwh/, "")
+println Rate
