@@ -4,6 +4,13 @@
    <name>Make Payment Button</name>
    <tag></tag>
    <elementGuidId>5998c2cf-060a-465b-b61a-7f671c031935</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.Button' and (text() = 'Make Payment' or . = 'Make Payment') and @resource-id = 'com.sus.scm_mobile:id/btn_make_payment']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -13,7 +20,7 @@
       <value>android.widget.Button</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>

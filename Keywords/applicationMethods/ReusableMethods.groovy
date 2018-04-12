@@ -36,7 +36,7 @@ public class ReusableMethods {
 		Mobile.startApplication(GlobalVariable.sApplicationPath, false,FailureHandling.STOP_ON_FAILURE)
 
 		'Delay of 60 Sec'
-		Mobile.delay(10)
+		Mobile.delay(5)
 
 		'Clearing the UserName Text Field'
 		Mobile.clearText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), 3)
@@ -60,7 +60,14 @@ public class ReusableMethods {
 		Mobile.tap(findTestObject('SCM Mobile/LogIn/SignIn Button'), 30)
 
 		'Delay of 20 Sec'
-		Mobile.delay(10)
+		Mobile.delay(5)
+		if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/btnClosePopUpDashboard'),
+			3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
+			println('About My Business Pop Up is Popped')
+
+			'Closing OPop UP'
+			Mobile.tap(findTestObject('SCM Mobile/LandingPage/btnClosePopUpDashboard'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+		}
 	}
 
 

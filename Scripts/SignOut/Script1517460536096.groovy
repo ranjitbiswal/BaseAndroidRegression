@@ -43,7 +43,7 @@ Mobile.tap(findTestObject('SCM Mobile/Common Elements/Hamburger Menu'), 5, Failu
 
 @com.kms.katalon.core.annotation.TearDown
 static void verifySignOutTestCases() {
-    'TC : TC_DBD_152 To verify that SignOut TestCases'
+    'TC : TC_DBD_152 TC_SD_30 To verify that SignOut TestCases'
     AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
     String messageText

@@ -319,17 +319,32 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'&quot;bharti.garg@smartenergywater.in&quot;'</initValue>
+      <initValue>'bharti.garg@smartenergywater.in'</initValue>
       <name>sEnrollEmailEfficiency</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'&quot;Subject&quot;'</initValue>
+      <initValue>'Subject'</initValue>
       <name>sEnrollSubjectEfficiency</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'&quot;Comments&quot;'</initValue>
+      <initValue>'Coents'</initValue>
       <name>sEnrollCommenctsEfficiency</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'92602'</initValue>
+      <name>sSearchTextFootprint</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C002002003'</initValue>
+      <name>sDefaultSAN</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Guest User has been added successfully. A link with instructions has been sent to the Email Address you provided.'</initValue>
+      <name>sSuccessMessageGuestUserAdded</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

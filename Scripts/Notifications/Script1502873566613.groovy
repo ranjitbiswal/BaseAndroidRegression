@@ -571,7 +571,7 @@ static void verifyNotificationServicesTabTestCases() {
 }
 
 static void verifyNotificationConnectmeTabTestCases() {
-    'TC : TC_NOT_14 To verify that Notification - Connect Me Tab Test Cases'
+    'TC : TC_NOT_14 TC_COM_16 To verify that Notification - Connect Me Tab Test Cases'
     String messageText = null
 
     AppiumDriver<?> driver = MobileDriverFactory.getDriver()

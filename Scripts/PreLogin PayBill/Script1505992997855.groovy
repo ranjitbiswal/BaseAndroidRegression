@@ -129,13 +129,16 @@ static void verifyPreLoginPayBillTestCases() {
         } else {
             System.out.println('On Click on PreLogin Pay Bill, user might route to the PayBill Module or something issue with the Module Name. Expected Module Name is : PayBill. Please check manually. ')
         }
+		
+		verifyOneTimePaymentCreditCardTestCases()
     } else {
         System.out.println('One Time Payment TestCases cannot be verified because Pay Bill is not displayed on PreLogin ')
     }
 }
 
-//'One Time Payment'
-//
+'One Time Payment'
+static void verifyOneTimePaymentCreditCardTestCases()
+{
 //'Clicking on Pay Bill Menu'
 //Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBillMenu'), 5)
 //
@@ -174,72 +177,73 @@ static void verifyPreLoginPayBillTestCases() {
 //'Clicking on Next Button'
 //Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Next Button'), 3)
 // 
-//'Delay of 5 seconds'
-//Mobile.delay(5)
-// 
-//'Clicking on Make Payment Button'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Make Payment Button'), 3)
-// 
-//'Delay of 5 seconds'
-//Mobile.delay(5)
-// 
-//'Entering Bill Amount'
-//Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Enter Amount TextBox'), '1', 3)
-// 
-//'Clicking on the Keyboard Ok Button'
-////Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
-//Mobile.pressBack()
-//
-//'Entering Card Holder Name'
-//Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Name On Credit Card TextBox'), 'Test Card Holder', 3)
-// 
-//'Clicking on the Keyboard Ok Button'
-////Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
-//Mobile.pressBack()
-//
-//'Entering Card Number'
-//Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Number'), '5454545454545454', 3)
-// 
-//'Clicking on the Keyboard Ok Button'
-////Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
-//Mobile.pressBack()
-//
-//'Clicking on Card Expiry Date Calendar'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Expiry Calendar'), 3)
-// 
-//'Clicking Card Expiry Year Ok Button'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Calendar Done Button'), 3)
-// 
-//'Entering Credit Card Security Code'
-//Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Security Code TextBox'), '123', 3)
-// 
-//'Clicking on the Keyboard Ok Button'
-////Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
-//Mobile.pressBack()
-// 
-//'Clicking on PayBill Button'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBill Button'), 10)
-// 
-//'Delay of 40 Sec'
-//Mobile.delay(40)
-// 
-//'Getting Payment Successful Text'
-//messageText = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Payment Successful Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
-// 
-//'Getting Payment Transaction Id'
-//transactionId = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Transaction Id Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
-// 
-//'Verifying One Time Payment is Successfully Done or Not'
-//if (messageText.equals(null)) {
-//	System.out.println('Something went wrong with One Time Payment, Please check manually')
-//} else {
-//	if (messageText.equals('Payment Successful!')) {
-//		System.out.println('One Time Payment Successful, Transaction Id is : ' + transactionId)
-//	} else {
-//		System.out.println((('One Time Payment Successful, Transaction Id is : ' + transactionId) + 'Expected Text, Expected Text is : "Payment Successful!" but Actual Text is ') +
-//			messageText)
-//	}
-//}
-// 
-//'Clicking on Ok'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Ok Button'), 5)
+'Delay of 5 seconds'
+Mobile.delay(5)
+ 
+'Clicking on Make Payment Button'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Make Payment Button'), 3)
+ 
+'Delay of 5 seconds'
+Mobile.delay(5)
+ 
+'Entering Bill Amount'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Enter Amount TextBox'), '1', 3)
+ 
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+
+'Entering Card Holder Name'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Name On Credit Card TextBox'), 'Test Card Holder', 3)
+ 
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+
+'Entering Card Number'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Number'), '5454545454545454', 3)
+ 
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+
+'Clicking on Card Expiry Date Calendar'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Expiry Calendar'), 3)
+ 
+'Clicking Card Expiry Year Ok Button'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Calendar Ok Button'), 3)
+ 
+'Entering Credit Card Security Code'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Credit Card Security Code TextBox'), '123', 3)
+ 
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+ 
+'Clicking on PayBill Button'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBill Button'), 10)
+ 
+'Delay of 40 Sec'
+Mobile.delay(40)
+ 
+'Getting Payment Successful Text'
+String messageText = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Payment Successful Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+ 
+'Getting Payment Transaction Id'
+String transactionId = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Transaction Id Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+ 
+'Verifying One Time Payment is Successfully Done or Not'
+if (messageText.equals(null)) {
+	System.out.println('Something went wrong with One Time Payment, Please check manually')
+} else {
+	if (messageText.equals('Payment Successful!')) {
+		System.out.println('One Time Payment Successful, Transaction Id is : ' + transactionId)
+	} else {
+		System.out.println((('One Time Payment Successful, Transaction Id is : ' + transactionId) + 'Expected Text, Expected Text is : "Payment Successful!" but Actual Text is ') +
+			messageText)
+	}
+}
+ 
+'Clicking on Ok'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Ok Button'), 5)
+}

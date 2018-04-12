@@ -27,11 +27,42 @@ import java.lang.reflect.Array
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper as MobileElementCommonHelper
 import io.appium.java_client.TouchAction as TouchAction
-
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import java.lang.ref.ReferenceQueue.Null as Null
+import groovy.time.TimeCategory as TimeCategory
+import java.util.logging.Logger as Logger
+import org.eclipse.persistence.jpa.jpql.parser.ElseExpressionBNF as ElseExpressionBNF
+import org.junit.After as After
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
+import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKeywords
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
+import io.appium.java_client.AppiumDriver as AppiumDriver
+import io.appium.java_client.MobileBy as MobileBy
+import io.appium.java_client.MobileElement as MobileElement
 
 'Starting the Application'
 applicationMethods.ReusableMethods.verifyValidLogin()
 
+@com.kms.katalon.core.annotation.TearDown
+static void verifyEfficiencytTestCases() {
 WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
 'Delay of 15 Sec'
 Mobile.delay(10)
@@ -59,24 +90,6 @@ int y = UsageMenu.getLocation().getY()
 
 //Mobile.delay(30)
 
-//'Bharti'
-////Get the size of screen.
-//size = driver.manage().window().getSize();
-//System.out.println(size);
-//
-////Find swipe x points from screen's with and height.
-////Find x1 point which is at right side of screen.
-//int x1 = (int) (size.width * 0.20);
-////Find x2 point which is at left side of screen.
-//int x2 = (int) (size.width * 0.80);
-//
-////Create object of TouchAction class.
-//TouchAction action = new TouchAction(driver);
-//
-////Here swipe to point x2 Is at right side of screen. So It will swipe element from left to right.
-//action.longPress(UsageMenu).moveTo(x2-590,580).release().perform();
-//
-//'Bharti'
 
 'Checking EV Menu is Displayed on Dashboard or Not'
 if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/EV Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
@@ -217,7 +230,7 @@ false) {
 	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
 	verifyChargingStationTestCase()
 
- 
+}
 
 static void verifyElecticVehicleTestCase() {
 
@@ -240,33 +253,6 @@ String sCar = null
 int x = UsageMenu.getLocation().getX()
 
 int y = UsageMenu.getLocation().getY()
-
-//TouchAction action = new TouchAction(driver)
-
-//action.press(x, y).moveTo(x-450, y).release().perform()
-//Mobile.delay(30)
-//action.press(x, y).moveTo(x-500, y).release().perform()
-
-//Mobile.delay(30)
-
-//'Bharti'
-////Get the size of screen.
-//size = driver.manage().window().getSize();
-//System.out.println(size);
-//
-////Find swipe x points from screen's with and height.
-////Find x1 point which is at right side of screen.
-//int x1 = (int) (size.width * 0.20);
-////Find x2 point which is at left side of screen.
-//int x2 = (int) (size.width * 0.80);
-//
-////Create object of TouchAction class.
-//TouchAction action = new TouchAction(driver);
-//
-////Here swipe to point x2 Is at right side of screen. So It will swipe element from left to right.
-//action.longPress(UsageMenu).moveTo(x2-590,580).release().perform();
-//
-//'Bharti'
 
 'Checking EV Menu is Displayed on Dashboard or Not'
 if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/EV Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
@@ -408,19 +394,7 @@ false) {
 ''
 static void verifyChargingStationTestCase() {
 	'Delay of 15 Sec'
-	Mobile.delay(20)
-//	String messageText = null
-//	
-//	Boolean bResult = false
-//	
-//	Boolean bResult1 = true
-//	
-//	Integer iBeforeCarCount = 0
-//	
-//	Integer iAfterCarCount = 0
-//	
-//	String sCar = null
-//	
+
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
@@ -473,10 +447,8 @@ false) {
 					for (int index2 = 0; index2 <= lsRate.size()-1; index2++) {
 					String Rate = lsRate.get(index2).getText()
 					Rate = Rate.substring(6,9)
-					//int intRate = (int)Double.parseDouble(Rate);
 					double intRate = Double.parseDouble(Rate)
-				//	def intRate = Rate.toInteger()
-				//	Rate.replaceAll(messageText1, messageText1)
+				
 				
 						testArray[index2] = intRate
 						println testArray[index2]
@@ -510,8 +482,7 @@ for (int i = 0; i < testArray.length - 1; i++) {
 					Rate = Rate.substring(6,9)
 					//int intRate = (int)Double.parseDouble(Rate);
 					double intRate = Double.parseDouble(Rate)
-				//	def intRate = Rate.toInteger()
-				//	Rate.replaceAll(messageText1, messageText1)
+			
 				
 						testArray[index2] = intRate
 						println testArray[index2]

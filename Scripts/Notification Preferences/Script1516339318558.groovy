@@ -36,7 +36,7 @@ import io.appium.java_client.TouchAction as TouchAction
 applicationMethods.ReusableMethods.verifyValidLogin()
 
 'Delay of 30 Sec'
-Mobile.delay(30)
+Mobile.delay(10)
 
 'Clicking on the Hamburger Menu'
 Mobile.tap(findTestObject('SCM Mobile/Common Elements/Hamburger Menu'), 5)
@@ -124,14 +124,210 @@ static void verifyNotificationPreferencesTestCases() {
         } else {
             System.out.println('Notification Preferences Services Menu is Displayed in Notification Preferences Menu')
         }
-        
-        applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Marketing Preferences/Notification Preferences Save Button', 
+        'Need to check'
+        applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Hamburger Menu/Notification Preferences/Notification Preferences Save Button', 
             'Notification Preferences Save Button')
 
-        applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Marketing Preferences/Notification Preferences Quiet Hours CheckBox', 
+        applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Hamburger Menu/Notification Preferences/Notification Preferences Quiet Hours CheckBox', 
             'Notification Preferences Quiet Hours CheckBox')
 
-        applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Marketing Preferences/Notification Preferences Quiet Hours Heading', 
+        applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Hamburger Menu/Notification Preferences/Notification Preferences Quiet Hours Heading', 
             'Notification Preferences Quiet Hours Heading')
-    }
+		'BHarti'
+	//	AppiumDriver<?> driver1 = MobileDriverFactory.getDriver()
+		ArrayList<MobileElement> lNotificationPreferences = driver.findElementsByClassName('android.widget.TextView')
+		
+			'Getting Random Number'
+			int randomnumber = utility.RandomRange.nextRandomIntegerInRange(1, lNotificationPreferences.size() - 1)
+		
+			for (int index1 = randomnumber; index1 < lNotificationPreferences.size(); ) {
+				String sNotificationPrefModuleName = lNotificationPreferences.get(index1).getText()
+		
+				'Clicking on Notification Preferences Side Menu'
+				lNotificationPreferences.get(index1).click()
+		
+				'Delay of 1 seconds'
+				Mobile.delay(1)
+		
+				ArrayList<MobileElement> lNotificationMedium = driver.findElementsByClassName('android.widget.TextView')
+		
+				'Getting Random Number'
+				int randomnumber1 = utility.RandomRange.nextRandomIntegerInRange(1, lNotificationMedium.size())
+		
+				for (int index2 = randomnumber1; index2 < lNotificationMedium.size(); ) {
+					if (lNotificationMedium.get(index2).getText().equals('Text')) {
+						println('Updating the Notification Medium Text')
+						''
+						messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/CheckBoxTextField'), 'checked', 1, FailureHandling.CONTINUE_ON_FAILURE)
+						
+								if (messageText.equals("false")){
+									println('Notification Text Medium is not selected, so we are selecting this medium')
+									
+									'Clicking on Check Box'
+									Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/CheckBoxTextField'),
+										3, FailureHandling.CONTINUE_ON_FAILURE)
+									}
+						
+//						if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/TextFieldTextBox'),
+//							3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
+//							println('Notification Text Medium is not selected, so we are selecting this medium')
+//		
+//							'Clicking on Text Field Text Box'
+//							Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/TextFieldTextBox'),
+//								3, FailureHandling.CONTINUE_ON_FAILURE)
+//						} 
+							else {
+							println('Notification Text Medium is already selected, so we are continuing this medium')
+		
+							'Clicking on Text Field Text Box'
+							lNotificationMedium.get(index2).click()
+		
+							'Clearing the Text Field'
+							Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/TextFieldTextBox'),
+								0, FailureHandling.CONTINUE_ON_FAILURE)
+		
+							'Entering the Phone Number in Text Field'
+							Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/TextFieldTextBox'),
+								GlobalVariable.sAlternateNumber, 4)
+							'Hide KeyBoard'
+							Mobile.hideKeyboard()
+						
+						}
+					} else if (lNotificationMedium.get(index2).getText().equals(
+						'Email Address')) {
+						println('Updating the Notification Medium Email')
+		
+						if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/EmailAddressTextBox'),
+							3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
+							println('Notification Email Address Medium is already selected, so we are unselecting this medium')
+		
+							'Clicking on Email Address Field Text Box'
+							Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/EmailAddressTextBox'),
+								3, FailureHandling.CONTINUE_ON_FAILURE)
+						} else {
+							println('Notification Email Address Medium is already selected, so we are unselecting this medium')
+		
+							'Clicking on Email Address Field Text Box'
+							lNotificationMedium.get(index2).click()
+		
+							'Clearing Email Address Text Field'
+							Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/EmailAddressTextBox'),
+								0, FailureHandling.CONTINUE_ON_FAILURE)
+		
+							'Entering the Email Address in Text Field'
+							Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/EmailAddressTextBox'),
+								GlobalVariable.sEmailAddress, 4)
+							'Hide KeyBoard'
+							Mobile.hideKeyboard()
+						
+						}
+					} else if (lNotificationMedium.get(index2).getText().equals(
+						'Voice Call')) {
+						println('Updating the Notification Medium IVR')
+		
+						if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/VoiceCallTextBox'),
+							3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
+							println('Notification IVR Medium is already selected, so we are unselecting this medium')
+		
+							'Clicking on IVR Field Text Box'
+							Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/VoiceCallTextBox'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+						} else {
+							println('Notification IVR Medium is already selected, so we are unselecting this medium')
+		
+							'Clicking on IVR Field Text Box'
+							lNotificationMedium.get(index2).click()
+		
+							'Clearing the IVR Field'
+							Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/VoiceCallTextBox'), 0,
+								FailureHandling.CONTINUE_ON_FAILURE)
+		
+							'Entering the Phone Number in IVR Field'
+							Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/VoiceCallTextBox'), GlobalVariable.sAlternateNumber,
+								4)
+							'Hide KeyBoard'
+							Mobile.hideKeyboard()
+						
+						}
+					}
+					
+					break
+				}
+				
+				'Clicking on Done Button'
+				Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/Done Button'), 5)
+		
+				'Clicking on Submit Button'
+				Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/btnSaveNP'), 5)
+		
+				if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/btnIAgreeNP'),
+					3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
+		
+					'Clicking on I Agree Button'
+					Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/btnIAgreeNP'),
+						3, FailureHandling.CONTINUE_ON_FAILURE)
+				}
+					
+					'Delay of 1 seconds'
+					Mobile.delay(30)
+			
+				'Getting configuration update text in the String Variable'
+				String messageText1 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'value',
+					5, FailureHandling.CONTINUE_ON_FAILURE)
+		
+				'Checking Configuration Updation Message Text is matching with the Expeced Text or Not'
+				if (messageText1.equals(GlobalVariable.sNotificationPreferencesUpdationMessageText)) {
+					System.out.println('Notification Preferences Updated Successfully')
+				} else {
+					System.out.println((('Notification Preferences Updated Text is not matching with the Expected Text, Expected Text is : ' +
+						GlobalVariable.sNotificationPreferencesUpdationMessageText) + ' but Actual Text is ') + messageText)
+				}
+				
+				'Clicking on the PopUp Ok Button'
+				Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+		
+				'Delay of 5 seconds'
+				Mobile.delay(5)
+		
+				break
+			}
+			
+			'Clicking on the Back Button'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+		
+			'Delay'
+			Mobile.delay(10)
+		
+			'Clicking on Hamburger Menu from Dashboard/Landing Page'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Hamburger Menu'), 5)
+			
+			'Clicking on the Notification Preferences'
+			Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/Notification Preferences Menu'), 5)
+	
+		
+		'Bharti'
+		'TC_SD_20'
+		'Quiet Hours'
+		Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/btnQuietHoursNP'), 5)
+		
+		Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/Notification Preferences Save Button'), 5)
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+  
+		'TC_SD_21'
+		'Budget Limit'
+		'Clicking on the Notification Preferences'
+	  Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/Notification Preferences Budget Limit Menu'), 5)
+	  
+	  
+		  'Clearing the Budget Limit Text Field'
+		  Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/txtEditBudgetlimitNP'), 3)
+	  
+		  'Entering Limit'
+		  Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/txtEditBudgetlimitNP'), "40", 3)
+	  
+		  'Hide KeyBoard'
+		  Mobile.hideKeyboard()
+	  
+	  Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/btnSubmitBudgetlimitNP'), 5)
+	
+	      }
 }

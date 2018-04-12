@@ -28,12 +28,15 @@ import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as Mobil
 import io.appium.java_client.AppiumDriver as AppiumDriver
 import io.appium.java_client.MobileBy as MobileBy
 import io.appium.java_client.MobileElement as MobileElement
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Formatter.DateTime
 'Starting the Application'
 applicationMethods.ReusableMethods.verifyValidLogin()
 
-'Delay of 30 Sec'
-Mobile.delay(30)
+'Delay of 10 Sec'
+Mobile.delay(10)
 //
 @com.kms.katalon.core.annotation.TearDown
 static void verifyConnectMeTestCases() {
@@ -65,17 +68,92 @@ static void verifyConnectMeTestCases() {
 				'Connect Me- Email Address')
 			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Comments',
 				'Connect Me- Comments')
+		
+				'TC==> TC_COM_05'
 			
+			messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Connect Me/Service Account Number'), 'text',
+				                5, FailureHandling.CONTINUE_ON_FAILURE)
+				
+				            'Checking SAN is matching with the EDefault SAN'
+				            if (messageText.equals(GlobalVariable.sDefaultSAN)) {
+				                System.out.println('SAN Matching Successfully')
+				            } 
+							else {
+				                System.out.println((('SAN is not matching with the Expected Text, Expected Text is : ' +
+				                    GlobalVariable.sDefaultSAN) + ' but Actual Text is ') + messageText)
+				            }
 			
 			'TC --> TC_COM_03 -->To verify the correct Customer Name is displayed in the CN field which is same as User name.'
 			
 			applicationMethods.ReusableMethods.verifyAttribute('SCM Mobile/Connect Me/Customer Name', "text", "John  Doe")
+			'Succesful Submit of Connect Me Request'
+			'TC_COM_15'
+			'Entering Email Address'
+			Mobile.setText(findTestObject('SCM Mobile/Connect Me/Email Address'), GlobalVariable.sEnrollEmailEfficiency, 3)
+			'Entering Subject'
+			Mobile.setText(findTestObject('SCM Mobile/Connect Me/Subject'), GlobalVariable.sEnrollSubjectEfficiency, 3)
+			'Hide KeyBoard'
+			Mobile.hideKeyboard()
+			'Entering Comments'
+			Mobile.setText(findTestObject('SCM Mobile/Connect Me/Comments'), GlobalVariable.sEnrollCommenctsEfficiency, 3)
+			'Hide KeyBoard'
+			Mobile.hideKeyboard()
+				'Submit Enrollment Form'
+			Mobile.tap(findTestObject('SCM Mobile/Connect Me/Connect Me Submit Button'), 15)
 			
+	messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+	if (messageText.equals(GlobalVariable.sProblemSignInText)) {
+		System.out.println('Connect Me Request submit successfully.')
+
+		'Clicking on Popup Ok Button'
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	} else {
+		System.out.println((('Something bad happened on the sending Request. Please check manually. Expected Popup message text is ' +
+				GlobalVariable.sProblemSignInText) + ' but Actual text is ') + messageText)
+
+		'Clicking on Popup Ok Button'
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+		Mobile.pressBack()
+
+		Mobile.delay(1)
+	}
+		
+	'TC_COM_06'	
+	'Clicking on Topic Connect Me '
+	Mobile.tap(findTestObject('SCM Mobile/Connect Me/TopicSelectionDropDown'), 3, FailureHandling.STOP_ON_FAILURE)
+
+	Mobile.tap(findTestObject('SCM Mobile/Connect Me/BillingTopicConnectMe'),
+		3, FailureHandling.CONTINUE_ON_FAILURE)
+	
+	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Connect Me/Date',
+		'Connect Me- Date')
+	messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Connect Me/Date'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+//	String mydate = new Date()
+//	String formattedDate = mydate.format(“MM/dd/yyyy”)
+	// Create object of SimpleDateFormat class and decide the format
+	DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");
+	
+	//get current date time with Date()
+	Date date = new Date();
+	
+	// Now format the date
+	String date1= dateFormat.format(date);
+	
+	// Print the Date
+	System.out.println(date1);
+
+		if (messageText.equals(date1)) {
+			System.out.println('Date is Current Date')
+		}
+
         } 
 		else 
 		{
-            System.out.println('On Click on Connect Me from the My Account Tab, user might route to the Connect Me Module or something issue with the Module Name. Expected Module Name is : Marketing Preferences. Please check manually. ')
+            System.out.println('Date is not as current and Expected. Please check manually. ')
         }
+		
     } 
 	//End of Module Connect Me
 	else
@@ -83,9 +161,4 @@ static void verifyConnectMeTestCases() {
         println('The webelement Connect me is missing')
 		 }
 	
-
-
-
-
 }
-

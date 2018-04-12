@@ -4,6 +4,13 @@
    <name>Pay Bill Button</name>
    <tag></tag>
    <elementGuidId>759b8956-56f5-4461-b327-7b91326afc48</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.RelativeLayout' and @resource-id = 'com.sus.scm_mobile:id/rel_ButtonPay']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -13,7 +20,7 @@
       <value>android.widget.RelativeLayout</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>
