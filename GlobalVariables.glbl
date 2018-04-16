@@ -144,7 +144,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'(111) 111-1111'</initValue>
+      <initValue>'(999) 999-9999'</initValue>
       <name>sCustomerMobileNumber</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -164,12 +164,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'5454545454545454'</initValue>
+      <initValue>'999999999'</initValue>
       <name>sBankAccountNumber</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'124000054'</initValue>
+      <initValue>'999999999'</initValue>
       <name>sRoutingNumber</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -199,7 +199,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C003009010'</initValue>
+      <initValue>'C002002003'</initValue>
       <name>sCustomerAccountNumber</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -346,5 +346,30 @@
       <description></description>
       <initValue>'Guest User has been added successfully. A link with instructions has been sent to the Email Address you provided.'</initValue>
       <name>sSuccessMessageGuestUserAdded</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'The credit card details have been successfully deleted from profile.'</initValue>
+      <name>sLblTxtNConfirmDltEnrolledCreditCard</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Mailing Address information has been saved successfully.'</initValue>
+      <name>sSuccessSaveProfilePopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Valid Address'</initValue>
+      <name>sMessageIsValidPopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Mailing Address information has been saved successfully.'</initValue>
+      <name>sMessageSuccessUpdatePopupMessageText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Our records indicate that this Account Number is already registered.'</initValue>
+      <name>sAlreadyRegisteredAccPopupMessageText</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

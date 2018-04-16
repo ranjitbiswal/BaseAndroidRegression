@@ -69,6 +69,9 @@ static void verifyPreLoginEfficiencyTestCases() {
             System.out.println('Rebate Menu is displayed.')
 
             verifyPreLoginEfficiencyRebatesTestCases()
+			verifyPreLoginEfficiencySavingTipsTestCases()
+			verifyPreLoginEfficiencyEduTipsTestCases()
+			
         } else {
             System.out.println('We are unable to verify the Rebates test cases, because Rebates Menu is not displayed.')
         }
@@ -123,299 +126,93 @@ static void verifyPreLoginEfficiencyRebatesTestCases() {
         System.out.println('On Click on Rebates from the PreLogin Efficiency Tab, user might route to the PreLogin Efficiency or something issue with the Module Name. Expected Module Name is : Rebates. Please check manually. ')
     }
 }
+static void verifyPreLoginEfficiencySavingTipsTestCases()
+{
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+	
+		String messageText
 
-//AppiumDriver<?> driver = MobileDriverFactory.getDriver()
-//
-//ArrayList<MobileElement> ls = driver.findElementsByClassName('XCUIElementTypeStaticText')
-//
-//println(ls.size())
-//
-//'Delay of 20 seconds'
-//Mobile.delay(20)
-//
-//for (int index = 0; index < ls.size(); index++) {
-//    if (ls.get(index).getText().equals('Rebates')) {
-//        ls.get(index).click()
-//
-//        'Delay of 15 seconds'
-//        Mobile.delay(15)
-//
-//        ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
-//
-//        println('Rebates Tip Count ' + lTipsCount.size())
-//
-//        for (int index1 = 0; index1 < 1; index1++) {
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountBeforeClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountBeforeClick)
-//
-//            String[] s2 = sViewCountBeforeClick.split('\\s')
-//
-//            println(s2)
-//
-//            String s3 = s2[1]
-//
-//            int iViewCountBeforeClick = Integer.parseInt(s3)
-//
-//            'Calling the Press Back Inbuilt funtion'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//            'Delay'
-//            Mobile.delay(10)
-//
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountAfterClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountAfterClick)
-//
-//            String[] s4 = sViewCountAfterClick.split('\\s')
-//
-//            println(s4)
-//
-//            String s5 = s4[1]
-//
-//            int iViewCountAfterClick = Integer.parseInt(s5)
-//
-//            if (iViewCountAfterClick == (iViewCountBeforeClick + 1)) {
-//                println('On Click on the Tip, Count Increased by 1 ')
-//            } else {
-//                println('On Click on the Tip, Count mismatched please check manually ')
-//            }
-//        }
-//        
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//    } else if (ls.get(index).getText().equals('Programs')) {
-//        ls.get(index).click()
-//
-//        'Delay of 15 seconds'
-//        Mobile.delay(15)
-//
-//        ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
-//
-//        println('Rebates Tip Count ' + lTipsCount.size())
-//
-//        for (int index1 = 0; index1 < 1; index1++) {
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountBeforeClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountBeforeClick)
-//
-//            String[] s2 = sViewCountBeforeClick.split('\\s')
-//
-//            println(s2)
-//
-//            String s3 = s2[1]
-//
-//            int iViewCountBeforeClick = Integer.parseInt(s3)
-//
-//            'Calling the Press Back Inbuilt funtion'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//            'Delay'
-//            Mobile.delay(10)
-//
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountAfterClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountAfterClick)
-//
-//            String[] s4 = sViewCountAfterClick.split('\\s')
-//
-//            println(s4)
-//
-//            String s5 = s4[1]
-//
-//            int iViewCountAfterClick = Integer.parseInt(s5)
-//
-//            if (iViewCountAfterClick == (iViewCountBeforeClick + 1)) {
-//                println('On Click on the Tip, Count Increased by 1 ')
-//            } else {
-//                println('On Click on the Tip, Count mismatched please check manually ')
-//            }
-//        }
-//        
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//    } else if (ls.get(index).getText().equals('Saving Tips')) {
-//        ls.get(index).click()
-//
-//        'Delay of 15 seconds'
-//        Mobile.delay(15)
-//
-//        ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
-//
-//        println('Saving Tip Count ' + lTipsCount.size())
-//
-//        for (int index1 = 0; index1 < 1; index1++) {
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountBeforeClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountBeforeClick)
-//
-//            String[] s2 = sViewCountBeforeClick.split('\\s')
-//
-//            println(s2)
-//
-//            String s3 = s2[1]
-//
-//            int iViewCountBeforeClick = Integer.parseInt(s3)
-//
-//            'Calling the Press Back Inbuilt funtion'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//            'Delay'
-//            Mobile.delay(10)
-//
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountAfterClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountAfterClick)
-//
-//            String[] s4 = sViewCountAfterClick.split('\\s')
-//
-//            println(s4)
-//
-//            String s5 = s4[1]
-//
-//            int iViewCountAfterClick = Integer.parseInt(s5)
-//
-//            if (iViewCountAfterClick == (iViewCountBeforeClick + 1)) {
-//                println('On Click on the Tip, Count Increased by 1 ')
-//            } else {
-//                println('On Click on the Tip, Count mismatched please check manually ')
-//            }
-//        }
-//        
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//    } else if (ls.get(index).getText().equals('Educational Tips')) {
-//        ls.get(index).click()
-//
-//        'Delay of 15 seconds'
-//        Mobile.delay(15)
-//
-//        ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
-//
-//        println('Educational Tip Count ' + lTipsCount.size())
-//
-//        for (int index1 = 0; index1 < 1; index1++) {
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountBeforeClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountBeforeClick)
-//
-//            String[] s2 = sViewCountBeforeClick.split('\\s')
-//
-//            println(s2)
-//
-//            String s3 = s2[1]
-//
-//            int iViewCountBeforeClick = Integer.parseInt(s3)
-//
-//            'Calling the Press Back Inbuilt funtion'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//            'Delay'
-//            Mobile.delay(10)
-//
-//            lTipsCount.get(index1).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            String sViewCountAfterClick = driver.findElementByXPath('//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]').getText()
-//
-//            println(sViewCountAfterClick)
-//
-//            String[] s4 = sViewCountAfterClick.split('\\s')
-//
-//            println(s4)
-//
-//            String s5 = s4[1]
-//
-//            int iViewCountAfterClick = Integer.parseInt(s5)
-//
-//            if (iViewCountAfterClick == (iViewCountBeforeClick + 1)) {
-//                println('On Click on the Tip, Count Increased by 1 ')
-//            } else {
-//                println('On Click on the Tip, Count mismatched please check manually ')
-//            }
-//        }
-//        
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//
-//        'Calling the Press Back Inbuilt funtion'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//        'Delay'
-//        Mobile.delay(10)
-//    }
-//	
-//}
-//
-//'Calling the Press Back Inbuilt funtion'
-//Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//
-//'Delay'
-//Mobile.delay(10)
+if (Mobile.getAttribute(findTestObject('SCM Mobile/Efficiency/lblSavingsTipsMenuEfficiency'),
+	'text', 5, FailureHandling.CONTINUE_ON_FAILURE).equals('Savings Tips')) {
+
+	Mobile.tap(findTestObject('SCM Mobile/Efficiency/lblSavingsTipsMenuEfficiency'), 15)
+	'Delay of 50 seconds'
+	Mobile.delay(5)
+	'bhartt'
+	ArrayList<MobileElement> lSavingTipssideMenu = driver.findElementsById('com.sus.scm_mobile:id/tv_rebates_details')
+	
+		println('Size of Billing Side Menu :' + lSavingTipssideMenu.size())
+	
+		'TC_EEC_016'
+		for (int index2 = 0; index2 < lSavingTipssideMenu.size(); index2++) {
+			lSavingTipssideMenu.get(index2).click()
+			
+			'verify likes, Enrolled Status, Viewed Details, Read More'
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/ViewedDtails',
+				'SCM Mobile/Efficiency/Rebates/ViewedDtails')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/SaveUptoDetails',
+				'SCM Mobile/Efficiency/Rebates/SaveUptoDetails')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/DescriptionDetails',
+				'SCM Mobile/Efficiency/Rebates/DescriptionDetails')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/AddedDetails',
+				'SCM Mobile/Efficiency/Rebates/AddedDetails')
+			
+			'Calling the Press Back Inbuilt funtion'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+		}
+
+
+	'Calling the Press Back Inbuilt funtion'
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+
+
+	'Delay'
+	Mobile.delay(10)
+}
+}
+static void verifyPreLoginEfficiencyEduTipsTestCases()
+{
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+	
+		String messageText
+
+if (Mobile.getAttribute(findTestObject('SCM Mobile/Efficiency/lblEducational TipsMenuEfficiency'),
+	'text', 5, FailureHandling.CONTINUE_ON_FAILURE).equals('Educational Tips')) {
+
+	Mobile.tap(findTestObject('SCM Mobile/Efficiency/lblEducational TipsMenuEfficiency'), 15)
+	
+	'Delay of 50 seconds'
+	Mobile.delay(5)
+	'bhartt'
+	ArrayList<MobileElement> lEduTipssideMenu = driver.findElementsById('com.sus.scm_mobile:id/tv_rebates_details')
+	
+		println('Size of Billing Side Menu :' + lEduTipssideMenu.size())
+	
+		'TC_EEC_020'
+		for (int index2 = 0; index2 < lEduTipssideMenu.size(); index2++) {
+			lEduTipssideMenu.get(index2).click()
+			
+			'verify likes, Enrolled Status, Viewed Details, Read More'
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/ViewedDtails',
+				'SCM Mobile/Efficiency/Rebates/ViewedDtails')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/SaveUptoDetails',
+				'SCM Mobile/Efficiency/Rebates/SaveUptoDetails')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/DescriptionDetails',
+				'SCM Mobile/Efficiency/Rebates/DescriptionDetails')
+			applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/Efficiency/Rebates/AddedDetails',
+				'SCM Mobile/Efficiency/Rebates/AddedDetails')
+			
+			'Calling the Press Back Inbuilt funtion'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+		}
+
+	'Calling the Press Back Inbuilt funtion'
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
+
+
+	'Delay'
+	Mobile.delay(10)
+
+}
+}
+''

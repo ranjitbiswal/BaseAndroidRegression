@@ -33,516 +33,7 @@ import io.appium.java_client.MobileElement as MobileElement
 applicationMethods.ReusableMethods.verifyValidLogin()
 
 'Delay of 30 Sec'
-Mobile.delay(30 //
-		//'Checking My Account Menu is Displayed on Dashboard or Not'
-		//if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/My Account Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
-		//false) {
-		//    System.out.println('My Account is not displayed in the Dashboard/Landing Page')
-		//} else {
-		//    'Clicking on My Account Menu from Dashboard/Landing Page'
-		//    Mobile.tap(findTestObject('SCM Mobile/LandingPage/My Account Menu'), 10)
-		//
-		//    AppiumDriver<?> driver = MobileDriverFactory.getDriver()
-		) //
-//    MobileElement Wb = driver.findElementByXPath('//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.view.View[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]')
-//
-//    ArrayList<MobileElement> lMyAccountSideMenu = driver.findElementsByClassName('android.widget.RelativeLayout')
-//
-//    println('Size of My Account Side Menu :' + lMyAccountSideMenu.size())
-//
-//    'Printing My Account Side Menu List'
-//    println('My Account Side Menu List Contains :')
-//
-//    for (int index = 0; index < lMyAccountSideMenu.size(); index++) {
-//        println(lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText())
-//
-//        'Delay of 1 seconds'
-//        Mobile.delay(1)
-//    }
-//
-//    for (int index = 0; index < lMyAccountSideMenu.size(); index++) {
-//        if (lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText().equals('Profile1')) {
-//            'Veryfing My Account - Profile'
-//
-//            'Clicking on Profile from My Account Menu'
-//            lMyAccountSideMenu.get(index).click()
-//
-//            'Delay of 50 seconds'
-//            Mobile.delay(50)
-//
-//            if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile - Alternate Number Text Box'),
-//                3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
-//                'Clearing the Alternate Number Text Box'
-//                Mobile.clearText(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile - Alternate Number Text Box'),
-//                    5)
-//
-//                'Entering the Alternate Number'
-//                Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile - Alternate Number Text Box'),
-//                    GlobalVariable.sAlternateNumber, 4)
-//
-//                'Clicking on the Keyboard Ok Button'
-//                Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 15)
-//
-//                'Delay of 15 seconds'
-//                Mobile.delay(15)
-//            }
-//
-//            'Clicking on the Save Button'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile - Save Button'), 15)
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            'Getting the Account Update Message Text in the String variable'
-//            messageText = Mobile.getAttribute(('SCM Mobile/My Account/Profile/My Account - Profile - Profile Updation Message Text'),
-//                'text', 15, FailureHandling.CONTINUE_ON_FAILURE)
-//
-//            'Checking Account Update Message Text is matching with the Expeced Text or Not'
-//            if (messageText.equals('Your Profile has been updated successfully.')) {
-//                System.out.println('Account Update Message Text is matching with the Expeced Text')
-//            } else {
-//                System.out.println('Account Update Message Text is not matching with the Expected Text, Expected Text is : Your Profile has been updated successfully. but Actual Text is ' +
-//                    messageText)
-//            }
-//
-//            'Clicking on the Ok Button'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile - Ok Button'), 25)
-//
-//            'Delay'
-//            Mobile.delay(25)
-//
-//            'Clicking on the Back Button'
-//            Mobile.pressBack()
-//
-//            'Delay'
-//            Mobile.delay(10)
-//        } else if (lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText().equals('Payment Information1')) {
-//            'Veryfing My Account - Payment Information'
-//
-//            'Clicking on Payment Information from My Account Menu'
-//            lMyAccountSideMenu.get(index).click()
-//
-//            'Delay of 20 seconds'
-//            Mobile.delay(20)
-//
-//            '******Deleting Payment Method ***********'
-//
-//            'Getting Accounts in the List'
-//            ArrayList<MobileElement> lAccountsList = driver.findElementsByClassName('XCUIElementTypeCell')
-//
-//            println('Number of Accounts :' + lAccountsList.size())
-//
-//            if (lAccountsList.size() > 0) {
-//                'Getting User Id from the DataBase'
-//                String sUserIdQuery = (('Select UserId from [User] Where UserName = ' + '\'') + GlobalVariable.sUserName) +
-//                '\''
-//
-//                String sUserId = database.DataBaseUtil.executeSQLQuery(sUserIdQuery)
-//
-//                System.out.println(sUserId)
-//
-//                'Getting Account Id from the DataBase'
-//                String sAccountNumberQuery = (('Select AccountNumber from Account Where UtilityAccountNumber = ' + '\'') +
-//                GlobalVariable.sUtilityAccountNumber) + '\''
-//
-//                String sAccountNumber = database.DataBaseUtil.executeSQLQuery(sAccountNumberQuery)
-//
-//                System.out.println(sAccountNumber)
-//
-//                'Deleting Row from Table Default Payment'
-//
-//                'Selecting Row Count from the table'
-//                String sDefaultPaymentMethodGetRowQuery = (((((('Select COUNT(*) from DefaultPayment Where UserId = ' +
-//                '\'') + sUserId) + '\'') + ' and AccountNumber = ') + '\'') + sAccountNumber) + '\''
-//
-//                String sDefaultPaymentMethodGetRow = database.DataBaseUtil.executeSQLQuery(sDefaultPaymentMethodGetRowQuery)
-//
-//                if (sDefaultPaymentMethodGetRow > 0) {
-//                    String sDefaultPaymentMethodDeleteRowQuery = (((((('Delete from DefaultPayment Where UserId = ' + '\'') +
-//                    sUserId) + '\'') + ' and AccountNumber = ') + '\'') + sAccountNumber) + '\''
-//
-//                    String sDefaultPaymentMethodDeleteRow = database.DataBaseUtil.executeUpdateandDeleteSQLQuery(sDefaultPaymentMethodDeleteRowQuery)
-//
-//                    if (sDefaultPaymentMethodGetRow == 1) {
-//                        println('Default Payment Method Deleted Sucessfully')
-//                    } else {
-//                        println('Default Payment Method is not get Deleted, Please check manually')
-//                    }
-//                } else {
-//                    println('There is no Default Payment Method linked with this account')
-//                }
-//
-//                'Deleting Row from Table CreditCard'
-//
-//                'Selecting Row Count from the table'
-//                String sCreditCardGetRowQuery = (('Select COUNT(*) from CreditCard Where UserId = ' + '\'') + sUserId) +
-//                '\''
-//
-//                String sCreditCardGetRow = database.DataBaseUtil.executeSQLQuery(sDefaultPaymentMethodGetRowQuery)
-//
-//                if (sCreditCardGetRow > 0) {
-//                    String sCreditCardDeleteRowQuery = (('Delete from CreditCard Where UserId = ' + '\'') + sUserId) + '\''
-//
-//                    String sCreditCardDeleteRow = database.DataBaseUtil.executeUpdateandDeleteSQLQuery(sCreditCardDeleteRowQuery)
-//
-//                    if (sCreditCardGetRow == 1) {
-//                        println('CreditCard Deleted Sucessfully')
-//                    } else {
-//                        println('CreditCard is not get Deleted, Please check manually')
-//                    }
-//                } else {
-//                    println('There is no CreditCard Payment Method linked with this account')
-//                }
-//
-//                'Deleting Row from Table BankAccount'
-//
-//                'Selecting Row Count from the table'
-//                String sBankAccountGetRowQuery = (('Select COUNT(*) from BankAccount Where UserId = ' + '\'') + sUserId) +
-//                '\''
-//
-//                String sBankAccountGetRow = database.DataBaseUtil.executeSQLQuery(sDefaultPaymentMethodGetRowQuery)
-//
-//                if (sBankAccountGetRow > 0) {
-//                    String sBankAccountDeleteRowQuery = (('Delete from BankAccount Where UserId = ' + '\'') + sUserId) +
-//                    '\''
-//
-//                    String sBankAccountDeleteRow = database.DataBaseUtil.executeUpdateandDeleteSQLQuery(sBankAccountDeleteRowQuery)
-//
-//                    if (sBankAccountGetRow == 1) {
-//                        println('BankAccount Deleted Sucessfully')
-//                    } else {
-//                        println('BankAccount is not get Deleted, Please check manually')
-//                    }
-//                } else {
-//                    println('There is no BankAccount Payment Method linked with this account')
-//                }
-//            } else {
-//                println('There is no Payment Method linked with this account')
-//            }
-//
-//            '*********Adding Payment Method*******'
-//
-//            'Clicking on Add Payment Method from Payment Information'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Add Payment Method Button'), 5)
-//
-//            'Entering the Card Holder Name'
-//            Mobile.setText(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Card Holder Name'), GlobalVariable.sCardHolderName,
-//                4)
-//
-//            'Clicking on the Keyboard Ok Button'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 15)
-//
-//            'Entering the Card Number'
-//            Mobile.setText(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Credit Card Number'), GlobalVariable.sCardNumber,
-//                4)
-//
-//            'Clicking on the Keyboard Ok Button'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 15)
-//
-//            'Clicking on Calendar Icon'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Calendar Icon'), 4)
-//
-//            'Clicking on Calendar Done Button'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Calendar Done Button'), 5)
-//
-//            'Entering the Card CVV Number'
-//            Mobile.setText(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Card Security Code'), '123', 4)
-//
-//            'Clicking on the Keyboard Ok Button'
-//            Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 15)
-//
-//            'Clicking on Calendar Add Card Button'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/CreditCardAddButton'), 5)
-//
-//            'Delay'
-//            Mobile.delay(30)
-//
-//            'Getting the Payment Card Message Text in the String variable'
-//            messageText = Mobile.getAttribute(findTestObject('SCM Mobile/My Account/Payment Information/Payment Method Add Text'),
-//                'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
-//
-//            'Checking Payment Method Add Message Text is matching with the Expeced Text or Not'
-//            if (messageText.equals('Your credit card details have been added successfully and will be validated once you choose to make a payment.')) {
-//                System.out.println('Payment Method Added Successfuly')
-//            } else {
-//                System.out.println('Payment Method Add Message Text is not matching with the Expected Text, Expected Text is : Your credit card details have been added successfully and will be validated once you choose to make a payment. but Actual Text is ' +
-//                    messageText)
-//            }
-//
-//            'Clicking on the Ok Button'
-//            Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Add Payment Method Message Popup Ok Button'),
-//                15)
-//
-//            'Delay'
-//            Mobile.delay(60)
-//
-//            'Clicking on the Back Button'
-//            Mobile.pressBack()
-//
-//            'Delay'
-//            Mobile.delay(10)
-//        } else if (lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText().equals('Marketing Preferences')) {
-//            'Veryfing My Account - Marketing Preferences'
-//
-//            'Clicking on Marketing Preferences from My Account Menu'
-//            lMyAccountSideMenu.get(index).click()
-//
-//            'Delay'
-//            Mobile.delay(10)
-//
-//            'Getting Marketing Preferences in the List'
-//            ArrayList<MobileElement> lMarketingPreferencesList = driver.findElementsByClassName('XCUIElementTypeCell')
-//
-//            println(('Number of Marketing Preferences :' + lMarketingPreferencesList.size()) - 1)
-//
-//            'Printing Marketing Preferences List'
-//            println('Marketing Preferences List Contains :')
-//
-//            if (lMarketingPreferencesList.size() > 1) {
-//                for (int index1 = 1; index1 < lMarketingPreferencesList.size(); index1++) {
-//                    println(lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.TextView').getText())
-//
-//                    'Delay of 1 seconds'
-//                    Mobile.delay(1)
-//                }
-//
-//                'Getting Random Number'
-//                int randomnumber = utility.RandomRange.nextRandomIntegerInRange(1, lMarketingPreferencesList.size())
-//
-//                for (int index1 = randomnumber; index1 < lMarketingPreferencesList.size(); ) {
-//                    String sSwitchSelection = lMarketingPreferencesList.get(index1).findElementByClassName('XCUIElementTypeSwitch').getAttribute(
-//                        'text').toString()
-//
-//                    println(sSwitchSelection)
-//
-//                    if (sSwitchSelection.equals('true')) {
-//                        bResult = true
-//
-//                        println(lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.TextView').getText() +
-//                            ' is already checked')
-//
-//                        'UnSelecting the Marketing Preferences'
-//                        lMarketingPreferencesList.get(index1).findElementByClassName('XCUIElementTypeSwitch').click()
-//
-//                        'Delay of 1 seconds'
-//                        Mobile.delay(1)
-//
-//                        println('UnSelecting Marketing Prefereces for  ' + lMarketingPreferencesList.get(index1).findElementByClassName(
-//                                'android.widget.TextView').getText())
-//                    } else {
-//                        bResult1 = true
-//
-//                        println(lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.TextView').getText() +
-//                            ' is not checked')
-//
-//                        'Selecting the Marketing Preferences'
-//                        lMarketingPreferencesList.get(index1).findElementByClassName('XCUIElementTypeSwitch').click()
-//
-//                        'Delay of 1 seconds'
-//                        Mobile.delay(1)
-//
-//                        println('Selecting Marketing Prefereces for  ' + lMarketingPreferencesList.get(index1).findElementByClassName(
-//                                'android.widget.TextView').getText())
-//                    }
-//                }
-//
-//                'Clicking on Save Button'
-//                Mobile.tap(findTestObject('SCM Mobile/My Account/Marketing Preferences/Save Button'), 5)
-//
-//                'Delay of 8 seconds'
-//                Mobile.delay(8)
-//
-//                messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text',
-//                    5, FailureHandling.CONTINUE_ON_FAILURE)
-//
-//                'Checking Marketing Preferences Updation Message Text is matching with the Expeced Text or Not'
-//                if (messageText.equals(GlobalVariable.sMarketingPreferencesMessageText)) {
-//                    System.out.println('Marketing Preferences Updated Successfully')
-//                } else {
-//                    System.out.println((('Marketing Preferences Updated Text is not matching with the Expected Text, Expected Text is : ' +
-//                        GlobalVariable.sMarketingPreferencesMessageText) + ' but Actual Text is ') + messageText)
-//                }
-//
-//                'Clicking on the PopUp Ok Button'
-//                Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
-//
-//                'Delay of 5 seconds'
-//                Mobile.delay(5)
-//
-//                'Clicking on the Back Button'
-//                Mobile.pressBack()
-//
-//                'Delay'
-//                Mobile.delay(10)
-//            } else {
-//                println('Marketing Preferences List is Empty')
-//            }
-//
-//            'Clicking on the Back Button'
-//            Mobile.pressBack()
-//
-//            'Delay'
-//            Mobile.delay(10)
-//        } else if (lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText().equals('About My Home1')) {
-//            'Veryfing My Account - About My Home'
-//
-//            'Clicking on About My Home from My Account Menu'
-//            lMyAccountSideMenu.get(index).click()
-//
-//            'Delay'
-//            Mobile.delay(40)
-//
-//            'Clicking on the Back Button'
-//            Mobile.pressBack()
-//
-//            'Delay'
-//            Mobile.delay(40)
-//        } else if (lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText().equals('Guest User1')) {
-//            'Veryfing My Account - Guest User'
-//
-//            'Clicking on Guest User from My Account Menu'
-//            lMyAccountSideMenu.get(index).click()
-//
-//            'Delay'
-//            Mobile.delay(10)
-//
-//            'Clicking on the Back Button'
-//            Mobile.pressBack()
-//
-//            'Delay'
-//            Mobile.delay(30)
-//        } else if (lMyAccountSideMenu.get(index).findElementByClassName('android.widget.TextView').getText().equals('About My Business')) {
-//            'Veryfing My Account - About My Business'
-//
-//            'Clicking on About My Business from My Account Menu'
-//            lMyAccountSideMenu.get(index).click()
-//
-//            'Delay'
-//            Mobile.delay(40)
-//
-//            'Clicking on the Back Button'
-//            Mobile.pressBack()
-//
-//            'Delay'
-//            Mobile.delay(40)
-//        }
-//    }
-//
-//    'Clicking on the Back Button'
-//    Mobile.pressBack()
-//
-//    'Delay'
-//    Mobile.delay(30)
-//}
-//
-//        'Checking for My Account Profile'
-//        if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
-//        false) {
-//            System.out.println('My Account - Profile Menu is not displayed in the My Account Tab, So My Account - Profile Test cases cannot be verified.')
-//        } else {
-//        }
-//
-//        'Checking for My Account Payment Information'
-//        if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/My Account/Profile/My Account - Profile Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
-//        false) {
-//            System.out.println('My Account - Profile Menu is not displayed in the My Account Tab, So My Account - Profile Test cases cannot be verified.')
-//        } else {
-//        }
-//	MobileElement  Mb= driver.findElementByClassName('android.support.v7.widget.RecyclerView')
-//
-//    'Getting Marketing Preferences in the List'
-//    ArrayList<MobileElement> lMarketingPreferencesList = Mb.findElementsByClassName('android.widget.RelativeLayout')
-//
-//    println(('Number of Marketing Preferences :' + lMarketingPreferencesList.size()) - 1)
-//
-//    'Printing Marketing Preferences List'
-//    println('Marketing Preferences List Contains :')
-//
-//    if (lMarketingPreferencesList.size() > 1) {
-//        for (int index1 = 1; index1 < lMarketingPreferencesList.size(); index1++) {
-//            println(lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.TextView').getText())
-//
-//            'Delay of 1 seconds'
-//            Mobile.delay(1)
-//        }
-//
-//        'Getting Random Number'
-//        int randomnumber = utility.RandomRange.nextRandomIntegerInRange(1, lMarketingPreferencesList.size())
-//
-//        for (int index1 = randomnumber; index1 < lMarketingPreferencesList.size(); ) {
-//            String sSwitchSelection = lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.CompoundButton').getAttribute(
-//                'checked').toString()
-//
-//            println(sSwitchSelection)
-//
-//            if (sSwitchSelection.equals('true')) {
-//                bResult = true
-//
-//                println(lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.TextView').getText() +
-//                    ' is already checked')
-//
-//                'UnSelecting the Marketing Preferences'
-//                lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.CompoundButton').click()
-//
-//                'Delay of 1 seconds'
-//                Mobile.delay(1)
-//
-//                println('UnSelecting Marketing Prefereces for  ' + lMarketingPreferencesList.get(index1).findElementByClassName(
-//                        'android.widget.TextView').getText())
-//            } else {
-//                bResult1 = true
-//
-//                println(lMarketingPreferencesList.get(index1).findElementByClassName('android.widget.TextView').getText() +
-//                    ' is not checked')
-//
-//                'Selecting the Marketing Preferences'
-//                lMarketingPreferencesList.get(index1).findElementByClassName('XCUIElementTypeSwitch').click()
-//
-//                'Delay of 1 seconds'
-//                Mobile.delay(1)
-//
-//                println('Selecting Marketing Prefereces for  ' + lMarketingPreferencesList.get(index1).findElementByClassName(
-//                        'android.widget.TextView').getText())
-//            }
-//        }
-//
-//        'Clicking on Save Button'
-//        Mobile.tap(findTestObject('SCM Mobile/My Account/Marketing Preferences/Submit Button'), 5)
-//
-//        'Delay of 8 seconds'
-//        Mobile.delay(8)
-//
-//        messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
-//
-//        'Checking Marketing Preferences Updation Message Text is matching with the Expeced Text or Not'
-//        if (messageText.equals(GlobalVariable.sMarketingPreferencesMessageText)) {
-//            System.out.println('Marketing Preferences Updated Successfully')
-//        } else {
-//            System.out.println((('Marketing Preferences Updated Text is not matching with the Expected Text, Expected Text is : ' +
-//                GlobalVariable.sMarketingPreferencesMessageText) + ' but Actual Text is ') + messageText)
-//        }
-//
-//        'Clicking on the PopUp Ok Button'
-//        Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
-//
-//        'Delay of 5 seconds'
-//        Mobile.delay(5)
-//
-//        'Clicking on the Back Button'
-//        Mobile.pressBack()
-//
-//
-//        'Delay'
-//        Mobile.delay(10)
-//    } else {
-//        println('Marketing Preferences List is Empty')
-//    }
-//
-//Get Current Month as a number
-//	MobileElement meFirstCreditCardRadio = driver.findElementsById('com.sus.scm_mobile:id/rb_payment')
-//	TouchActions actions = new TouchActions(driver)
-//	actions.longPress(MobileBy.AccessibilityId('com.sus.scm_mobile:id/rb_payment')).perform()
-//Mobile.switchToNative(FailureHandling.CONTINUE_ON_FAILURE)
+Mobile.delay(30)
 
 @com.kms.katalon.core.annotation.TearDown
 static void verifyMyAccountTestCases() {
@@ -582,7 +73,7 @@ static void verifyMyAccountTestCases() {
 			System.out.println('My Account - Profile Menu is displayed on the My Account Tab.')
 
 			'Verifying My Account - Profile Test Cases'
-			'verifyMyAccountProfileTestCases()'
+			verifyMyAccountProfileTestCases()
 		}
 
 		'Checking for My Account Marketing Preferences Tab'
@@ -593,7 +84,6 @@ static void verifyMyAccountTestCases() {
 			System.out.println('My Account - Marketing Preferences Menu is displayed on the My Account Tab.')
 
 			'Verifying Marketing Preferences Test Cases'
-
 			'verifyMyAccountMarketingPreferencesTestCases()'
 		}
 
@@ -605,7 +95,7 @@ static void verifyMyAccountTestCases() {
 			System.out.println('My Account - Payment Information Menu is displayed on the My Account Tab.')
 
 			'Verifying Payment Information Test Cases'
-			//  verifyMyAccountPaymentInformationTestCases()
+			verifyMyAccountPaymentInformationTestCases()
 		}
 
 		verifyMyAccountGuestUserTestCases()
@@ -778,6 +268,9 @@ static void verifyMyAccountPaymentInformationTestCases() {
 	}
 
 	'Checking for Bank Account Tab'
+	'Clicking on Add Payment Method'
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Add Payment Method Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
 	if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/My Account/Payment Information/Bank Account/BankAccountHeading'),
 	3, FailureHandling.CONTINUE_ON_FAILURE) == false) {
 		System.out.println('Bank Account option is not displayed in the Add Payment Mode Tab, So Bank Account Test cases cannot be verified.')
@@ -785,8 +278,7 @@ static void verifyMyAccountPaymentInformationTestCases() {
 		System.out.println('Bank Account option is displayed in the Add Payment Mode Tab.')
 
 		'Verifying Bank Account Test Cases'
-
-		' verifyMyAccountPaymentInformationBankAccountTestCases()'
+		verifyMyAccountPaymentInformationBankAccountTestCases()
 	}
 }
 
@@ -848,11 +340,79 @@ static void verifyMyAccountPaymentInformationBankAccountTestCases() {
 	Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Bank Account/BankAccountRoutingNumberValidationButton'),
 			4, FailureHandling.CONTINUE_ON_FAILURE)
 
-	''
-
 	'Entering the Bank Account Number'
 	Mobile.setText(findTestObject('SCM Mobile/My Account/Payment Information/Bank Account/BankAccountNumberTextBox'), GlobalVariable.sBankAccountNumber,
 			4, FailureHandling.CONTINUE_ON_FAILURE)
+	'Click on Back to Hide Keyboard'
+	Mobile.pressBack()
+	'Clicking on Add Bank Account Button'
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Bank Account/BankAccountAddButton'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	'Clicking on Popup Ok Button'
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	Mobile.pressBack()
+	Mobile.delay(1)
+
+
+	'Update Bank Account'
+	List<MobileElement> meCreditCardRadio = driver.findElementsByClassName('android.widget.RadioButton')
+
+	if (meCreditCardRadio.size > 0) {
+		'Clicking on the first Bank from the list'
+
+		Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/expDateDetailsCreditCardList'), 0, 0,
+				FailureHandling.CONTINUE_ON_FAILURE)
+
+		'Clicking on Popup Update button'
+		Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Edit Credit Card/Popup Update Button'),
+				3, FailureHandling.CONTINUE_ON_FAILURE)
+		'Clicking on the Update Button'
+		Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Edit Credit Card/Update Card Button'),
+				3, FailureHandling.CONTINUE_ON_FAILURE)
+
+		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		if (messageText.equals(GlobalVariable.sCreditCardUpdateMessageText)) {
+			System.out.println('Credit Card Updated Successfully and Popup message text is as expected.')
+
+			'Clicking on Popup Ok Button'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+			Mobile.pressBack()
+			Mobile.delay(1)
+		} else {
+			System.out.println((('Something bad happened on the updating the Credit Card. Please check manually. Expected Popup message text is ' +
+					GlobalVariable.sCreditCardUpdateMessageText) + ' but Actual text is ') + messageText)
+
+			'Clicking on Popup Ok Button'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+			Mobile.pressBack()
+			Mobile.delay(1)
+
+		}
+	}
+	''
+	'TC_MAPI_43 Delete the Bank Account'
+	Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/routingNumDetailsBankAccList'), 0, 0)
+
+	'Clicking on Popup Delete button'
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/btnDltCreditCardPaymentInfo'),
+			3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/btnYesPopUpDltCreditCardPaymentInfo'),
+			3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+
+	if (messageText.equals(GlobalVariable.sLblTxtNonDltEnrolledCreditCard)) {
+		System.out.println(GlobalVariable.sLblTxtNonDltEnrolledCreditCard)
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	} else {
+		System.out.println((('Something bad happened on the updating the Settings. Please check manually. Expected Popup message text is ' +
+				GlobalVariable.sLblTxtNonDltEnrolledCreditCard) + 'but Actual Text is ') + messageText)
+	}
+
 }
 
 static void verifyMyAccountPaymentInformationCreditCardTestCases() {
@@ -1040,11 +600,9 @@ static void verifyMyAccountPaymentInformationCreditCardTestCases() {
 
 	if (meCreditCardRadio.size > 0) {
 		'Clicking on the first card from the list'
-		//MobileElement meFirstCreditCardRadio = driver.findElementsById('com.sus.scm_mobile:id/rb_payment')
 
-		//action.longPress(meFirstCreditCardRadio).perform();
 
-		Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/android.widget.RadioButton0'), 0, 0,
+		Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/expDateDetailsCreditCardList'), 0, 0,
 				FailureHandling.CONTINUE_ON_FAILURE)
 
 		'Clicking on Popup Update button'
@@ -1069,7 +627,7 @@ static void verifyMyAccountPaymentInformationCreditCardTestCases() {
 
 		if (Mobile.getAttribute(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Edit Credit Card/Card Number TextBox'),
 		'enabled', 0).equals('false')) {
-			System.out.println('Card Number is in readonly mode, which is as expected')
+			System.out.println('Card Number is in read only mode, which is as expected')
 		} else {
 			System.out.println('Card Number is editable, which is against the requirement')
 		}
@@ -1104,6 +662,10 @@ static void verifyMyAccountPaymentInformationCreditCardTestCases() {
 		Mobile.setText(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Edit Credit Card/Card Holder Name'),
 				'John Doe New', 4, FailureHandling.CONTINUE_ON_FAILURE)
 
+		'Entering the card security code'
+		Mobile.setText(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Card Security Code'), '123', 4,
+				FailureHandling.CONTINUE_ON_FAILURE)
+
 		'Clicking on the Update Button'
 		Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/Edit Credit Card/Update Card Button'),
 				3, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1115,6 +677,8 @@ static void verifyMyAccountPaymentInformationCreditCardTestCases() {
 
 			'Clicking on Popup Ok Button'
 			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+			Mobile.pressBack()
+			Mobile.delay(1)
 		} else {
 			System.out.println((('Something bad happened on the updating the Credit Card. Please check manually. Expected Popup message text is ' +
 					GlobalVariable.sCreditCardUpdateMessageText) + ' but Actual text is ') + messageText)
@@ -1123,12 +687,37 @@ static void verifyMyAccountPaymentInformationCreditCardTestCases() {
 			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
 			Mobile.pressBack()
-
 			Mobile.delay(1)
+
+		}
+
+		'TC_MAPI_43 Delete the Credit Card'
+		Mobile.tapAndHold(findTestObject('SCM Mobile/My Account/Payment Information/expDateDetailsCreditCardList'), 0, 0)
+
+		'Clicking on Popup Delete button'
+		Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/btnDltCreditCardPaymentInfo'),
+				3, FailureHandling.CONTINUE_ON_FAILURE)
+
+		Mobile.tap(findTestObject('SCM Mobile/My Account/Payment Information/Credit Card/btnYesPopUpDltCreditCardPaymentInfo'),
+				3, FailureHandling.CONTINUE_ON_FAILURE)
+
+		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1, FailureHandling.CONTINUE_ON_FAILURE)
+
+		if (messageText.equals(GlobalVariable.sLblTxtNConfirmDltEnrolledCreditCard)) {
+			System.out.println(GlobalVariable.sLblTxtNConfirmDltEnrolledCreditCard)
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+
+
+		} else {
+			System.out.println((('Something bad happened on the Deleting the Settings. Please check manually. Expected Popup message text is ' +
+					GlobalVariable.sLblTxtNConfirmDltEnrolledCreditCard) + 'but Actual Text is ') + messageText)
 		}
 	} else {
 		System.out.println('Edit Credit Card test cases cannot be verified because no card is displayed in the list')
 	}
+
+
 }
 
 static void verifyMyAccountProfileTestCases() {
@@ -1152,7 +741,42 @@ static void verifyMyAccountProfileTestCases() {
 		System.out.println('On Click on Profile from the My Account Tab, user might route to the Profile Module or something issue with the Module Name. Expected Module Name is : Profile. Please check manually. ')
 	}
 
-	'Checking Mailing Address is Displayed or Not'
+	'TC_MAP_140 TC_MAP_141 Checking contact types in'
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/ddlPrimaryContactType'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Profile/rbtnPrimarySecondaryLandlineType',
+			'rbtnPrimarySecondaryLandlineType')
+	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Profile/rbtnPrimarySecondaryMobileType',
+			'rbtnPrimarySecondaryMobileType')
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/rbtnPrimarySecondaryMobileType'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/ddlSecondaryContactType'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Profile/rbtnPrimarySecondaryLandlineType',
+			'rbtnPrimarySecondaryLandlineType')
+	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Profile/rbtnPrimarySecondaryMobileType',
+			'rbtnPrimarySecondaryMobileType')
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/rbtnPrimarySecondaryMobileType'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	'TC_MAP_121'
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/btnSaveMyAccountProfile'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+
+	String messageText1 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text',
+			5, FailureHandling.CONTINUE_ON_FAILURE)
+
+	'Checking Text is matching with the Expeced Text or Not'
+	if (messageText1.equals(GlobalVariable.sSuccessSaveProfilePopupMessageText)) {
+		System.out.println('Updated Successfully')
+	} else {
+		System.out.println((('Text is not matching with the Expected Text, Expected Text is : ' +
+				GlobalVariable.sSuccessSaveProfilePopupMessageText) + ' but Actual Text is ') + messageText1)
+	}
+
+	'Clicking on the PopUp Ok Button'
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
+	'Delay of 5 seconds'
+	Mobile.delay(5)
+
+	' Checking Mailing Address is Displayed or Not'
 	if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/My Account/Profile/Mailing Address/Mailing Address Heading'),
 	3, FailureHandling.CONTINUE_ON_FAILURE) == false) {
 		System.out.println('Mailing Address is not displayed in the My Account - Profile Tab, So Mailing Address Test cases cannot be verified.')
@@ -1162,8 +786,89 @@ static void verifyMyAccountProfileTestCases() {
 		'Verifying MyAccount Profile MailingAddress Test Cases'
 		verifyMyAccountProfileMailingAddressTestCases()
 	}
-}
 
+	'TC_MAP_79 TC_MAP_80 checking Property Address Displayed or not'
+	if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/My Account/Profile/Mailing Address/Mailing Address Heading'),
+	3, FailureHandling.CONTINUE_ON_FAILURE) == false) {
+		System.out.println('Property Address is not displayed in the My Account - Profile Tab, So Mailing Address Test cases cannot be verified.')
+	} else {
+		System.out.println('Property Address is displayed on the My Account - Profile Tab.')
+
+		'Verifying MyAccount Profile Property Address Test Cases'
+		verifyMyAccountProfilePropertyAddressTestCases()
+	}
+}
+static verifyMyAccountProfilePropertyAddressTestCases(){
+	String messageText
+
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+
+	'Clicking on Property Address from My Account - Profile Menu'
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/Property Address/btnEditPropertyAddMyAcc'), 6, FailureHandling.CONTINUE_ON_FAILURE)
+
+	'Delay'
+	Mobile.delay(3)
+
+	'Check Module Name'
+	messageText = driver.findElementById('com.sus.scm_mobile:id/title').getText()
+
+	if (messageText.equals('My Account')) {
+		System.out.println('On Click on Property Address from the My Account - Profile Tab, User is routing to the My Account Module')
+	} else {
+		System.out.println('On Click on Property Address from the My Account - Profile Tab, user might route to the My Account  Module or something issue with the Module Name. Expected Module Name is :Edit Mailing Address. Please check manually. ')
+	}
+
+	'Checking Link Account Page Objects'
+	applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Profile/Property Address/btnLinkAccount',
+			'btnLinkAccount')
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/Property Address/btnLinkAccount'), 6, FailureHandling.CONTINUE_ON_FAILURE)
+	''
+	'Entering First Name'
+	Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/Property Address/txtFirstNameLinkAccount'), 'BHarti', 4,
+			FailureHandling.CONTINUE_ON_FAILURE)
+	'Hide KeyBoard'
+	Mobile.hideKeyboard()
+
+	'Entering Account Number'
+	Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/Property Address/txtAccountNumLinkAccount'), 'C002002003', 4,
+			FailureHandling.CONTINUE_ON_FAILURE)
+	'Hide KeyBoard'
+	Mobile.hideKeyboard()
+
+	'Entering Last Name'
+	Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/Property Address/txtLastNameLinkAccount'), 'LastN', 4,
+			FailureHandling.CONTINUE_ON_FAILURE)
+	'Hide KeyBoard'
+	Mobile.hideKeyboard()
+
+	'Entering Zip COde'
+	Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/Property Address/txtZipCodeLinkAccount'), '92602', 4,
+			FailureHandling.CONTINUE_ON_FAILURE)
+	'Hide KeyBoard'
+	Mobile.hideKeyboard()
+	Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/Property Address/btnSubmitLinkAccount'), 6, FailureHandling.CONTINUE_ON_FAILURE)
+	String messageText4 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text',
+			5, FailureHandling.CONTINUE_ON_FAILURE)
+
+	'Checking Text is matching with the Expeced Text or Not'
+	if (messageText4.equals(GlobalVariable.sAlreadyRegisteredAccPopupMessageText)) {
+		System.out.println('Correct Message')
+	} else {
+		System.out.println((('Text is not matching with the Expected Text, Expected Text is : ' +
+				GlobalVariable.sAlreadyRegisteredAccPopupMessageText) + ' but Actual Text is ') + messageText4)
+	}
+
+	'Clicking on the PopUp Ok Button'
+	Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
+	'Delay of 5 seconds'
+	Mobile.delay(5)
+
+
+	''
+
+
+}
 static void verifyMyAccountProfileMailingAddressTestCases() {
 	'TC : TC_MAP_100,TC_MAP_101 To verify that MailingAddress Test Cases from My Acccount - Profile Tab'
 	String messageText
@@ -1253,7 +958,55 @@ static void verifyMyAccountProfileMailingAddressTestCases() {
 		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/Profile/Mailing Address/Validate Button',
 				'Validate Button')
 
-		//'Updating the Street Address'
+		'TC_MAP_114 TC_MAP_116 Updating the Street Address'
+		'Entering Address 1'
+		Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/Mailing Address/Street Address Line 1 TextBox'), 'Address 1', 4,
+				FailureHandling.CONTINUE_ON_FAILURE)
+		'Hide KeyBoard'
+		Mobile.hideKeyboard()
+
+		'Entering Address 2'
+		Mobile.setText(findTestObject('SCM Mobile/My Account/Profile/Mailing Address/Street Address Line 2 TextBox'), 'Address 2', 4,
+				FailureHandling.CONTINUE_ON_FAILURE)
+		'Hide KeyBoard'
+		Mobile.hideKeyboard()
+
+		'Validate'
+		Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/Mailing Address/Validate Button'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+		String messageText2 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text',
+				5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		'Checking Text is matching with the Expeced Text or Not'
+		if (messageText2.equals(GlobalVariable.sMessageIsValidPopupMessageText)) {
+			System.out.println('Address is Valid')
+			'Clicking on the PopUp Ok Button'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+			'Update Button'
+			Mobile.tap(findTestObject('SCM Mobile/My Account/Profile/Mailing Address/Update Button'), 15)
+
+			'Verify Update Success Message'
+			String messageText4 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text',
+					5, FailureHandling.CONTINUE_ON_FAILURE)
+			if (messageText4.equals(GlobalVariable.sMessageSuccessUpdatePopupMessageText)) {
+				System.out.println('Address is Valid')
+				'Clicking on the PopUp Ok Button'
+				Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+			}
+			else
+			{
+				println "Some other message is on"
+				'Clicking on the PopUp Ok Button'
+				Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+			}
+
+		} else {
+			System.out.println('Address is Invalid')
+			'Clicking on the PopUp Ok Button'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
+		}
+
+
 
 	}
 
@@ -1391,14 +1144,14 @@ static void verifyMyAccountGuestUserTestCases()
 		'Update already Invited User'
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnInviteUpdateGU'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		'Clicking on the Ok Button'
-	 Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
 
 
 		' TC_GA_21 Revoke Access of Invitee'
 		lGuestusersList.get(1).click()
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnDeleteInvitation'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		'Clicking on the Ok Button'
-		 Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
 
 		'TC_GA_2 New Invite User Page Objects Validation'
 
@@ -1440,7 +1193,7 @@ static void verifyMyAccountGuestUserTestCases()
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnInviteNewGU'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		'Delay'
 		Mobile.delay(15)
-	String messageText1 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'),
+		String messageText1 = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'),
 				'text', 15, FailureHandling.CONTINUE_ON_FAILURE)
 
 		'Checking Account Update Message Text is matching with the Expeced Text or Not'
@@ -1452,7 +1205,7 @@ static void verifyMyAccountGuestUserTestCases()
 		}
 
 		'Clicking on the Ok Button'
-		 Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
 		'Delay'
 		Mobile.delay(25)
 
@@ -1547,7 +1300,7 @@ static void verifyMyAccountGuestUserTestCases()
 					messageText)
 		}
 		'Clicking on the Ok Button'
-		 Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
 
 	}
 

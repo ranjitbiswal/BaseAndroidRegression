@@ -1,14 +1,14 @@
 [Appium] Welcome to Appium v1.7.2
 [Appium] Non-default server args:
-[Appium]   port: 8498
+[Appium]   port: 29939
 [Appium]   loglevel: info
-[Appium]   chromeDriverPort: 8499
-[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1523525468344
-[Appium] Appium REST http interface listener started on 0.0.0.0:8498
+[Appium]   chromeDriverPort: 29940
+[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1523877436956
+[Appium] Appium REST http interface listener started on 0.0.0.0:29939
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 11 ms - 72 
+[HTTP] <-- GET /wd/hub/status 200 17 ms - 72 
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 8 ms - 72 
+[HTTP] <-- GET /wd/hub/status 200 4 ms - 72 
 [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"capabilities":{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}}
 [Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"E:\\SCM.apk","ap... into desiredCapabilities object {"app":"E:\\SCM.apk","appWaitActivity":"com.*",...
 [Appium] Creating new AndroidDriver (v1.37.0) session
@@ -25,7 +25,7 @@
 [Appium]   platformName: android
 [Appium]   udid: 4d00c4b5b0a160b9
 [BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
-[BaseDriver] Session created with session id: 1243a926-5a57-4cf8-bdd1-7fbfb2541807
+[BaseDriver] Session created with session id: 697e40c7-ccc4-45f4-9d35-9d62b9f56f99
 [AndroidDriver] Java version is: 1.8.0_102
 [ADB] Checking whether adb is present
 [ADB] Using adb.exe from C:\Users\bharti.garg\.katalon\tools\android_sdk\platform-tools\adb.exe
@@ -45,56 +45,20 @@
 [AndroidDriver] Remote apk path is /data/local/tmp/9ac06dd1101d05fe6946311bfac21cb9.apk
 [ADB] Checking whether aapt is present
 [ADB] Extracting package and launch activity from manifest
-[ADB] Cannot kill process 29215 in 1000 ms. Trying to force kill...
+[ADB] No uiautomator process found to kill, continuing...
 [AndroidBootstrap] Android bootstrap socket is now connected
 [AndroidDriver] Screen already unlocked, doing nothing
-[Appium] New AndroidDriver session created successfully, session 1243a926-5a57-4cf8-bdd1-7fbfb2541807 added to master session list
-[HTTP] <-- POST /wd/hub/session 200 20165 ms - 1059 
+[Appium] New AndroidDriver session created successfully, session 697e40c7-ccc4-45f4-9d35-9d62b9f56f99 added to master session list
+[HTTP] <-- POST /wd/hub/session 200 20410 ms - 1059 
 [HTTP] --> GET /wd/hub/status {}
 [HTTP] <-- GET /wd/hub/status 200 4 ms - 83 
-[HTTP] --> POST /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/timeouts {"type":"implicit","ms":60000}
-[HTTP] <-- POST /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/timeouts 200 4 ms - 76 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 197 ms - 2777 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1851 ms - 105910 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 51 ms - 2744 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 2878 ms - 917498 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 156 ms - 24867 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 2963 ms - 851818 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 98 ms - 18593 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1796 ms - 132122 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 162 ms - 26175 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1846 ms - 181414 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 145 ms - 26172 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1912 ms - 173374 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 57 ms - 7253 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1790 ms - 175894 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 157 ms - 26172 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1854 ms - 174130 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 113 ms - 9228 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 2010 ms - 271086 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/source 200 140 ms - 26172 
-[HTTP] --> GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot {}
-[HTTP] <-- GET /wd/hub/session/1243a926-5a57-4cf8-bdd1-7fbfb2541807/screenshot 200 1862 ms - 175546 
-[BaseDriver] Shutting down because we waited 1800 seconds for a command
-[Appium] Closing session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
-[Appium] Removing session 1243a926-5a57-4cf8-bdd1-7fbfb2541807 from our master session list
-[ADB] No uiautomator process found to kill, continuing...
+[HTTP] --> POST /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/timeouts {"type":"implicit","ms":60000}
+[HTTP] <-- POST /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/timeouts 200 4 ms - 76 
+[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source {}
+[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source 200 180 ms - 2777 
+[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot {}
+[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot 200 1814 ms - 106294 
+[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source {}
+[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source 200 166 ms - 28005 
+[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot {}
+[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot 200 3046 ms - 870854 

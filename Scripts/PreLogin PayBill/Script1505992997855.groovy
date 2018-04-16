@@ -131,6 +131,7 @@ static void verifyPreLoginPayBillTestCases() {
         }
 		
 		verifyOneTimePaymentCreditCardTestCases()
+		verifyOneTimePaymentBankAccountTestCases()
     } else {
         System.out.println('One Time Payment TestCases cannot be verified because Pay Bill is not displayed on PreLogin ')
     }
@@ -139,44 +140,7 @@ static void verifyPreLoginPayBillTestCases() {
 'One Time Payment'
 static void verifyOneTimePaymentCreditCardTestCases()
 {
-//'Clicking on Pay Bill Menu'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBillMenu'), 5)
-//
-//'Delay of 5 seconds'
-//Mobile.delay(5)
-// 
-//'Entering Customer Account Number'
-//Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Customer Account Number TextBox'), GlobalVariable.sUtilityAccountNumber, 3)
-//
-//'Delay of 5 seconds'
-//Mobile.delay(5)
-//	
-//'Clicking on the Keyboard Ok Button'
-////Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
-//Mobile.pressBack()
-//
-//'Delay of 2 seconds'
-//Mobile.delay(2)
-//
-// 'Entering Customer Mobile Number'
-//Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Customer Mobile Number TextBox'), GlobalVariable.sCustomerMobileNumber, 3)
-// 
-//'Clicking on the Keyboard Ok Button'
-////Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
-//Mobile.pressBack()
-//
-//'Delay of 2 seconds'
-//Mobile.delay(2)
-// 
-//'Selecting the Agree CheckBox'
-//Mobile.checkElement(findTestObject('SCM Mobile/PreLogin PayBill/Agree CheckBox'), 3)
-//
-//'Delay of 2 seconds'
-//Mobile.delay(2)
-//  
-//'Clicking on Next Button'
-//Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Next Button'), 3)
-// 
+
 'Delay of 5 seconds'
 Mobile.delay(5)
  
@@ -222,6 +186,112 @@ Mobile.pressBack()
  
 'Clicking on PayBill Button'
 Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBill Button'), 10)
+ 
+'Delay of 40 Sec'
+Mobile.delay(40)
+ 
+'Getting Payment Successful Text'
+String messageText = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Payment Successful Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+ 
+'Getting Payment Transaction Id'
+String transactionId = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Transaction Id Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
+ 
+'Verifying One Time Payment is Successfully Done or Not'
+if (messageText.equals(null)) {
+	System.out.println('Something went wrong with One Time Payment, Please check manually')
+} else {
+	if (messageText.equals('Payment Successful!')) {
+		System.out.println('One Time Payment Successful, Transaction Id is : ' + transactionId)
+	} else {
+		System.out.println((('One Time Payment Successful, Transaction Id is : ' + transactionId) + 'Expected Text, Expected Text is : "Payment Successful!" but Actual Text is ') +
+			messageText)
+	}
+}
+ 
+'Clicking on Ok'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Ok Button'), 5)
+}
+
+static void verifyOneTimePaymentBankAccountTestCases()
+{
+	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
+
+'Clicking on Pay Bill Menu'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBillMenu'), 5)
+
+'Delay of 5 seconds'
+Mobile.delay(5)
+
+'Entering Customer Account Number'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Customer Account Number TextBox'), GlobalVariable.sUtilityAccountNumber, 3)
+
+'Delay of 5 seconds'
+Mobile.delay(5)
+
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+
+'Delay of 2 seconds'
+Mobile.delay(2)
+
+ 'Entering Customer Mobile Number'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Customer Mobile Number TextBox'), GlobalVariable.sCustomerMobileNumber, 3)
+
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+
+'Delay of 2 seconds'
+Mobile.delay(2)
+
+'Selecting the Agree CheckBox'
+Mobile.checkElement(findTestObject('SCM Mobile/PreLogin PayBill/Agree CheckBox'), 3)
+
+'Delay of 2 seconds'
+Mobile.delay(2)
+
+'Clicking on Next Button'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Next Button'), 3)
+
+'Delay of 5 seconds'
+Mobile.delay(5)
+ 
+'Clicking on Make Payment Button'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Make Payment Button'), 3)
+ 
+'Delay of 5 seconds'
+Mobile.delay(5)
+ 
+'Entering Bill Amount'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/Enter Amount TextBox'), '1', 3)
+ 
+'Clicking on the Keyboard Ok Button'
+//Mobile.tap(findTestObject('SCM Mobile/Common Elements/KeyBoard Done Button'), 5)
+Mobile.pressBack()
+
+'Bharti'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/btnBankAccountOptionOTP'), 3)
+
+'Entering CBank Account Holder Name'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/txtBoxAccountHolderName'), 'John', 3)
+Mobile.pressBack()
+'Delay of 5 seconds'
+Mobile.delay(5)
+'Entering Routing Number'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/txtBoxRoutingNumber'), '999999999', 3)
+Mobile.pressBack()
+'Delay of 5 seconds'
+Mobile.delay(5)
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/btnRoutingValidate'), 3)
+'Delay of 5 seconds'
+Mobile.delay(5)
+'Entering Account Number'
+Mobile.setText(findTestObject('SCM Mobile/PreLogin PayBill/txtBoxBankAccountNumber'), '999999999', 3)
+Mobile.pressBack()
+
+'Clicking on PayBill Button'
+Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/btnPayBill'), 10)
  
 'Delay of 40 Sec'
 Mobile.delay(40)
