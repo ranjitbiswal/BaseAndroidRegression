@@ -43,7 +43,7 @@ Mobile.getDeviceOS(FailureHandling.CONTINUE_ON_FAILURE)
 Mobile.getDeviceOSVersion(FailureHandling.CONTINUE_ON_FAILURE)
 
 'Delay of 30 Sec'
-Mobile.delay(30)
+Mobile.delay(10)
 
 'TC  --> To verify that SCM-Mobile app Landing screen contain Objects'
 

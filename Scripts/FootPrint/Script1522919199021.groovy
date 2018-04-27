@@ -66,7 +66,7 @@ static void verifFootPrintTestCases() {
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
 
 'TC_FP_1'
 'Checking FootPrint Menu is Displayed on Dashboard or Not'

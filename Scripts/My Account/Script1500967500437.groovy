@@ -783,7 +783,7 @@ static void verifyMyAccountProfileTestCases() {
 	} else {
 		System.out.println('Mailing Address is displayed on the My Account - Profile Tab.')
 
-		'Verifying MyAccount Profile MailingAddress Test Cases'
+		'Verifying MyAccount Profile Mailing Address Test Cases'
 		verifyMyAccountProfileMailingAddressTestCases()
 	}
 
@@ -810,7 +810,7 @@ static verifyMyAccountProfilePropertyAddressTestCases(){
 	Mobile.delay(3)
 
 	'Check Module Name'
-	messageText = driver.findElementById('com.sus.scm_mobile:id/title').getText()
+	messageText = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
 
 	if (messageText.equals('My Account')) {
 		System.out.println('On Click on Property Address from the My Account - Profile Tab, User is routing to the My Account Module')
@@ -863,11 +863,7 @@ static verifyMyAccountProfilePropertyAddressTestCases(){
 
 	'Delay of 5 seconds'
 	Mobile.delay(5)
-
-
 	''
-
-
 }
 static void verifyMyAccountProfileMailingAddressTestCases() {
 	'TC : TC_MAP_100,TC_MAP_101 To verify that MailingAddress Test Cases from My Acccount - Profile Tab'
@@ -1106,7 +1102,7 @@ static void verifyMyAccountGuestUserTestCases()
 
 		'Delay of 1 seconds'
 		Mobile.delay(1)
-		'TC_GA_1 Verify Objects Displayed for Invited Guest User'
+		'TC_GA_1 TC_PM_1 Verify Objects Displayed for Invited Guest User'
 		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/GuestUser/lblHeadingAccountNumber',
 				'lblHeadingAccountNumber')
 		applicationMethods.ReusableMethods.isMobileElementDisplayed('SCM Mobile/My Account/GuestUser/txtLblAccountNumber',
@@ -1141,19 +1137,19 @@ static void verifyMyAccountGuestUserTestCases()
 				'btnInviteUpdateGU')
 
 
-		'Update already Invited User'
+		'TC_PM_16 TC_PM_17 Update already Invited User'
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnInviteUpdateGU'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		'Clicking on the Ok Button'
 		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
 
 
-		' TC_GA_21 Revoke Access of Invitee'
+		' TC_GA_21 TC_PM_18 TC_PM_31 Revoke Access of Invitee'
 		lGuestusersList.get(1).click()
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnDeleteInvitation'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		'Clicking on the Ok Button'
 		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
 
-		'TC_GA_2 New Invite User Page Objects Validation'
+		'TC_GA_2 TC_PM_7 New Invite User Page Objects Validation'
 
 		'Clicking on New Invite Guest User from My Account Menu'
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnAddGuestUser'), 3, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1209,7 +1205,7 @@ static void verifyMyAccountGuestUserTestCases()
 		'Delay'
 		Mobile.delay(25)
 
-		' TC_GA_26 Validate Message of Mnadstory Details to b filled'
+		' TC_GA_26 TC_PM_34 Validate Message of Mnadstory Details to b filled'
 		'Clicking on New Invite Guest User from My Account Menu'
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnAddGuestUser'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnInviteNewGU'), 3, FailureHandling.CONTINUE_ON_FAILURE)

@@ -1,12 +1,12 @@
 [Appium] Welcome to Appium v1.7.2
 [Appium] Non-default server args:
-[Appium]   port: 29939
+[Appium]   port: 61072
 [Appium]   loglevel: info
-[Appium]   chromeDriverPort: 29940
-[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1523877436956
-[Appium] Appium REST http interface listener started on 0.0.0.0:29939
+[Appium]   chromeDriverPort: 61074
+[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1524564416837
+[Appium] Appium REST http interface listener started on 0.0.0.0:61072
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 17 ms - 72 
+[HTTP] <-- GET /wd/hub/status 200 15 ms - 72 
 [HTTP] --> GET /wd/hub/status {}
 [HTTP] <-- GET /wd/hub/status 200 4 ms - 72 
 [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"capabilities":{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}}
@@ -25,7 +25,7 @@
 [Appium]   platformName: android
 [Appium]   udid: 4d00c4b5b0a160b9
 [BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
-[BaseDriver] Session created with session id: 697e40c7-ccc4-45f4-9d35-9d62b9f56f99
+[BaseDriver] Session created with session id: 57973bc0-595d-414f-8931-a2b9508f9ca4
 [AndroidDriver] Java version is: 1.8.0_102
 [ADB] Checking whether adb is present
 [ADB] Using adb.exe from C:\Users\bharti.garg\.katalon\tools\android_sdk\platform-tools\adb.exe
@@ -48,17 +48,22 @@
 [ADB] No uiautomator process found to kill, continuing...
 [AndroidBootstrap] Android bootstrap socket is now connected
 [AndroidDriver] Screen already unlocked, doing nothing
-[Appium] New AndroidDriver session created successfully, session 697e40c7-ccc4-45f4-9d35-9d62b9f56f99 added to master session list
-[HTTP] <-- POST /wd/hub/session 200 20410 ms - 1059 
+[Appium] New AndroidDriver session created successfully, session 57973bc0-595d-414f-8931-a2b9508f9ca4 added to master session list
+[HTTP] <-- POST /wd/hub/session 200 17936 ms - 1059 
 [HTTP] --> GET /wd/hub/status {}
 [HTTP] <-- GET /wd/hub/status 200 4 ms - 83 
-[HTTP] --> POST /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/timeouts {"type":"implicit","ms":60000}
-[HTTP] <-- POST /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/timeouts 200 4 ms - 76 
-[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source {}
-[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source 200 180 ms - 2777 
-[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot {}
-[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot 200 1814 ms - 106294 
-[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source {}
-[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/source 200 166 ms - 28005 
-[HTTP] --> GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot {}
-[HTTP] <-- GET /wd/hub/session/697e40c7-ccc4-45f4-9d35-9d62b9f56f99/screenshot 200 3046 ms - 870854 
+[HTTP] --> POST /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/timeouts {"type":"implicit","ms":60000}
+[HTTP] <-- POST /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/timeouts 200 6 ms - 76 
+[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source {}
+[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source 200 214 ms - 2777 
+[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot {}
+[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot 200 1710 ms - 105378 
+[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source {}
+[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source 200 273 ms - 44660 
+[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot {}
+[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot 200 2843 ms - 874970 
+[Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
+[Appium] Removing session 57973bc0-595d-414f-8931-a2b9508f9ca4 from our master session list
+[AndroidBootstrap] Cannot shut down Android bootstrap; it has already shut down
+[HTTP] --> DELETE /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4 {}
+[HTTP] <-- DELETE /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4 404 8 ms - 131 

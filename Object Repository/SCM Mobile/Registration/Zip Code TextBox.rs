@@ -4,6 +4,12 @@
    <name>Zip Code TextBox</name>
    <tag></tag>
    <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.EditText' and @instance = '3' and (text() = 'Mandatory' or . = 'Mandatory') and @resource-id = 'com.sus.scm_mobile:id/et_edittext_dynamic']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -18,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>
-      <value>4</value>
+      <value>3</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

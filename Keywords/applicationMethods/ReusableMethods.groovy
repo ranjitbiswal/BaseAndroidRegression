@@ -64,8 +64,7 @@ public class ReusableMethods {
 		if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/btnClosePopUpDashboard'),
 			3, FailureHandling.CONTINUE_ON_FAILURE) == true) {
 			println('About My Business Pop Up is Popped')
-
-			'Closing OPop UP'
+			'Closing Pop UP'
 			Mobile.tap(findTestObject('SCM Mobile/LandingPage/btnClosePopUpDashboard'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}

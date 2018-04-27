@@ -3,6 +3,6 @@
    <description>PreLoginPayBill</description>
    <name>PreLogin PayBill</name>
    <tag>PreLoginPayBill</tag>
-   <comment></comment>
+   <comment>One Time Payment</comment>
    <testCaseGuid>a3b1a734-e033-453d-815c-71316bf80e03</testCaseGuid>
 </TestCaseEntity>

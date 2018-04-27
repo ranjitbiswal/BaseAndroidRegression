@@ -3,8 +3,11 @@
    <description>Billing</description>
    <name>Billing</name>
    <tag>Billing</tag>
-   <comment>Veryfing Billing - History
+   <comment>Veryfing Billing - Auto Pay
+Veryfing Billing - History
 Veryfing Billing - Budget My Bill
-test reusable functions</comment>
+Verify Billing - Level Pay 
+test reusable functions
+Bharti</comment>
    <testCaseGuid>64abfa9e-d19f-44be-9e56-20733fa3449b</testCaseGuid>
 </TestCaseEntity>

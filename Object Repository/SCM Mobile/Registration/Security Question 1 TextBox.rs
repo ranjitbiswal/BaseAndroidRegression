@@ -4,6 +4,12 @@
    <name>Security Question 1 TextBox</name>
    <tag></tag>
    <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.EditText' and @instance = '8' and (text() = 'Mandatory' or . = 'Mandatory') and @resource-id = 'com.sus.scm_mobile:id/et_single_line']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -18,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>
-      <value>5</value>
+      <value>8</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

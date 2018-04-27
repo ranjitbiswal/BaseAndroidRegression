@@ -40,7 +40,7 @@ Mobile.delay(50)
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu1'), 20)
 
 //x = UsageMenu.getLocation().getX()
 //y = UsageMenu.getLocation().getY()

@@ -23,14 +23,20 @@ import io.appium.java_client.AppiumDriver as AppiumDriver
 import io.appium.java_client.MobileElement as MobileElement
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.remote.DesiredCapabilities
+
 import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper as MobileElementCommonHelper
 import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.TouchAction as TouchAction
+import io.appium.java_client.android.AndroidDriver
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import java.awt.Dimension
 import java.lang.ref.ReferenceQueue.Null as Null
 import groovy.time.TimeCategory as TimeCategory
 import java.util.logging.Logger as Logger
@@ -57,6 +63,7 @@ import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as Mobil
 import io.appium.java_client.AppiumDriver as AppiumDriver
 import io.appium.java_client.MobileBy as MobileBy
 import io.appium.java_client.MobileElement as MobileElement
+import org.openqa.selenium.Dimension
 
 'Starting the Application'
 applicationMethods.ReusableMethods.verifyValidLogin()
@@ -66,14 +73,23 @@ static void verifyEfficiencytTestCases() {
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
+WebElement NofMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Notifications Menu'), 20)
 
-//x = UsageMenu.getLocation().getX()
-//y = UsageMenu.getLocation().getY()
-//TouchAction action = new TouchAction(driver)
-//action.press(x, y).moveTo(x - 450, y).release().perform()
-//action.press(x, y).moveTo(x - 500, y).release().perform()
-//Mobile.delay(30)
+//int x,y
+int x = UsageMenu.getLocation().getX()
+int y = UsageMenu.getLocation().getY()
+int x1 = NofMenu.getLocation().getX()
+int y1 = NofMenu.getLocation().getY()
+int s2=x1-x
+int s1=y1-y
+TouchAction action = new TouchAction(driver)
+//action.press(935,1535).moveTo(751, 0).release().perform()
+//action.press(x, y).moveTo(-300, y).release().perform()
+
+//Mobile.swipe(935,1535,184,1535, FailureHandling.STOP_ON_FAILURE)
+//Mobile.swipe(935,1535,751,0, FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(30)
 
 'Checking Efficiency Menu is Displayed on Dashboard or Not'
 if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/Efficiency Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) == 

@@ -372,4 +372,14 @@
       <initValue>'Our records indicate that this Account Number is already registered.'</initValue>
       <name>sAlreadyRegisteredAccPopupMessageText</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'123'</initValue>
+      <name>sInvalidPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'The entered Password does not desired requirements. Please enter a valid password. Your password should comprise of '</initValue>
+      <name>sPasswordInvalidMessageText</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -33,7 +33,7 @@ Mobile.delay(30)
 
 @com.kms.katalon.core.annotation.TearDown
 static void verifyPreLoginPaymentLocationsTestCases() {
-    'TC : TC_PLPL_10, TC_PLPL_15, TC_PLPL_11, TC_PLPL_14 To verify that PreLogin Payment Locations'
+    'TC : TC_PLPL_2 TC_PLPL_10, TC_PLPL_15, TC_PLPL_11, TC_PLPL_14 To verify that PreLogin Payment Locations'
     String messageText = null
 
     String sZipCode = null

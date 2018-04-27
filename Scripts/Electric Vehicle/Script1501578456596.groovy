@@ -62,8 +62,8 @@ import io.appium.java_client.MobileElement as MobileElement
 applicationMethods.ReusableMethods.verifyValidLogin()
 
 @com.kms.katalon.core.annotation.TearDown
-static void verifyEfficiencytTestCases() {
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+static void verifyElectricVehicleTestCases() {
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
 'Delay of 15 Sec'
 Mobile.delay(10)
 String messageText = null
@@ -234,7 +234,7 @@ false) {
 
 static void verifyElecticVehicleTestCase() {
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
 'Delay of 15 Sec'
 Mobile.delay(10)
 String messageText = null
@@ -398,7 +398,7 @@ static void verifyChargingStationTestCase() {
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu (1)'), 20)
+WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
 
 'Checking EV Menu is Displayed on Dashboard or Not'
 if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/EV Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
@@ -414,7 +414,7 @@ false) {
 	ArrayList<MobileElement> ls = driver.findElementsByClassName('android.widget.Button')
 
 		ls.get(3).click()
-		'Check Module Name'
+		'TC_EV_18 Check Module Name'
 		String messageText1 = driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
 
 		if (messageText1.equals('Charging Stations')) {

@@ -44,7 +44,7 @@ Mobile.tap(findTestObject('SCM Mobile/Common Elements/Hamburger Menu'), 5)
 @com.kms.katalon.core.annotation.TearDown
 static void verifyNotificationPreferencesTestCases() {
 
-	'TC : TC_MANP_1, TC_MANP_2 To verify that Notification Preferences Tab and page objects'
+	'TC :TC_SD_1 TC_MANP_1, TC_MANP_2 To verify that Notification Preferences Tab and page objects'
 	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
 	String messageText
@@ -247,7 +247,7 @@ static void verifyNotificationPreferencesTestCases() {
 
 			'Clicking on Done Button'
 			Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/Done Button'), 5)
-
+			'TC_MANP_3'
 			'Clicking on Submit Button'
 			Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Notification Preferences/btnSaveNP'), 5)
 

@@ -180,6 +180,48 @@ static void verifyChangePasswordTestCases() {
             
             'Clicking on the PopUp Ok Button'
             Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+			
+			'TC: TC_DBD_101 To verify that message The entered Password does not desired requirements Please enter a valid password Your password should comprise of '
+			
+			'Clearing the Existing Password'
+			Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Change Password/Existing Password TextBox'), 2, FailureHandling.STOP_ON_FAILURE)
+
+			'Clearing the New Password'
+			Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Change Password/New Password TextBox'), 2, FailureHandling.STOP_ON_FAILURE)
+
+			'Clearing the Confirm Password'
+			Mobile.clearText(findTestObject('SCM Mobile/Hamburger Menu/Change Password/Confirm Password TextBox'), 2, FailureHandling.STOP_ON_FAILURE)
+
+			'Entering the Existing Password'
+			Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Change Password/Existing Password TextBox'), GlobalVariable.sPassword,
+				4)
+
+			'Entering the New Password'
+			Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Change Password/New Password TextBox'), GlobalVariable.sInvalidPassword,
+				4)
+
+			'Entering the Confirm Password'
+			Mobile.setText(findTestObject('SCM Mobile/Hamburger Menu/Change Password/Confirm Password TextBox'), GlobalVariable.sInvalidPassword,
+				4)
+
+			Mobile.pressBack()
+
+			'Clicking on Submit Button'
+			Mobile.tap(findTestObject('SCM Mobile/Hamburger Menu/Change Password/Submit Button'), 4)
+
+			messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text', 1,
+				FailureHandling.CONTINUE_ON_FAILURE)
+			'Checking Password Change Message Text is matching with the Expected Text or Not'
+			if (messageText.equals(GlobalVariable.sPasswordInvalidMessageText)) {
+				System.out.println('Password Updated Successfully')
+			} else {
+				System.out.println((('Password Updated Text is not matching with the Expected Text, Expected Text is : ' +
+					GlobalVariable.sPasswordInvalidMessageText) + ' but Actual Text is ') + messageText)
+			}
+			
+			'Clicking on the PopUp Ok Button'
+			Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 15)
+
 
             'TC : TC_DBD_111 --> Successfully Password change '
 
