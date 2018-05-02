@@ -1,14 +1,14 @@
 [Appium] Welcome to Appium v1.7.2
 [Appium] Non-default server args:
-[Appium]   port: 61072
+[Appium]   port: 31241
 [Appium]   loglevel: info
-[Appium]   chromeDriverPort: 61074
-[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1524564416837
-[Appium] Appium REST http interface listener started on 0.0.0.0:61072
+[Appium]   chromeDriverPort: 31242
+[Appium]   tmpDir: C:\Users\BHARTI~1.GAR\AppData\Local\Temp\\Katalon\Appium\Temp1525262937548
+[Appium] Appium REST http interface listener started on 0.0.0.0:31241
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 15 ms - 72 
+[HTTP] <-- GET /wd/hub/status 200 13 ms - 72 
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 4 ms - 72 
+[HTTP] <-- GET /wd/hub/status 200 5 ms - 72 
 [HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"capabilities":{"desiredCapabilities":{"app":"E:\\SCM.apk","appWaitActivity":"com.*","autoGrantPermissions":true,"deviceId":"","deviceName":"samsung GT-I9500 (Android 5.0.1)","fullReset":false,"newCommandTimeout":1800,"noReset":true,"platform":"ANDROID","platformName":"Android","udid":"4d00c4b5b0a160b9"},"firstMatch":[{"platformName":"android"}]}}
 [Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"E:\\SCM.apk","ap... into desiredCapabilities object {"app":"E:\\SCM.apk","appWaitActivity":"com.*",...
 [Appium] Creating new AndroidDriver (v1.37.0) session
@@ -25,7 +25,7 @@
 [Appium]   platformName: android
 [Appium]   udid: 4d00c4b5b0a160b9
 [BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
-[BaseDriver] Session created with session id: 57973bc0-595d-414f-8931-a2b9508f9ca4
+[BaseDriver] Session created with session id: 1d89227d-1c15-46c6-92fe-8bae6798a90a
 [AndroidDriver] Java version is: 1.8.0_102
 [ADB] Checking whether adb is present
 [ADB] Using adb.exe from C:\Users\bharti.garg\.katalon\tools\android_sdk\platform-tools\adb.exe
@@ -48,22 +48,30 @@
 [ADB] No uiautomator process found to kill, continuing...
 [AndroidBootstrap] Android bootstrap socket is now connected
 [AndroidDriver] Screen already unlocked, doing nothing
-[Appium] New AndroidDriver session created successfully, session 57973bc0-595d-414f-8931-a2b9508f9ca4 added to master session list
-[HTTP] <-- POST /wd/hub/session 200 17936 ms - 1059 
+[Appium] New AndroidDriver session created successfully, session 1d89227d-1c15-46c6-92fe-8bae6798a90a added to master session list
+[HTTP] <-- POST /wd/hub/session 200 24088 ms - 1059 
 [HTTP] --> GET /wd/hub/status {}
-[HTTP] <-- GET /wd/hub/status 200 4 ms - 83 
-[HTTP] --> POST /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/timeouts {"type":"implicit","ms":60000}
-[HTTP] <-- POST /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/timeouts 200 6 ms - 76 
-[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source {}
-[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source 200 214 ms - 2777 
-[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot {}
-[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot 200 1710 ms - 105378 
-[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source {}
-[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/source 200 273 ms - 44660 
-[HTTP] --> GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot {}
-[HTTP] <-- GET /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4/screenshot 200 2843 ms - 874970 
+[HTTP] <-- GET /wd/hub/status 200 5 ms - 83 
+[HTTP] --> POST /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/timeouts {"type":"implicit","ms":60000}
+[HTTP] <-- POST /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/timeouts 200 5 ms - 76 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source 200 176 ms - 2777 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot 200 1830 ms - 105378 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source 200 179 ms - 41515 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot 200 3000 ms - 854354 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source 200 170 ms - 27913 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot 200 1940 ms - 225322 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/source 200 170 ms - 26695 
+[HTTP] --> GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot {}
+[HTTP] <-- GET /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a/screenshot 200 1889 ms - 194990 
 [Appium] Closing session, cause was 'UiAUtomator shut down unexpectedly'
-[Appium] Removing session 57973bc0-595d-414f-8931-a2b9508f9ca4 from our master session list
+[Appium] Removing session 1d89227d-1c15-46c6-92fe-8bae6798a90a from our master session list
 [AndroidBootstrap] Cannot shut down Android bootstrap; it has already shut down
-[HTTP] --> DELETE /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4 {}
-[HTTP] <-- DELETE /wd/hub/session/57973bc0-595d-414f-8931-a2b9508f9ca4 404 8 ms - 131 
+[HTTP] --> DELETE /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a {}
+[HTTP] <-- DELETE /wd/hub/session/1d89227d-1c15-46c6-92fe-8bae6798a90a 404 9 ms - 131 

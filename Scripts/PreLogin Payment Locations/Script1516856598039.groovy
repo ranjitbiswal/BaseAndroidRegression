@@ -29,7 +29,7 @@ import io.appium.java_client.MobileElement as MobileElement
 applicationMethods.ReusableMethods.startApplication()
 
 'Delay of 30 Sec'
-Mobile.delay(30) 
+Mobile.delay(10) 
 
 @com.kms.katalon.core.annotation.TearDown
 static void verifyPreLoginPaymentLocationsTestCases() {
@@ -96,7 +96,7 @@ static void verifyPreLoginPaymentLocationsTestCases() {
 
                     sZipCode = (parts1[1])
 
-                    'Clicking on First Payment Location'
+                    'TC_PLPL_8 Clicking on First Payment Location'
                     lPaymentLocationsCount.get(index).click()
 
                     sFirstPaymentLocationTitleFromMap = driver.findElementById('com.sus.scm_mobile:id/tv_detail_header').getText()

@@ -4,6 +4,12 @@
    <name>Header Search Icon</name>
    <tag></tag>
    <elementGuidId>701f1203-50ba-4a58-a1d4-b4d148cd7bde</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.TextView' and (text() = '' or . = '') and @resource-id = 'com.sus.scm_mobile:id/iv_searchicon']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -14,7 +20,7 @@
       <value>android.widget.TextView</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>

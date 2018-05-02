@@ -73,17 +73,17 @@ static void verifyEfficiencytTestCases() {
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
-WebElement NofMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Notifications Menu'), 20)
-
-//int x,y
-int x = UsageMenu.getLocation().getX()
-int y = UsageMenu.getLocation().getY()
-int x1 = NofMenu.getLocation().getX()
-int y1 = NofMenu.getLocation().getY()
-int s2=x1-x
-int s1=y1-y
-TouchAction action = new TouchAction(driver)
+//WebElement UsageMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 20)
+//WebElement NofMenu = MobileElementCommonHelper.findElement(findTestObject('SCM Mobile/LandingPage/Notifications Menu'), 20)
+//
+////int x,y
+//int x = UsageMenu.getLocation().getX()
+//int y = UsageMenu.getLocation().getY()
+//int x1 = NofMenu.getLocation().getX()
+//int y1 = NofMenu.getLocation().getY()
+//int s2=x1-x
+//int s1=y1-y
+//TouchAction action = new TouchAction(driver)
 //action.press(935,1535).moveTo(751, 0).release().perform()
 //action.press(x, y).moveTo(-300, y).release().perform()
 
@@ -187,96 +187,7 @@ false) {
 							println "Successfully Enrolled"
 						}
 						}
-//					'bharti'
-//					ArrayList<MobileElement> lTipsCount = driver.findElementsByClassName('XCUIElementTypeCell')
-//					
-//					println("Rebates Tip Count " + lTipsCount.size())
-//					
-//					for(int index1=0;index1<1;index1++)
-//					{
-//						lTipsCount.get(index1).click()
-//						
-//						'Delay of 20 seconds'
-//						Mobile.delay(20)
-//						
-//						String sViewCountBeforeClick = driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeStaticText[2]").getText()
-//						println (sViewCountBeforeClick)
-//						
-//						String sLikeCountBeforeCLick =driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]").getText()
-//						println (sLikeCountBeforeCLick)
-//						
-//						String[] s2 = sViewCountBeforeClick.split("\\s")
-//						println (s2)
-//						
-//						String s3 =s2[1]
-//						
-//						int iViewCountBeforeClick =Integer.parseInt(s3)
-//						int iLikeCountBeforeCLick =Integer.parseInt(sLikeCountBeforeCLick)
-//						
-//						
-//						'Clicking on Like Button'
-//						Mobile.tap(findTestObject('SCM Mobile/Efficiency/Rebates/Like Icon'), 10)
-//		
-//						'Delay of 10 seconds'
-//						Mobile.delay(10)
-//					
-//						String sLikeCountAfterCLick =driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[2]/XCUIElementTypeStaticText[2]").getText()
-//						println (sLikeCountAfterCLick)
-//						
-//						
-//						int iLikeCountAfterCLick =Integer.parseInt(sLikeCountAfterCLick)
-//						
-//						'Calling the Press Back Inbuilt funtion'
-//						Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//		
-//			
-//						'Delay'
-//						Mobile.delay(10)
-//						
-//						lTipsCount.get(index1).click()
-//						
-//						'Delay of 20 seconds'
-//						Mobile.delay(20)
-//							
-//						String sViewCountAfterClick = driver.findElementByXPath("//XCUIElementTypeApplication/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTable[1]/XCUIElementTypeCell[3]/XCUIElementTypeStaticText[2]").getText()
-//						println (sViewCountAfterClick)
-//					
-//						String[] s4 = sViewCountAfterClick.split("\\s")
-//						println (s4)
-//						
-//						String s5 =s4[1]
-//						int iViewCountAfterClick =Integer.parseInt(s5)
-//						
-//						if(iViewCountAfterClick ==iViewCountBeforeClick +1 )
-//						{
-//							println ("On Click on the Tip, Count Increased by 1 ")
-//						}
-//						else
-//						{
-//							println ("On Click on the Tip, Count mismatched please check manually ")
-//						}
-//						
-//						if(iLikeCountAfterCLick >  iLikeCountBeforeCLick)
-//						{
-//							println ("Like Button Clicked and Verified ")
-//						}
-//						else if(iLikeCountAfterCLick <  iLikeCountBeforeCLick)
-//						{
-//							println ("UnLike Button Clicked and Verified ")
-//						}
-//						else
-//						{
-//							println ("On Click on the Like/UnLike, Count mismatched please check manually")
-//						}
-//		
-//					}
-//					
-//					'Calling the Press Back Inbuilt funtion'
-//					Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
-//		
-//		
-//					'Delay'
-//					Mobile.delay(10)
+
 						String s= driver.findElementById('com.sus.scm_mobile:id/tv_modulename').getText()
 					if (s.equals('Efficiency'))  {
 						Mobile.tap(findTestObject('SCM Mobile/Efficiency/lblRebatesMenuEfficiency'), 15)

@@ -29,95 +29,70 @@ int x = 0
 
 int y = 0
 
-'Calling Login Page Test Case'
-Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+'Starting the Application'
+applicationMethods.ReusableMethods.verifyValidLogin()
 
-Mobile.delay(30)
+Mobile.delay(10)
 
 'Checking Mic icon is Displayed on Dashboard or Not'
-if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Common Elements/Mic Button'), 3, FailureHandling.CONTINUE_ON_FAILURE) == 
+if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/Common Elements/Mic Button'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
 false) {
-    System.out.println('Mic icon is not displayed in the Dashboard/Landing Page')
+	System.out.println('Mic icon is not displayed in the Dashboard/Landing Page')
 } else {
-    System.out.println('Mic icon is displayed in the Dashboard/Landing Page')
+	System.out.println('Mic icon is displayed in the Dashboard/Landing Page')
+}
+
+'TC_MD_6 Checking Weather info is Present or not.'
+if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/weatherDateTimeLandingPage'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
+false) {
+	System.out.println('Weather for current day is not displayed in the Dashboard/Landing Page')
+} else {
+	System.out.println('Weather for current day is displayed in the Dashboard/Landing Page')
+}
+
+if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/weatherDetailsWeekLandingPage'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
+false) {
+	System.out.println('Weather for whole week is not displayed in the Dashboard/Landing Page')
+} else {
+	System.out.println('Weather for whole week is displayed in the Dashboard/Landing Page')
 }
 
 AppiumDriver<?> driver = MobileDriverFactory.getDriver()
 
-String sPageIndicator = Mobile.getAttribute(findTestObject('SCM Mobile/LandingPage/PageIndicator'), 'value', 15, FailureHandling.CONTINUE_ON_FAILURE)
 
-String[] s1 = sPageIndicator.split('\\s')
+ArrayList<MobileElement> lLandingPageMenu1 = driver.findElementsById('com.sus.scm_mobile:id/ll_griditemcontainer_home')
 
-println(s1)
+println('Size of Menus Available on Landing Page 1:' + lLandingPageMenu1.size())
 
-String sPageBegin = s1[1]
+'Printing Landing Page Menu List'
+println('Below are the Tabs available on the Dashboard Page 1 : ')
 
-String sPageEnd = s1[3]
+for (int index = 0; index < lLandingPageMenu1.size(); index++) {
+	if (index == 2) {
+		String sFirstMenu = lLandingPageMenu1.get(index).getText()
 
-println(sPageBegin)
+		WebElement FirstMenu = lLandingPageMenu1.get(index)
 
-int iPageBegin = Integer.parseInt(sPageBegin)
+		x = FirstMenu.getLocation().getX()
 
-println(sPageEnd)
+		y = FirstMenu.getLocation().getY()
+	}
 
-int iPageEnd = Integer.parseInt(sPageEnd)
+	println(lLandingPageMenu1.get(index).getText())
+}
 
-for (int iPage = 0; iPage < iPageEnd; iPage++) {
-    if (((iPageEnd == 2) && (iPageBegin == 1)) && (iPage == 0)) {
-        ArrayList<MobileElement> lLandingPageMenu1 = driver.findElementsByClassName('XCUIElementTypeCell')
+TouchAction action = new TouchAction(driver)
 
-        println('Size of Menus Available on Landing Page 1:' + lLandingPageMenu1.size())
+action.press(x, y).moveTo(x - 560, y).release().perform()
 
-        'Printing Landing Page Menu List'
-        println('Below are the Tabs available on the Dashboard Page 1 : ')
 
-        for (int index = 0; index < lLandingPageMenu1.size(); index++) {
-            if (index == 2) {
-                String sFirstMenu = lLandingPageMenu1.get(index).findElementByClassName('XCUIElementTypeStaticText').getText()
+ArrayList<MobileElement> lLandingPageMenu2 = driver.findElementsById('com.sus.scm_mobile:id/ll_griditemcontainer_home')
 
-                WebElement FirstMenu = lLandingPageMenu1.get(index)
+println('Size of Menus Available on Landing Page 2:' + lLandingPageMenu2.size())
 
-                x = FirstMenu.getLocation().getX()
+'Printing Landing Page Menu List'
+println('Below are the Tabs available on the Dashboard Page 2 : ')
 
-                y = FirstMenu.getLocation().getY()
-            }
-            
-            println(lLandingPageMenu1.get(index).findElementByClassName('XCUIElementTypeStaticText').getText())
-        }
-        
-        TouchAction action = new TouchAction(driver)
-
-        action.press(x, y).moveTo(x - 560, y).release().perform()
-    }
-    
-    if (iPage == 1) {
-        ArrayList<MobileElement> lLandingPageMenuTemp = driver.findElementsByClassName('XCUIElementTypeCell')
-
-        for (int index = 0; index < lLandingPageMenuTemp.size(); index++) {
-            if (index == 2) {
-                String sFirstMenu = lLandingPageMenuTemp.get(index).findElementByClassName('XCUIElementTypeStaticText').getText()
-
-                WebElement FirstMenu = lLandingPageMenuTemp.get(index)
-
-                x = FirstMenu.getLocation().getX()
-
-                y = FirstMenu.getLocation().getY()
-
-                TouchAction action = new TouchAction(driver)
-
-                action.press(x, y).moveTo(x - 560, y).release().perform()
-            }
-        }
-        
-        ArrayList<MobileElement> lLandingPageMenu2 = driver.findElementsByClassName('XCUIElementTypeCell')
-
-        println('Size of Menus Available on Landing Page 2:' + lLandingPageMenu2.size())
-
-        'Printing Landing Page Menu List'
-        println('Below are the Tabs available on the Dashboard Page 2 : ')
-
-        for (int index = 0; index < lLandingPageMenu2.size(); index++) {
-            println(lLandingPageMenu2.get(index).findElementByClassName('XCUIElementTypeStaticText').getText())
-        }
-    }
+for (int index = 0; index < lLandingPageMenu2.size(); index++) {
+	println(lLandingPageMenu2.get(index).getText())
 }

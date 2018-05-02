@@ -4,6 +4,12 @@
    <name>Search Text Box</name>
    <tag></tag>
    <elementGuidId>84ec8e2c-0f69-4a38-8975-50725504b669</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.EditText' and (text() = 'Search by City Name/Zip Code' or . = 'Search by City Name/Zip Code') and @resource-id = 'com.sus.scm_mobile:id/edtSearch']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -14,7 +20,7 @@
       <value>android.widget.EditText</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>

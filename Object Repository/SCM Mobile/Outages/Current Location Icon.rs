@@ -4,6 +4,12 @@
    <name>Current Location Icon</name>
    <tag></tag>
    <elementGuidId>8525098f-e3b5-424a-aef1-28611e939a1d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'android.widget.Button' and (text() = '' or . = '') and @resource-id = 'com.sus.scm_mobile:id/iv_currentlocation']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -14,7 +20,7 @@
       <value>android.widget.Button</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>instance</name>
       <type>Main</type>

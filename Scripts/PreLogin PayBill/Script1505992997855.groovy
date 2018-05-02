@@ -137,7 +137,7 @@ static void verifyPreLoginPayBillTestCases() {
     }
 }
 
-'One Time Payment'
+'TC_PB_8 TC_PB_15 TC_PB_32 One Time Payment'
 static void verifyOneTimePaymentCreditCardTestCases()
 {
 
@@ -188,7 +188,7 @@ Mobile.pressBack()
 Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/PayBill Button'), 10)
  
 'Delay of 40 Sec'
-Mobile.delay(40)
+Mobile.delay(20)
  
 'Getting Payment Successful Text'
 String messageText = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Payment Successful Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
@@ -211,7 +211,7 @@ if (messageText.equals(null)) {
 'Clicking on Ok'
 Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/Ok Button'), 5)
 }
-
+'TC_PB_9 TC_PB_10 TC_PB_14 TC_PB_33'
 static void verifyOneTimePaymentBankAccountTestCases()
 {
 	AppiumDriver<?> driver = MobileDriverFactory.getDriver()
@@ -294,7 +294,7 @@ Mobile.pressBack()
 Mobile.tap(findTestObject('SCM Mobile/PreLogin PayBill/btnPayBill'), 10)
  
 'Delay of 40 Sec'
-Mobile.delay(40)
+Mobile.delay(20)
  
 'Getting Payment Successful Text'
 String messageText = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Payment Successful Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
@@ -302,7 +302,7 @@ String messageText = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin Pay
 'Getting Payment Transaction Id'
 String transactionId = Mobile.getAttribute(findTestObject('SCM Mobile/PreLogin PayBill/Transaction Id Text'), 'text', 5, FailureHandling.CONTINUE_ON_FAILURE)
  
-'Verifying One Time Payment is Successfully Done or Not'
+'Verifying One Time Payment is SuccesverifyOneTimePaymentCreditCardTestCasessfully Done or Not'
 if (messageText.equals(null)) {
 	System.out.println('Something went wrong with One Time Payment, Please check manually')
 } else {

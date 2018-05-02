@@ -27,14 +27,15 @@ import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as Mobil
 import io.appium.java_client.AppiumDriver as AppiumDriver
 import io.appium.java_client.MobileElement as MobileElement
 
+'Starting the Application'
+applicationMethods.ReusableMethods.verifyValidLogin()
+
 @com.kms.katalon.core.annotation.TearDown
 static void verifyUsageTestCases() {
 String messageText = null
 
-'Calling Login Page Test Case'
-Mobile.callTestCase(findTestCase('LogIn'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.delay(50)
+Mobile.delay(10)
 
 'Checking Usage Menu is Displayed on Dashboard or Not'
 if (Mobile.verifyElementVisible(findTestObject('SCM Mobile/LandingPage/Usage Menu'), 3, FailureHandling.CONTINUE_ON_FAILURE) ==
@@ -155,7 +156,7 @@ false) {
 			println "Default Value is not Monthly and somethimg else is visible, please check manually"
 		}
 
-		'TC_UP_185 Test Case for High Alert Functionality'
+		'TC_UP_165 TC_UP_185 Test Case for High Alert Functionality'
 		Mobile.tap(findTestObject('SCM Mobile/Usage/Power/btnSetUsageAlertPower'), 15)
 		Mobile.tap(findTestObject('SCM Mobile/Usage/Power/btnSubmitUsageAlertSettingsUsagePower'), 15)
 
@@ -163,7 +164,7 @@ false) {
 		Mobile.tap(findTestObject('SCM Mobile/Common Elements/Popup Ok Button'), 30)
 
 		'Delay'
-		Mobile.delay(20)
+		Mobile.delay(10)
 
 		'Calling the Press Back Inbuilt funtion'
 		Mobile.tap(findTestObject('SCM Mobile/Common Elements/PressBack'), 15)
@@ -174,7 +175,7 @@ false) {
 
 
 		'Delay'
-		Mobile.delay(30)
+		Mobile.delay(10)
 	}
 
 	if (Mobile.getAttribute(findTestObject('SCM Mobile/Usage/Common/lblWaterMenuUsage'),
@@ -321,7 +322,7 @@ false) {
 			Mobile.tap(findTestObject('SCM Mobile/Usage/Solar/kWh Unit'),23)
 
 			'Delay'
-			Mobile.delay(30)
+			Mobile.delay(10)
 		}
 		else
 		{
@@ -335,7 +336,7 @@ false) {
 
 
 		'Delay'
-		Mobile.delay(30)
+		Mobile.delay(10)
 	}
 	if (Mobile.getAttribute(findTestObject('SCM Mobile/Usage/Common/lblGasMenuUsage'),
 	'text', 5, FailureHandling.CONTINUE_ON_FAILURE).equals('Gas')) {
@@ -447,7 +448,7 @@ false) {
 
 
 		'Delay'
-		Mobile.delay(30)
+		Mobile.delay(10)
 	}
 
 

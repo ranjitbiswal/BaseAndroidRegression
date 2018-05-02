@@ -1258,7 +1258,7 @@ static void verifyMyAccountGuestUserTestCases()
 			Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/ddlAccessPeriodNewGuestUser'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 			Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnOkAccessPeriodNewGuestUser'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 		}
-		'TC_GA_10'
+		'TC_PM_35'
 		Mobile.tap(findTestObject('SCM Mobile/My Account/GuestUser/btnInviteNewGU'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 
 		messageText = Mobile.getAttribute(findTestObject('SCM Mobile/Common Elements/Popup Message Text'), 'text',

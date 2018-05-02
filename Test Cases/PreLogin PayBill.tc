@@ -3,6 +3,7 @@
    <description>PreLoginPayBill</description>
    <name>PreLogin PayBill</name>
    <tag>PreLoginPayBill</tag>
-   <comment>One Time Payment</comment>
+   <comment>TC_PB_8 TC_PB_15 TC_PB_32 One Time Payment
+TC_PB_9 TC_PB_10 TC_PB_14 TC_PB_33</comment>
    <testCaseGuid>a3b1a734-e033-453d-815c-71316bf80e03</testCaseGuid>
 </TestCaseEntity>

@@ -91,7 +91,7 @@ static void verifyPreLoginOutagesTestCases() {
 }
 
 static void verifyPreLoginCurrentOutagesTabTestCases() {
-    'TC : TC_PLO_3 To verify that PreLogin Outages Current Tab Test Cases'
+    'TC : TC_PLO_5 To verify that PreLogin Outages Current Tab Test Cases'
     String messageText = null
 
     String sOutageTitleOnListOutagesPage = null

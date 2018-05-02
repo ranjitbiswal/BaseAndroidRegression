@@ -39,10 +39,10 @@ public class ReusableMethods {
 		Mobile.delay(5)
 
 		'Clearing the UserName Text Field'
-		Mobile.clearText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), 3)
+	//	Mobile.clearText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), 3)
 
 		'Entering UserName'
-		Mobile.setText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), GlobalVariable.sUserName, 3)
+		//Mobile.setText(findTestObject('SCM Mobile/LogIn/UserName TextBox'), GlobalVariable.sUserName, 3)
 
 		'Hide KeyBoard'
 		Mobile.hideKeyboard()

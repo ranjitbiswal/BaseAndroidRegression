@@ -26,7 +26,7 @@ import internal.GlobalVariable as GlobalVariable
 //Prepared By Sahil
 @com.kms.katalon.core.annotation.SetUp
 static def verifyValidLogin() {
-    'Check Application is Already Installed on Device or Not'
+    'TC_LO_12 Check Application is Already Installed on Device or Not'
     Mobile.startApplication(GlobalVariable.sApplicationPath, false)
 
     'Delay of 60 Sec'
